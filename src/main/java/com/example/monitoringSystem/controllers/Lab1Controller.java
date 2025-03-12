@@ -14,6 +14,7 @@ import com.example.monitoringSystem.factory.AlertFactory;
 //import com.example.monitoringSystem.builder.MeasuringStationBuilder;
 //import com.example.monitoringSystem.builder.NotificationBuilder;
 //import com.example.monitoringSystem.prototype.CityPrototype;
+import com.example.monitoringSystem.prototype.SensorPrototype;
 
 @Controller
 public class Lab1Controller {
@@ -25,11 +26,14 @@ public class Lab1Controller {
         String reportResult = ReportTypeFactory.createReport("PDF").getFormat();
         String alertResult = AlertFactory.createAlert("HighTemperature").getMessage();
 
+        // Prototype Pattern
+        SensorPrototype sensorPrototype = new SensorPrototype("Czujnik temperatury", "Podaje temperaturę w stopniach celcjusza");
+        SensorPrototype clonedSensor = (SensorPrototype) sensorPrototype.clone();
 
         model.addAttribute("sensorResult", sensorResult);
         model.addAttribute("reportResult", reportResult);
         model.addAttribute("alertResult", alertResult);
-
+        model.addAttribute("sensorPrototype", clonedSensor.toString());
 
         return "lab1"; 
     }
