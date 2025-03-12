@@ -1,0 +1,26 @@
+<!-- lab1.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB 1 - Wzorce Projektowe</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>LAB 1 - Factory, Singleton, Builder, Prototype</h1>
+<nav>
+    <ul>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/lab1}">LAB 1</a></li>
+        <li><a href="#">LAB 2</a></li>
+        <li><a href="#">LAB 3</a></li>
+    </ul>
+</nav>
+<div>
+    <h2>Factory Pattern</h2>
+    <p>Sensor: <span th:text="${sensorResult}"></span></p>
+    <p>Report Type: <span th:text="${reportResult}"></span></p>
+    <p>Alert: <span th:text="${alertResult}"></span></p>
+</div>
+</body>
+</html>
