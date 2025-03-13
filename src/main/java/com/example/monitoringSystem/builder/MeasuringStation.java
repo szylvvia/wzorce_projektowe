@@ -2,7 +2,7 @@ package com.example.monitoringSystem.builder;
 
 public class MeasuringStation {
     public String name;
-    private String localization;
+    public String localization;
 
     private MeasuringStation(StationBuilder builder) {
         this.name = builder.name;
