@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.controllers;
 
+import com.example.monitoringSystem.singleton.DataSourceSingletonEagerInit;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +35,13 @@ public class Lab1Controller {
         model.addAttribute("reportResult", reportResult);
         model.addAttribute("alertResult", alertResult);
         model.addAttribute("sensorPrototype", clonedSensor.toString());
+
+        //Singleton Pattern
+        DataSourceSingletonEagerInit dataSourceSingletonEagerInit1 = DataSourceSingletonEagerInit.getInstance();
+        DataSourceSingletonEagerInit dataSourceSingletonEagerInit2 = DataSourceSingletonEagerInit.getInstance();
+        model.addAttribute("dataSourceSingletonEagerInit1", dataSourceSingletonEagerInit1.hashCode());
+        model.addAttribute("dataSourceSingletonEagerInit2", dataSourceSingletonEagerInit2.hashCode());
+
 
         return "lab1"; 
     }
