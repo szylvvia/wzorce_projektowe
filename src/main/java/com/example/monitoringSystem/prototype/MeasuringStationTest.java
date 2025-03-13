@@ -1,11 +1,11 @@
-package com.example.monitoringSystem.protoype1;
+package com.example.monitoringSystem.prototype;
 
 public class MeasuringStationTest {
 
     public static void main(String[] args) {
-        MeasuringStation prototypeStation = new MeasuringStation("Station A", "New York");
+        MeasuringStationP prototypeStation = new MeasuringStationP("Station A", "New York");
 
-        MeasuringStation clonedStation = prototypeStation.clone();
+        MeasuringStationP clonedStation = prototypeStation.clone();
         clonedStation.setName("Station B");
         clonedStation.setLocalization("New York");
 

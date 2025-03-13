@@ -1,23 +1,24 @@
-package com.example.monitoringSystem.protoype1;
+package com.example.monitoringSystem.prototype;
 
-class MeasuringStation implements Cloneable {
+public class MeasuringStationP implements Cloneable {
     private String name;
     private String localization;
 
-    public MeasuringStation(String name, String localization) {
+    public MeasuringStationP(String name, String localization) {
         this.name = name;
         this.localization = localization;
     }
 
     // Clone method to implement the Prototype pattern
     @Override
-    public MeasuringStation clone() {
+    public MeasuringStationP clone() {
         try {
-            return (MeasuringStation) super.clone();
+            return (MeasuringStationP) super.clone();
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException("Cloning not supported", e);
         }
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -27,10 +28,20 @@ class MeasuringStation implements Cloneable {
         this.localization = localization;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLocalization() {
+        return localization;
+    }
+
+
     @Override
     public String toString() {
         return "MeasuringStation{Name='" + name + "', Localization='" + localization + "'}";
     }
+
 }
 
 

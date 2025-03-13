@@ -21,11 +21,18 @@
     <p>Sensor: <span th:text="${sensorResult}"></span></p>
     <p>Report Type: <span th:text="${reportResult}"></span></p>
     <p>Alert: <span th:text="${alertResult}"></span></p>
-
+</div>
+<div>
     <h2>Singleton Pattern</h2>
     <h4>Szybka inicjalizacja</h4>
     <p>DataSourceSingleton first variable: <span th:text="${dataSourceSingletonEagerInit1}"></span> </p>
     <p>DataSourceSingleton second variable: <span th:text="${dataSourceSingletonEagerInit2}"></span> </p>
+</div>
+<div>
+    <h2>Factory Builder</h2>
+    <p>Measuring Station: <span th:text="${measuringStation}"></span></p>
+    <p>Notification: <span th:text="${notification}"></span></p>
+    <p>Generated Report: <span th:text="${report}"></span></p>
     <h4>Blok static</h4>
     <p>DataSourceSingletonStaticBlockInit first variable: <span th:text="${dataSourceSingletonStaticBlockInit1}"></span> </p>
     <p>DataSourceSingletonStaticBlockInit second variable: <span th:text="${dataSourceSingletonStaticBlockInit2}"></span> </p>
@@ -51,6 +58,7 @@
     <ul>
         <li th:each="city : ${countryPrototypeClone2}" th:text="${city.name}"></li>
     </ul>
+    <p>Measuring Station Prototype (Cloned): <span th:text="${prototypeStation}"></span></p>
 </div>
 </body>
 </html>
