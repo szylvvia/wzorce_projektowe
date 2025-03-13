@@ -1,6 +1,8 @@
 package com.example.monitoringSystem.controllers;
 
 import com.example.monitoringSystem.singleton.DataSourceSingletonEagerInit;
+import com.example.monitoringSystem.singleton.DataSourceSingletonInnerStaticClassInit;
+import com.example.monitoringSystem.singleton.DataSourceSingletonStaticBlockInit;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,7 +44,16 @@ public class Lab1Controller {
         model.addAttribute("dataSourceSingletonEagerInit1", dataSourceSingletonEagerInit1.hashCode());
         model.addAttribute("dataSourceSingletonEagerInit2", dataSourceSingletonEagerInit2.hashCode());
 
+        DataSourceSingletonStaticBlockInit dataSourceSingletonStaticBlockInit1 = DataSourceSingletonStaticBlockInit.getInstance();
+        DataSourceSingletonStaticBlockInit dataSourceSingletonStaticBlockInit2 = DataSourceSingletonStaticBlockInit.getInstance();
+        model.addAttribute("dataSourceSingletonStaticBlockInit1", dataSourceSingletonStaticBlockInit1.hashCode());
+        model.addAttribute("dataSourceSingletonStaticBlockInit2", dataSourceSingletonStaticBlockInit2.hashCode());
 
-        return "lab1"; 
+        DataSourceSingletonInnerStaticClassInit dataSourceSingletonInnerStaticClassInit1 = DataSourceSingletonInnerStaticClassInit.getInstance();
+        DataSourceSingletonInnerStaticClassInit dataSourceSingletonInnerStaticClassInit2 = DataSourceSingletonInnerStaticClassInit.getInstance();
+        model.addAttribute("dataSourceSingletonInnerStaticClassInit1", dataSourceSingletonInnerStaticClassInit1.hashCode());
+        model.addAttribute("dataSourceSingletonInnerStaticClassInit2", dataSourceSingletonInnerStaticClassInit2.hashCode());
+
+        return "lab1";
     }
 }
