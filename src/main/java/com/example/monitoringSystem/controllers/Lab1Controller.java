@@ -1,5 +1,7 @@
 package com.example.monitoringSystem.controllers;
 
+import com.example.monitoringSystem.prototype.City;
+import com.example.monitoringSystem.prototype.CountryPrototype;
 import com.example.monitoringSystem.singleton.DataSourceSingletonEagerInit;
 import com.example.monitoringSystem.singleton.DataSourceSingletonInnerStaticClassInit;
 import com.example.monitoringSystem.singleton.DataSourceSingletonStaticBlockInit;
@@ -18,6 +20,8 @@ import com.example.monitoringSystem.factory.AlertFactory;
 //import com.example.monitoringSystem.builder.NotificationBuilder;
 //import com.example.monitoringSystem.prototype.CityPrototype;
 import com.example.monitoringSystem.prototype.SensorPrototype;
+
+import java.util.List;
 
 @Controller
 public class Lab1Controller {
@@ -53,6 +57,22 @@ public class Lab1Controller {
         DataSourceSingletonInnerStaticClassInit dataSourceSingletonInnerStaticClassInit2 = DataSourceSingletonInnerStaticClassInit.getInstance();
         model.addAttribute("dataSourceSingletonInnerStaticClassInit1", dataSourceSingletonInnerStaticClassInit1.hashCode());
         model.addAttribute("dataSourceSingletonInnerStaticClassInit2", dataSourceSingletonInnerStaticClassInit2.hashCode());
+
+        CountryPrototype countryPrototypeData = new CountryPrototype();
+
+        countryPrototypeData.loadData();
+
+        CountryPrototype countryPrototypeClone1 = (CountryPrototype) countryPrototypeData.clone();
+        CountryPrototype countryPrototypeClone2 = (CountryPrototype) countryPrototypeData.clone();
+
+        List<City> firstCountryCities = countryPrototypeClone1.getListCities();
+        firstCountryCities.add(new City("Gdańsk", 470907, false));
+        List<City> secondCountryCities = countryPrototypeClone2.getListCities();
+        secondCountryCities.add(new City("Wrocław", 640648, false));
+
+        model.addAttribute("countryPrototypeData", countryPrototypeData.getListCities());
+        model.addAttribute("countryPrototypeClone1", firstCountryCities);
+        model.addAttribute("countryPrototypeClone2", secondCountryCities);
 
         return "lab1";
     }

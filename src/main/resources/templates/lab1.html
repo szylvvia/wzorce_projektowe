@@ -37,6 +37,20 @@
 <div>
     <h2>Prototype Pattern</h2>
     <p>Sensor Prototype (Cloned): <span th:text="${sensorPrototype}"></span></p>
+
+    <h4>Country Prototype</h4>
+    <p>Country Prototype (Cloned):</p>
+    <ul>
+        <li th:each="city : ${countryPrototypeData}" th:text="${city.name}"></li>
+    </ul>
+    <p>Country Prototype (Cloned 1):></p>
+    <ul>
+        <li th:each="city : ${countryPrototypeClone1}" th:text="${city.name}"></li>
+    </ul>
+    <p>Country Prototype (Cloned 2):></p>
+    <ul>
+        <li th:each="city : ${countryPrototypeClone2}" th:text="${city.name}"></li>
+    </ul>
 </div>
 </body>
 </html>
