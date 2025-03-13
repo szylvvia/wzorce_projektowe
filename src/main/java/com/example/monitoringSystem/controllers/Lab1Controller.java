@@ -34,16 +34,16 @@ public class Lab1Controller {
 
     @GetMapping("/lab1")
     public String lab1(Model model) {
-        // Factory Pattern - creating objects
+        // Tydzien 1 - Wzorzec Factory
         String sensorResult = SensorFactory.createSensor("Temperature").getDetails();
         String reportResult = ReportTypeFactory.createReport("PDF").getFormat();
         String alertResult = AlertFactory.createAlert("HighTemperature").getMessage();
-
         model.addAttribute("sensorResult", sensorResult);
         model.addAttribute("reportResult", reportResult);
         model.addAttribute("alertResult", alertResult);
+        // Koniec, Tydzien 1 - Wzorzec Factory
 
-        // Prototype Pattern
+        // Tydzien 1 - Wzorzec Prototype
         SensorPrototype sensorPrototype = new SensorPrototype("Czujnik temperatury", "Podaje temperaturę w stopniach celcjusza");
         SensorPrototype clonedSensor = (SensorPrototype) sensorPrototype.clone();
         MeasuringStationP prototypeStation = new MeasuringStationP("Station B", "Los Angeles");
@@ -64,8 +64,9 @@ public class Lab1Controller {
         model.addAttribute("countryPrototypeData", countryPrototypeData.getListCities());
         model.addAttribute("countryPrototypeClone1", firstCountryCities);
         model.addAttribute("countryPrototypeClone2", secondCountryCities);
+        // Koniec, Tydzien 1 - Wzorzec Prototype
 
-        //Singleton Pattern
+        // Tydzien 1 - Wzorzec Singleton
         DataSourceSingletonEagerInit dataSourceSingletonEagerInit1 = DataSourceSingletonEagerInit.getInstance();
         DataSourceSingletonEagerInit dataSourceSingletonEagerInit2 = DataSourceSingletonEagerInit.getInstance();
         model.addAttribute("dataSourceSingletonEagerInit1", dataSourceSingletonEagerInit1.hashCode());
@@ -80,8 +81,9 @@ public class Lab1Controller {
         DataSourceSingletonInnerStaticClassInit dataSourceSingletonInnerStaticClassInit2 = DataSourceSingletonInnerStaticClassInit.getInstance();
         model.addAttribute("dataSourceSingletonInnerStaticClassInit1", dataSourceSingletonInnerStaticClassInit1.hashCode());
         model.addAttribute("dataSourceSingletonInnerStaticClassInit2", dataSourceSingletonInnerStaticClassInit2.hashCode());
+        // Koniec, Tydzien 1 - Wzorzec Singleton
 
-        // Builder Pattern
+        // Tydzien 1 - Wzorzec Builder
         MeasuringStation measuringStation = new MeasuringStation.StationBuilder("Station A", "New York").build();
         Notification notification = new Notification.NotificationBuilder("Warning: High temperature detected!").build();
         Report report = new Report.ReportBuilder("2025-03-13", "New York", "Weather Report", measuringStation.name)
@@ -92,6 +94,7 @@ public class Lab1Controller {
         model.addAttribute("measuringStation", measuringStation.name + " - " + measuringStation.localization);
         model.addAttribute("notification", notification.toString());
         model.addAttribute("report", report.toString());
+        // Koniec, Tydzien 1 - Wzorzec Builder
 
         return "lab1"; 
     }
