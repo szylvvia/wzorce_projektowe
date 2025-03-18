@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.factory;
+package com.example.monitoringSystem.lab1Patterns.factory;
 
 public class ReportTypeFactory {
     public static Report createReport(String type) {

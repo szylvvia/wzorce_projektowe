@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.singleton;
+package com.example.monitoringSystem.lab1Patterns.singleton;
 
 public class DataSourceSingletonStaticBlockInit {
     private static final DataSourceSingletonStaticBlockInit dataSourceInstance;

@@ -1,17 +1,17 @@
 package com.example.monitoringSystem.controllers;
 
-import com.example.monitoringSystem.prototype.City;
-import com.example.monitoringSystem.prototype.CountryPrototype;
-import com.example.monitoringSystem.singleton.DataSourceSingletonEagerInit;
-import com.example.monitoringSystem.singleton.DataSourceSingletonInnerStaticClassInit;
-import com.example.monitoringSystem.singleton.DataSourceSingletonStaticBlockInit;
+import com.example.monitoringSystem.lab1Patterns.prototype.City;
+import com.example.monitoringSystem.lab1Patterns.prototype.CountryPrototype;
+import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonEagerInit;
+import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonInnerStaticClassInit;
+import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonStaticBlockInit;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.monitoringSystem.factory.SensorFactory;
-import com.example.monitoringSystem.factory.ReportTypeFactory;
-import com.example.monitoringSystem.factory.AlertFactory;
+import com.example.monitoringSystem.lab1Patterns.factory.SensorFactory;
+import com.example.monitoringSystem.lab1Patterns.factory.ReportTypeFactory;
+import com.example.monitoringSystem.lab1Patterns.factory.AlertFactory;
 //import com.example.monitoringSystem.singleton.DataSource;
 //import com.example.monitoringSystem.singleton.SensorRegistry;
 //import com.example.monitoringSystem.singleton.CriticalLevels;
@@ -20,11 +20,11 @@ import com.example.monitoringSystem.factory.AlertFactory;
 //import com.example.monitoringSystem.builder.NotificationBuilder;
 //import com.example.monitoringSystem.prototype.CityPrototype;
 
-import com.example.monitoringSystem.builder.MeasuringStation;
-import com.example.monitoringSystem.builder.Notification;
-import com.example.monitoringSystem.builder.Report;
-import com.example.monitoringSystem.prototype.SensorPrototype;
-import com.example.monitoringSystem.prototype.MeasuringStationP;
+import com.example.monitoringSystem.lab1Patterns.builder.MeasuringStation;
+import com.example.monitoringSystem.lab1Patterns.builder.Notification;
+import com.example.monitoringSystem.lab1Patterns.builder.Report;
+import com.example.monitoringSystem.lab1Patterns.prototype.SensorPrototype;
+import com.example.monitoringSystem.lab1Patterns.prototype.MeasuringStationP;
 
 
 import java.util.List;

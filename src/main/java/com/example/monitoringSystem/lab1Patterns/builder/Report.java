@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.builder;
+package com.example.monitoringSystem.lab1Patterns.builder;
 
 public class Report {
     private String date;

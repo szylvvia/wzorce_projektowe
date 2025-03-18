@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.prototype;
+package com.example.monitoringSystem.lab1Patterns.prototype;
 
 import java.util.ArrayList;
 import java.util.List;

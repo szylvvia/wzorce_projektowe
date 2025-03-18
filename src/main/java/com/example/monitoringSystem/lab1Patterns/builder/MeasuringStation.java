@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.builder;
+package com.example.monitoringSystem.lab1Patterns.builder;
 
 public class MeasuringStation {
     public String name;

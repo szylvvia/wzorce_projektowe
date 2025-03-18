@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.prototype;
+package com.example.monitoringSystem.lab1Patterns.prototype;
 
 public class MeasuringStationP implements Cloneable {
     private String name;
