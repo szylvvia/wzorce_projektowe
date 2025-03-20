@@ -13,5 +13,36 @@
 <p>Temperatura w K: <span th:text="${kelvinTemp}"></span></p>
 <p>Prędkość wiatru w mph: <span th:text="${mphWindSpeed}"></span></p>
 <p>Ciśnienie w mmHg: <span th:text="${mmHgPressure}"></span></p>
+
+<h2>Bridge - System Komunikacji</h2>
+<h3>Stacja Meteorologiczna (HTTP)</h3>
+<p th:utext="${weatherStationResults}"></p>
+
+<h3>Stacja Przemysłowa (MQTT)</h3>
+<p th:utext="${industrialStationResults}"></p>
+
+<h2>Bridge - System Pobioru danych</h2>
+<h3>Stacja Pogodowa</h3>
+<p th:utext="${weatherStationResults}"></p>
+
+<h3>Stacja Przemysłowa</h3>
+<p th:utext="${industrialStationResults}"></p>
+
+<h3>Stacja Wieloczujnikowa</h3>
+<p th:utext="${multiSensorStationResults}"></p>
+
+
+<h2>Bridge - Generowanie Raportów</h2>
+
+<h3>Raport Stacji Pogodowej (PDF)</h3>
+<p th:text="${weatherReportResult}"></p>
+
+<h3>Raport Stacji Przemysłowej (CSV)</h3>
+<p th:text="${industrialReportResult}"></p>
+
+
+<h2>Decorator - Pomiar Stacji</h2>
+<p th:utext="${measurementResults}"></p>
+
 </body>
 </html>
