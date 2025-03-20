@@ -41,12 +41,19 @@
 <p th:text="${industrialReportResult}"></p>
 
 
-<h2>Decorator - Pomiar Stacji</h2>
-<p th:utext="${measurementResults}"></p>
-
 <h2>Kompozycja - Stacja złożona z sensorów</h2>
 <p th:utext="${composite1details}"></p>
 
+<h2>Decorator - Pomiar Stacji</h2>
+<p th:utext="${measurementResults}"></p>
+
+<h2>Lab 2 - Decorator Pattern (Authorization)</h2>
+
+<h3>Authorized Sensor</h3>
+<p th:text="${resultAuthorized}"></p>
+
+<h3>Unauthorized Sensor</h3>
+<p th:text="${resultUnauthorized}"></p>
 
 </body>
 </html>

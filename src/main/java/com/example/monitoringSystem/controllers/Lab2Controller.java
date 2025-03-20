@@ -1,6 +1,7 @@
 package com.example.monitoringSystem.controllers;
 
 
+import com.example.monitoringSystem.lab1Patterns.factory.SensorF;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.*;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.*;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.TemperatureSensorB;
@@ -17,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.example.monitoringSystem.lab2Patterns.adapter.*;
+import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.*;
 
 import java.util.List;
 
@@ -83,16 +85,6 @@ public class Lab2Controller {
         model.addAttribute("weatherReportResult", weatherReportResult);
         model.addAttribute("industrialReportResult", industrialReportResult);
 
-        //Dcorator Logging and Alerts
-        // Base measurement station
-        MeasurementStation station = new BasicMeasurementStation();
-        // Alert
-        MeasurementStation fullFeatureStation = new LoggingDecorator(new AlertDecorator(station));
-        // Perform measurement and capture results
-        String measurementResults = fullFeatureStation.measure();
-        // Pass results to the HTML template
-        model.addAttribute("measurementResults", measurementResults);
-
         //Composite pattern
         System.out.println("--- Kompozyt 1 ---");
         TemperatureSensorC tempSensorC = new TemperatureSensorC("S001",21.9);
@@ -115,6 +107,24 @@ public class Lab2Controller {
         String details = stationC.getDetails();
         model.addAttribute("composite1details", details);
 
+        //Decorator Logging and Alerts
+        // Base measurement station
+        MeasurementStation station = new BasicMeasurementStation();
+        // Alert
+        MeasurementStation fullFeatureStation = new LoggingDecorator(new AlertDecorator(station));
+        // Perform measurement and capture results
+        String measurementResults = fullFeatureStation.measure();
+        // Pass results to the HTML template
+        model.addAttribute("measurementResults", measurementResults);
+
+        // === Decorator: Autoryzacja ===
+        SensorAuth basicSensor = new BasicSensor("Temperature Sensor");
+        SensorAuth authorizedSensor = new AuthorizedSensorDecorator(basicSensor, true);
+        SensorAuth unauthorizedSensor = new AuthorizedSensorDecorator(basicSensor, false);
+
+        model.addAttribute("resultAuthorized", executeMeasurement(authorizedSensor));
+        model.addAttribute("resultUnauthorized", executeMeasurement(unauthorizedSensor));
+
         System.out.println("--- Kompozyt 2 ---");
         MeasurementStationCity cityStation = new MeasurementStationCity("Lublin", "medium");
         MeasurementStationCity cityStation2 = new MeasurementStationCity("Swidnik", "low");
@@ -130,5 +140,14 @@ public class Lab2Controller {
 
 
         return "lab2";
+    }
+
+    private String executeMeasurement(SensorAuth sensor) {
+        try {
+            sensor.measure();
+            return "Measurement successful!";
+        } catch (SecurityException e) {
+            return "Measurement failed: " + e.getMessage();
+        }
     }
 }

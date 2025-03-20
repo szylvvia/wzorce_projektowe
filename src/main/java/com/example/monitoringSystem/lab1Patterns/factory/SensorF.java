@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab1Patterns.factory;
 
-public interface Sensor {
+public interface SensorF {
     String getDetails();
+
 }

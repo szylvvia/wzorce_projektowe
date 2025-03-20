@@ -1,7 +1,7 @@
 package com.example.monitoringSystem.lab1Patterns.factory;
 
 public class SensorFactory {
-    public static Sensor createSensor(String type) {
+    public static SensorF createSensor(String type) {
         switch(type) {
             case "Temperature":
                 return new TemperatureSensor();
