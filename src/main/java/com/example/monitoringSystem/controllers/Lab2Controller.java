@@ -3,7 +3,7 @@ package com.example.monitoringSystem.controllers;
 
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.*;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.*;
-import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.TemperatureSensor;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.TemperatureSensorB;
 
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.*;
 
@@ -46,9 +46,9 @@ public class Lab2Controller {
 
 
         // === Bridge Pattern: Sensor Stations ===
-        MeasurementStationB weatherStation = new WeatherStationB(new TemperatureSensor());
-        MeasurementStationB industrialStation = new IndustrialStationB(new HumiditySensor());
-        MeasurementStationB multiSensorStation = new MultiSensorStationB(new TemperatureSensor(), new HumiditySensor());
+        MeasurementStationB weatherStation = new WeatherStationB(new TemperatureSensorB());
+        MeasurementStationB industrialStation = new IndustrialStationB(new HumiditySensorB());
+        MeasurementStationB multiSensorStation = new MultiSensorStationB(new TemperatureSensorB(), new HumiditySensorB());
 
         // Perform measurement and get results
         String weatherStationResults = weatherStation.measure();

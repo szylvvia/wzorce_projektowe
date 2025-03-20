@@ -4,13 +4,13 @@ package com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure;
 public class BridgePatternMessure {
     public static void main(String[] args) {
 
-        MeasurementStationB weatherStation = new WeatherStationB(new TemperatureSensor());
+        MeasurementStationB weatherStation = new WeatherStationB(new TemperatureSensorB());
         weatherStation.measure();
 
-        MeasurementStationB industrialStation = new IndustrialStationB(new HumiditySensor());
+        MeasurementStationB industrialStation = new IndustrialStationB(new HumiditySensorB());
         industrialStation.measure();
 
-        MeasurementStationB multiSensorStation = new MultiSensorStationB(new TemperatureSensor(), new HumiditySensor());
+        MeasurementStationB multiSensorStation = new MultiSensorStationB(new TemperatureSensorB(), new HumiditySensorB());
         multiSensorStation.measure();
     }
 }

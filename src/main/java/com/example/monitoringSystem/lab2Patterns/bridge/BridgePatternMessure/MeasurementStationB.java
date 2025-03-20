@@ -6,18 +6,18 @@ import java.util.List;
 
 // Abstraction - Measurement Station
 public abstract class MeasurementStationB {
-    protected List<Sensor> sensors = new ArrayList<>();
+    protected List<SensorB> sensorBS = new ArrayList<>();
 
-    public MeasurementStationB(Sensor... sensors) {
-        for (Sensor sensor : sensors) {
-            this.sensors.add(sensor);
+    public MeasurementStationB(SensorB... sensorBS) {
+        for (SensorB sensorB : sensorBS) {
+            this.sensorBS.add(sensorB);
         }
     }
 
     public String measure() {
         StringBuilder result = new StringBuilder(getStationType() + " starting measurements...<br>");
-        for (Sensor sensor : sensors) {
-            result.append(sensor.collectData()).append("<br>");
+        for (SensorB sensorB : sensorBS) {
+            result.append(sensorB.collectData()).append("<br>");
         }
         return result.toString();
     }

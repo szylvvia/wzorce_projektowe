@@ -2,8 +2,8 @@ package com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure;
 
 // Extended abstraction - Weather Station
 public class WeatherStationB extends MeasurementStationB {
-    public WeatherStationB(Sensor... sensors) {
-        super(sensors);
+    public WeatherStationB(SensorB... sensorBS) {
+        super(sensorBS);
     }
 
     @Override

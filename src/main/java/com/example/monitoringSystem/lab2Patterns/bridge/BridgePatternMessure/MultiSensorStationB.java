@@ -1,8 +1,8 @@
 package com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure;
 
 public class MultiSensorStationB extends MeasurementStationB {
-    public MultiSensorStationB(Sensor... sensors) {
-        super(sensors);
+    public MultiSensorStationB(SensorB... sensorBS) {
+        super(sensorBS);
     }
 
     @Override
