@@ -34,6 +34,7 @@ public class Lab1Controller {
 
     @GetMapping("/lab1")
     public String lab1(Model model) {
+
         // Tydzien 2 - Wzorzec Factory
         String sensorResult = SensorFactory.createSensor("Temperature").getDetails();
         String reportResult = ReportTypeFactory.createReport("PDF").getFormat();

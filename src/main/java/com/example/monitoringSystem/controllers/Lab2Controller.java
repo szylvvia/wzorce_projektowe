@@ -7,6 +7,7 @@ import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.Tem
 
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.*;
 
+import com.example.monitoringSystem.lab2Patterns.composite.*;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alart.AlertDecorator;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alart.BasicMeasurementStation;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alart.LoggingDecorator;
@@ -16,6 +17,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import com.example.monitoringSystem.lab2Patterns.adapter.*;
+
+import java.util.List;
 
 @Controller
 public class Lab2Controller {
@@ -89,6 +92,28 @@ public class Lab2Controller {
         String measurementResults = fullFeatureStation.measure();
         // Pass results to the HTML template
         model.addAttribute("measurementResults", measurementResults);
+
+        //Composite pattern
+        System.out.println("--- Kompozyt ---");
+        TemperatureSensorC tempSensorC = new TemperatureSensorC("S001",21.9);
+        PressureSensorC pressureSensorC = new PressureSensorC("S002", 1013.25);
+        HumiditySensorC humiditySensorC = new HumiditySensorC("S003", 65.0);
+
+        tempSensorC.getTemperature();
+        pressureSensorC.getPressure();
+        humiditySensorC.getHumidity();
+
+        tempSensorC.showMeasurement();
+        tempSensorC.reset();
+
+        List<SensorC> sensors = List.of(tempSensorC, pressureSensorC, humiditySensorC);
+
+        MonitoringStationC stationC = new MonitoringStationC("Station A", sensors);
+        stationC.showMeasurement();
+        stationC.reset();
+
+        String details = stationC.getDetails();
+        model.addAttribute("composite1details", details);
 
         return "lab2";
     }
