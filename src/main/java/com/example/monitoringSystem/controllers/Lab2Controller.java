@@ -94,7 +94,7 @@ public class Lab2Controller {
         model.addAttribute("measurementResults", measurementResults);
 
         //Composite pattern
-        System.out.println("--- Kompozyt ---");
+        System.out.println("--- Kompozyt 1 ---");
         TemperatureSensorC tempSensorC = new TemperatureSensorC("S001",21.9);
         PressureSensorC pressureSensorC = new PressureSensorC("S002", 1013.25);
         HumiditySensorC humiditySensorC = new HumiditySensorC("S003", 65.0);
@@ -114,6 +114,20 @@ public class Lab2Controller {
 
         String details = stationC.getDetails();
         model.addAttribute("composite1details", details);
+
+        System.out.println("--- Kompozyt 2 ---");
+        MeasurementStationCity cityStation = new MeasurementStationCity("Lublin", "medium");
+        MeasurementStationCity cityStation2 = new MeasurementStationCity("Swidnik", "low");
+        MeasurementStationCity cityStation3 = new MeasurementStationCity("Naleczow", "high");
+
+        cityStation.showPollutions();
+        cityStation.setPollutionLevel("high");
+
+        List<MeasurementStationCity> lub = List.of(cityStation, cityStation2, cityStation3);
+
+        MeasurementStationRegion regionStation = new MeasurementStationRegion(lub, "Lubelskie");
+        regionStation.showPollutions();
+
 
         return "lab2";
     }
