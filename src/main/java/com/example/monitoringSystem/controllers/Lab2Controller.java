@@ -14,6 +14,10 @@ import com.example.monitoringSystem.lab2Patterns.decorator.Alart.BasicMeasuremen
 import com.example.monitoringSystem.lab2Patterns.decorator.Alart.LoggingDecorator;
 
 import com.example.monitoringSystem.lab2Patterns.decorator.Alart.MeasurementStation;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AllPurposeSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AnalogSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.DigitalSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.SensorD;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -152,6 +156,15 @@ public class Lab2Controller {
         cityMeasurementsGroup.addMeasurement(measurement3);
 
         cityMeasurementsGroup.showMeasurement();
+
+        System.out.println("--- Dekorator 3 ---");
+        SensorD digitalSensor = new DigitalSensor(new AllPurposeSensor());
+        SensorD analogSensor = new AnalogSensor(new AllPurposeSensor());
+        SensorD digitalAnalogSensor =  new DigitalSensor(new AnalogSensor(new AllPurposeSensor()));
+
+        digitalSensor.calibrateSensor();
+        analogSensor.calibrateSensor();
+        digitalAnalogSensor.calibrateSensor();
 
         return "lab2";
     }
