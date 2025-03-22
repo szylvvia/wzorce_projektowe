@@ -34,6 +34,9 @@ public class Lab2Controller {
 
     @GetMapping("/lab2")
     public String showLab2Page(Model model) {
+
+        // === Adapter Pattern ===
+
         // Adapter - konwersja temperatury
         com.example.monitoringSystem.lab2Patterns.adapter.TemperatureSensor celsiusSensor = new CelsiusSensor();
         TemperatureUnitAdapter tempAdapter = new TemperatureUnitAdapter(celsiusSensor);
@@ -92,6 +95,7 @@ public class Lab2Controller {
         model.addAttribute("weatherReportResult", weatherReportResult);
         model.addAttribute("industrialReportResult", industrialReportResult);
 
+        // === Decorator 1: Logging and Alerts ===
         //Decorator Logging and Alerts
         // Base measurement station
         MeasurementStation station = new BasicMeasurementStation();
@@ -102,13 +106,23 @@ public class Lab2Controller {
         // Pass results to the HTML template
         model.addAttribute("measurementResults", measurementResults);
 
-        // === Decorator: Autoryzacja ===
+        // === Decorator 2: Autoryzacja ===
         SensorAuth basicSensor = new BasicSensor("Temperature Sensor");
         SensorAuth authorizedSensor = new AuthorizedSensorDecorator(basicSensor, true);
         SensorAuth unauthorizedSensor = new AuthorizedSensorDecorator(basicSensor, false);
 
         model.addAttribute("resultAuthorized", executeMeasurement(authorizedSensor));
         model.addAttribute("resultUnauthorized", executeMeasurement(unauthorizedSensor));
+
+        // === Decorator 3: Kalibracja sensorów ===
+        System.out.println("--- Dekorator 3 ---");
+        SensorD digitalSensor = new DigitalSensor(new AllPurposeSensor());
+        SensorD analogSensor = new AnalogSensor(new AllPurposeSensor());
+        SensorD digitalAnalogSensor =  new DigitalSensor(new AnalogSensor(new AllPurposeSensor()));
+
+        digitalSensor.calibrateSensor();
+        analogSensor.calibrateSensor();
+        digitalAnalogSensor.calibrateSensor();
 
         //Composite pattern
         System.out.println("--- Kompozyt 1 ---");
@@ -157,15 +171,6 @@ public class Lab2Controller {
         cityMeasurementsGroup.addMeasurement(measurement3);
 
         cityMeasurementsGroup.showMeasurement();
-
-        System.out.println("--- Dekorator 3 ---");
-        SensorD digitalSensor = new DigitalSensor(new AllPurposeSensor());
-        SensorD analogSensor = new AnalogSensor(new AllPurposeSensor());
-        SensorD digitalAnalogSensor =  new DigitalSensor(new AnalogSensor(new AllPurposeSensor()));
-
-        digitalSensor.calibrateSensor();
-        analogSensor.calibrateSensor();
-        digitalAnalogSensor.calibrateSensor();
 
         return "lab2";
     }
