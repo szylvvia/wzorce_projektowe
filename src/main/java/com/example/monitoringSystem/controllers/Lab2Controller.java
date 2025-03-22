@@ -26,6 +26,7 @@ import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.*;
 
 import java.sql.Time;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -150,7 +151,7 @@ public class Lab2Controller {
         Measurement measurement2 = new Measurement(LocalDate.now().minusDays(1), "low", "25", "70", "1015");
         Measurement measurement3 = new Measurement(LocalDate.now().minusDays(2), "medium", "22", "65", "1010");
 
-        List<TimeInterval> measurements = List.of(measurement1, measurement2);
+        List<TimeInterval> measurements = new ArrayList<>(List.of(measurement1, measurement2));
 
         CityMeasurementsGroup cityMeasurementsGroup = new CityMeasurementsGroup("Lublin", measurements);
         cityMeasurementsGroup.addMeasurement(measurement3);
