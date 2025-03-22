@@ -5,9 +5,9 @@ import java.util.List;
 
 public class MeasurementStationRegion implements CityC{
     private String name;
-    private List<MeasurementStationCity> measurementStationCityList = new ArrayList<>();
+    private List<CityC> measurementStationCityList = new ArrayList<>();
 
-    public MeasurementStationRegion(List<MeasurementStationCity> measurementStationCityList, String name) {
+    public MeasurementStationRegion(List<CityC> measurementStationCityList, String name) {
         this.measurementStationCityList = measurementStationCityList;
         this.name = name;
     }
@@ -15,7 +15,7 @@ public class MeasurementStationRegion implements CityC{
     @Override
     public void showPollutions() {
         System.out.println("Wszystkie stacje pomiarowe w regionie: "+ name);
-        for(MeasurementStationCity measurementStationCity : measurementStationCityList){
+        for(CityC measurementStationCity : measurementStationCityList){
             measurementStationCity.showPollutions();
         }
     }

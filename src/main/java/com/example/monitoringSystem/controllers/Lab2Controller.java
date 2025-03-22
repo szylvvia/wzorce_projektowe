@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.example.monitoringSystem.lab2Patterns.adapter.*;
 import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.*;
 
+import java.sql.Time;
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -85,8 +87,27 @@ public class Lab2Controller {
         model.addAttribute("weatherReportResult", weatherReportResult);
         model.addAttribute("industrialReportResult", industrialReportResult);
 
+        //Decorator Logging and Alerts
+        // Base measurement station
+        MeasurementStation station = new BasicMeasurementStation();
+        // Alert
+        MeasurementStation fullFeatureStation = new LoggingDecorator(new AlertDecorator(station));
+        // Perform measurement and capture results
+        String measurementResults = fullFeatureStation.measure();
+        // Pass results to the HTML template
+        model.addAttribute("measurementResults", measurementResults);
+
+        // === Decorator: Autoryzacja ===
+        SensorAuth basicSensor = new BasicSensor("Temperature Sensor");
+        SensorAuth authorizedSensor = new AuthorizedSensorDecorator(basicSensor, true);
+        SensorAuth unauthorizedSensor = new AuthorizedSensorDecorator(basicSensor, false);
+
+        model.addAttribute("resultAuthorized", executeMeasurement(authorizedSensor));
+        model.addAttribute("resultUnauthorized", executeMeasurement(unauthorizedSensor));
+
         //Composite pattern
         System.out.println("--- Kompozyt 1 ---");
+
         TemperatureSensorC tempSensorC = new TemperatureSensorC("S001",21.9);
         PressureSensorC pressureSensorC = new PressureSensorC("S002", 1013.25);
         HumiditySensorC humiditySensorC = new HumiditySensorC("S003", 65.0);
@@ -107,24 +128,6 @@ public class Lab2Controller {
         String details = stationC.getDetails();
         model.addAttribute("composite1details", details);
 
-        //Decorator Logging and Alerts
-        // Base measurement station
-        MeasurementStation station = new BasicMeasurementStation();
-        // Alert
-        MeasurementStation fullFeatureStation = new LoggingDecorator(new AlertDecorator(station));
-        // Perform measurement and capture results
-        String measurementResults = fullFeatureStation.measure();
-        // Pass results to the HTML template
-        model.addAttribute("measurementResults", measurementResults);
-
-        // === Decorator: Autoryzacja ===
-        SensorAuth basicSensor = new BasicSensor("Temperature Sensor");
-        SensorAuth authorizedSensor = new AuthorizedSensorDecorator(basicSensor, true);
-        SensorAuth unauthorizedSensor = new AuthorizedSensorDecorator(basicSensor, false);
-
-        model.addAttribute("resultAuthorized", executeMeasurement(authorizedSensor));
-        model.addAttribute("resultUnauthorized", executeMeasurement(unauthorizedSensor));
-
         System.out.println("--- Kompozyt 2 ---");
         MeasurementStationCity cityStation = new MeasurementStationCity("Lublin", "medium");
         MeasurementStationCity cityStation2 = new MeasurementStationCity("Swidnik", "low");
@@ -133,11 +136,22 @@ public class Lab2Controller {
         cityStation.showPollutions();
         cityStation.setPollutionLevel("high");
 
-        List<MeasurementStationCity> lub = List.of(cityStation, cityStation2, cityStation3);
+        List<CityC> lub = List.of(cityStation, cityStation2, cityStation3);
 
         MeasurementStationRegion regionStation = new MeasurementStationRegion(lub, "Lubelskie");
         regionStation.showPollutions();
 
+        System.out.println("--- Kompozyt 3 ---");
+        Measurement measurement1 = new Measurement(LocalDate.now(), "high", "20", "60", "1013");
+        Measurement measurement2 = new Measurement(LocalDate.now().minusDays(1), "low", "25", "70", "1015");
+        Measurement measurement3 = new Measurement(LocalDate.now().minusDays(2), "medium", "22", "65", "1010");
+
+        List<TimeInterval> measurements = List.of(measurement1, measurement2);
+
+        CityMeasurementsGroup cityMeasurementsGroup = new CityMeasurementsGroup("Lublin", measurements);
+        cityMeasurementsGroup.addMeasurement(measurement3);
+
+        cityMeasurementsGroup.showMeasurement();
 
         return "lab2";
     }
