@@ -3,6 +3,9 @@ package com.example.monitoringSystem.controllers;
 import com.example.monitoringSystem.lab3Patterns.Proxy.P1.VirtualMeasuringStationProxy;
 import com.example.monitoringSystem.lab3Patterns.Proxy.P2.ProtectionMeasuringStationProxy;
 import com.example.monitoringSystem.lab3Patterns.Proxy.P3.RemoteMeasuringStationProxy;
+import com.example.monitoringSystem.lab3Patterns.facade.AlertFacade.AlertFacade;
+import com.example.monitoringSystem.lab3Patterns.facade.MeasurementFacade.MeasurementFacade;
+import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.ReportFacade;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,6 +36,25 @@ public class Lab3Controller {
         model.addAttribute("resultP2Admin", resultP2Admin);
         model.addAttribute("resultP3", resultP3);
 
+        //----Facade----//
+
+        // Report Facade
+        ReportFacade reportFacade = new ReportFacade();
+        model.addAttribute("pdfReport", reportFacade.generatePdfReport("Environmental Data"));
+        model.addAttribute("csvReport", reportFacade.generateCsvReport("Environmental Data"));
+        model.addAttribute("jsonReport", reportFacade.generateJsonReport("Environmental Data"));
+
+        // Measurement Facade
+        MeasurementFacade measurementFacade = new MeasurementFacade();
+        model.addAttribute("temperature", measurementFacade.getTemperature());
+        model.addAttribute("humidity", measurementFacade.getHumidity());
+        model.addAttribute("pressure", measurementFacade.getPressure());
+
+        // Alert Facade
+        AlertFacade alertFacade = new AlertFacade();
+        alertFacade.sendSmsAlert("Temperature too high!");
+        alertFacade.sendEmailAlert("Pressure dropping rapidly!");
+        alertFacade.sendPushNotification("Humidity level critical!");
 
 
         return "lab3";
