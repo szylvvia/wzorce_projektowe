@@ -57,6 +57,7 @@ public class Lab3Controller {
         alertFacade.sendPushNotification("Humidity level critical!");
 
 
+
         return "lab3";
     }
 }
