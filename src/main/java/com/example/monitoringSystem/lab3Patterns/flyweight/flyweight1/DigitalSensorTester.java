@@ -1,13 +1,9 @@
 package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class DigitalSensorTester {
-    private static final Logger log = LoggerFactory.getLogger(DigitalSensorTester.class);
     private List<DigitalSensor> digitalSensors = new ArrayList<>();
 
     public DigitalSensorTester()
