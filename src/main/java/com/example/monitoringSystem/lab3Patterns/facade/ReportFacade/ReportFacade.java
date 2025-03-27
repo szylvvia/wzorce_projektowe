@@ -1,25 +1,31 @@
 package com.example.monitoringSystem.lab3Patterns.facade.ReportFacade;
 
 public class ReportFacade {
-    private final ReportGeneratorF pdfGenerator;
-    private final ReportGeneratorF csvGenerator;
-    private final ReportGeneratorF jsonGenerator;
+    private final DatabaseService airQualityDatabase;
+    private final DatabaseService temperatureDatabase;
+    private final DatabaseService noiseLevelDatabase;
+    private final ReportGeneratorF reportGenerator;
 
-    public ReportFacade() {
-        this.pdfGenerator = new PdfReportGeneratorF();
-        this.csvGenerator = new CsvReportGeneratorF();
-        this.jsonGenerator = new JsonReportGeneratorF();
+    public ReportFacade(ReportGeneratorF reportGenerator) {
+        this.airQualityDatabase = new AirQualityDatabase();
+        this.temperatureDatabase = new TemperatureDatabase();
+        this.noiseLevelDatabase = new NoiseLevelDatabase();
+        this.reportGenerator = reportGenerator;
     }
 
-    public String generatePdfReport(String data) {
-        return pdfGenerator.generateReport(data);
-    }
+    public String generateEnvironmentalReport() {
+        // Pobieramy dane z trzech różnych źródeł
+        String airQualityData = airQualityDatabase.getData();
+        String temperatureData = temperatureDatabase.getData();
+        String noiseLevelData = noiseLevelDatabase.getData();
 
-    public String generateCsvReport(String data) {
-        return csvGenerator.generateReport(data);
-    }
+        // Łączymy dane w jeden, spójny raport
+        String combinedData = "Environmental Data Report:\n" +
+                "Air Quality: " + airQualityData + "\n" +
+                "Temperature: " + temperatureData + "\n" +
+                "Noise Level: " + noiseLevelData;
 
-    public String generateJsonReport(String data) {
-        return jsonGenerator.generateReport(data);
+        // Używamy generatora raportów do przetworzenia połączonych danych
+        return reportGenerator.generateReport(combinedData);
     }
 }

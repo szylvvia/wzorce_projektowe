@@ -19,9 +19,12 @@
 <p th:text="${resultP3}"></p>
 
 <h2>Report Facade</h2>
-<p>PDF Report: <span th:text="${pdfReport}"></span></p>
-<p>CSV Report: <span th:text="${csvReport}"></span></p>
-<p>JSON Report: <span th:text="${jsonReport}"></span></p>
+<p><strong>PDF Report:</strong></p>
+<pre th:text="${pdfReport}"></pre>
+<p><strong>CSV Report:</strong></p>
+<pre th:text="${csvReport}"></pre>
+<p><strong>JSON Report:</strong></p>
+<pre th:text="${jsonReport}"></pre>
 
 <h2>Measurement Facade</h2>
 <p>Temperature: <span th:text="${temperature}"></span> °C</p>
