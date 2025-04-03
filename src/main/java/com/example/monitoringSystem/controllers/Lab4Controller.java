@@ -1,12 +1,25 @@
 package com.example.monitoringSystem.controllers;
 
 import com.example.monitoringSystem.lab4Patterns.command.*;
+// Mediator Calibration
+import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertMediatorImpl;
+import com.example.monitoringSystem.lab4Patterns.mediator.alert.SensorComponentA;
+import com.example.monitoringSystem.lab4Patterns.mediator.calibration.CalibrationMediatorImpl;
+import com.example.monitoringSystem.lab4Patterns.mediator.calibration.SensorComponentC;
+import com.example.monitoringSystem.lab4Patterns.mediator.station.SensorComponentS;
+import com.example.monitoringSystem.lab4Patterns.mediator.station.StationMediatorImpl;
+
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertSystem;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorCalibrationCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorM;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.MeasuringStationM;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.StateHistoryCaretaker;
+// Iterator imports
+import com.example.monitoringSystem.lab4Patterns.iterator.SensorData;
+import com.example.monitoringSystem.lab4Patterns.iterator.CalibrationHistory;
+import com.example.monitoringSystem.lab4Patterns.iterator.AlertHistory;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -69,6 +82,59 @@ public class Lab4Controller {
 
         alertSystem.restoreLastAlert(alertCaretaker.restoreAlert());
         alertSystem.restoreLastAlert(alertCaretaker.restoreAlert());
+
+        System.out.println("\n=== Iterator Patterns ===");
+
+        SensorData data = new SensorData();
+        data.addMeasurement(23.5);
+        data.addMeasurement(26.1);
+        data.addMeasurement(22.8);
+
+        for (double val : data) {
+            System.out.println("Sensor measurement: " + val);
+        }
+
+        CalibrationHistory calibHist = new CalibrationHistory();
+        calibHist.addCalibration(1.1);
+        calibHist.addCalibration(1.2);
+        calibHist.addCalibration(1.3);
+
+        calibHist.getIterator().forEachRemaining(val ->
+                System.out.println("Calibration history: " + val)
+        );
+
+        AlertHistory alertHist = new AlertHistory();
+        alertHist.addAlert("Overheating");
+        alertHist.addAlert("Low Battery");
+
+        for (String alert : alertHist) {
+            System.out.println("Alert history: " + alert);
+        }
+
+        System.out.println("\n=== Testing Mediator Pattern - Calibration ===");
+
+        CalibrationMediatorImpl calibMediator = new CalibrationMediatorImpl();
+        var calibSensor = new SensorComponentC(calibMediator);
+        var calibStation = new com.example.monitoringSystem.lab4Patterns.mediator.calibration.StationComponent(calibMediator);
+        calibMediator.registerComponents(calibSensor, calibStation);
+        calibStation.startCalibration();
+
+        System.out.println("\n=== Testing Mediator Pattern - Station ===");
+
+        StationMediatorImpl stationMediator = new StationMediatorImpl();
+        var stationSensor = new SensorComponentS(stationMediator);
+        var controller = new com.example.monitoringSystem.lab4Patterns.mediator.station.ControllerComponent(stationMediator);
+        stationMediator.register(stationSensor, controller);
+        stationSensor.detect();
+
+        System.out.println("\n=== Testing Mediator Pattern - Alert ===");
+
+        AlertMediatorImpl alertMediator = new AlertMediatorImpl();
+        var alertSensor = new SensorComponentA(alertMediator);
+        var alertComponent = new com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertComponent(alertMediator);
+        alertMediator.register(alertSensor, alertComponent);
+        alertSensor.readTemperature(105);
+
 
         return "lab4";
     }
