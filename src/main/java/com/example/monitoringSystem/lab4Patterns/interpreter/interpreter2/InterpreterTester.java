@@ -39,5 +39,14 @@ public class InterpreterTester {
         String noneResult = noneExp.interpret(data, "2025-04-04");
         System.out.println(noneResult);
 
+        AbstractExpression condition = new OrAnomalyChecker(
+                new HumidityInterpreter(10.0),
+                new TemperatureInterpreter(7),
+                new PressureInterpreter(1010.0));
+
+        String conditionResult = condition.interpret(data, "2025-04-01");
+        System.out.println(conditionResult);
+
     }
+
 }
