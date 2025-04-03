@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter3;
 
 import com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2.EnvironmentData;
 
+import java.beans.Expression;
 import java.util.List;
 import java.util.Map;
 
@@ -36,5 +37,11 @@ public class InterpreterTester {
         AbstractExpression pressureExp = new PressureAnomalyChecker(0);
         boolean pressureResult = pressureExp.interpret(data, "2025-04-03");
         System.out.println("Pressure Anomaly: " + pressureResult);
+
+        AbstractExpression condition = new AnomalyChecker(
+                new HumidityAnomalyChecker(10),
+                new TemperatureAnomalyChecker(7));
+        boolean conditionResult = condition.interpret(data, "2025-04-01");
+        System.out.println("Condition Anomaly: " + conditionResult);
     }
 }
