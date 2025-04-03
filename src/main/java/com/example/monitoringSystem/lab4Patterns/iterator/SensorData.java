@@ -1,18 +1,16 @@
 package com.example.monitoringSystem.lab4Patterns.iterator;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-public class SensorData implements Iterable<Double> {
-    private List<Double> measurements = new ArrayList<>();
+public class SensorData {
+    private double[] measurements = new double[100];
+    private int index = 0;
 
     public void addMeasurement(double value) {
-        measurements.add(value);
+        if (index < measurements.length) {
+            measurements[index++] = value;
+        }
     }
 
-    @Override
-    public Iterator<Double> iterator() {
-        return measurements.iterator();
+    public MyIterator<Double> createIterator() {
+        return new SensorDataIterator(measurements, index);
     }
 }

@@ -1,16 +1,16 @@
 package com.example.monitoringSystem.lab4Patterns.iterator;
 
-import java.util.LinkedList;
-import java.util.Iterator;
-
 public class CalibrationHistory {
-    private LinkedList<Double> history = new LinkedList<>();
+    private double[] history = new double[50];
+    private int index = 0;
 
     public void addCalibration(double value) {
-        history.add(value);
+        if (index < history.length) {
+            history[index++] = value;
+        }
     }
 
-    public Iterator<Double> getIterator() {
-        return history.iterator();
+    public MyIterator<Double> createIterator() {
+        return new CalibrationHistoryIterator(history, index);
     }
 }

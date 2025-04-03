@@ -1,19 +1,16 @@
 package com.example.monitoringSystem.lab4Patterns.iterator;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
-public class AlertHistory implements Iterable<String> {
-    private List<String> alerts = new ArrayList<>();
+public class AlertHistory {
+    private String[] alerts = new String[50];
+    private int count = 0;
 
     public void addAlert(String alert) {
-        alerts.add(alert);
+        if (count < alerts.length) {
+            alerts[count++] = alert;
+        }
     }
 
-    @Override
-    public Iterator<String> iterator() {
-        return alerts.iterator();
+    public MyIterator<String> createIterator() {
+        return new AlertHistoryIterator(alerts, count);
     }
 }
-

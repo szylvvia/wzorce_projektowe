@@ -2,6 +2,7 @@ package com.example.monitoringSystem.controllers;
 
 import com.example.monitoringSystem.lab4Patterns.command.*;
 // Mediator Calibration
+import com.example.monitoringSystem.lab4Patterns.iterator.MyIterator;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertMediatorImpl;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.SensorComponentA;
 import com.example.monitoringSystem.lab4Patterns.mediator.calibration.CalibrationMediatorImpl;
@@ -90,8 +91,9 @@ public class Lab4Controller {
         data.addMeasurement(26.1);
         data.addMeasurement(22.8);
 
-        for (double val : data) {
-            System.out.println("Sensor measurement: " + val);
+        MyIterator<Double> sensorIterator = data.createIterator();
+        while (sensorIterator.hasNext()) {
+            System.out.println("Sensor measurement: " + sensorIterator.next());
         }
 
         CalibrationHistory calibHist = new CalibrationHistory();
@@ -99,17 +101,20 @@ public class Lab4Controller {
         calibHist.addCalibration(1.2);
         calibHist.addCalibration(1.3);
 
-        calibHist.getIterator().forEachRemaining(val ->
-                System.out.println("Calibration history: " + val)
-        );
+        MyIterator<Double> calibIterator = calibHist.createIterator();
+        while (calibIterator.hasNext()) {
+            System.out.println("Calibration history: " + calibIterator.next());
+        }
 
         AlertHistory alertHist = new AlertHistory();
         alertHist.addAlert("Overheating");
         alertHist.addAlert("Low Battery");
 
-        for (String alert : alertHist) {
-            System.out.println("Alert history: " + alert);
+        MyIterator<String> alertIterator = alertHist.createIterator();
+        while (alertIterator.hasNext()) {
+            System.out.println("Alert history: " + alertIterator.next());
         }
+
 
         System.out.println("\n=== Testing Mediator Pattern - Calibration ===");
 
