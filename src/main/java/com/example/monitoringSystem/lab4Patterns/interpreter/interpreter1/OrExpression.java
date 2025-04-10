@@ -16,7 +16,6 @@ public class OrExpression implements AbstractExpression {
     public List<Double> interpret(Context context) {
         List<Double> leftResult = new ArrayList<>(left.interpret(context));
         List<Double> rightResult = new ArrayList<>(right.interpret(context));
-
         leftResult.addAll(rightResult);
         return leftResult;
     }
