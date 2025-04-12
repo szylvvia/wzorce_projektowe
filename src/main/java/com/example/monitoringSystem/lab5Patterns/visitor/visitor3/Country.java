@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
-public class Country implements AlertVisitable {
+class Country implements AlertVisitable {
     private String name;
     private String alertLevel;
     private String dangerousLevel = "Low";

@@ -25,7 +25,6 @@ public class Department implements AlertVisitable {
         return name;
     }
 
-
     @Override
     public String accept(AlertVisitor alertVisitor) {
         return alertVisitor.visit(this);

@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
-public class AlertImpl implements AlertVisitor {
+class AlertImpl implements AlertVisitor {
 
     @Override
     public String visit(Country countryStation) {

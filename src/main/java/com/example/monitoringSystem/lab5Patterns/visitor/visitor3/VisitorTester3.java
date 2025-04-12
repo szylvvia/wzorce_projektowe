@@ -1,9 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
-import com.example.monitoringSystem.lab5Patterns.visitor.visitor2.SeaStation;
-import com.example.monitoringSystem.lab5Patterns.visitor.visitor2.UrbanStation;
-
-public class VisitorTester {
+public class VisitorTester3 {
     public static void main(String[] args) {
 
         AlertVisitable[] objects = new AlertVisitable[]{

@@ -2,7 +2,7 @@ package com.example.monitoringSystem.lab5Patterns.visitor.visitor2;
 
 import java.util.Map;
 
-public class VisitorTester {
+public class VisitorTester2 {
     public static void main(String[] args) {
         DataAnalyzeVisitable [] stations = new DataAnalyzeVisitable[]{
                 new UrbanStation("New York", Map.of("Temperature", 25.0, "Humidity", 60.0, "Air Quality", 50.0, "Pressure", 1012.0)),

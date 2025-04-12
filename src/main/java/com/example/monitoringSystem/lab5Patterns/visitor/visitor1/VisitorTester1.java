@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor1;
 
-public class VisitorTester {
+public class VisitorTester1 {
 
     public static void main(String[] args) {
 
