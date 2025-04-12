@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor1;
 
-public class CityVisitorImpl implements StationVisitor{
+class CityVisitorImpl implements StationVisitor{
 
     @Override
     public String visit(CityStation cityStation) {
