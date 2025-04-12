@@ -2,7 +2,6 @@ package com.example.monitoringSystem.lab5Patterns.template.template1;
 
 public class TemplateTester {
     public static void main(String[] args) {
-
         // Przykładowe dane do testowania
         String cityTypeMeasurement = "Temperatura";
         String cityLocation = "Warszawa";

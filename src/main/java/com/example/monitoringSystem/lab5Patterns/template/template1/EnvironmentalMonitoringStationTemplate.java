@@ -18,8 +18,8 @@ abstract class EnvironmentalMonitoringStationTemplate {
         System.out.println("-> Wysyłanie danych do serwera");
     }
 
-    public void turnOnSensors(String type, String location){}
-    public void calibrateSensors(Integer resolution){}
-    public void collectData(Integer interval){}
-    public void turnOffSensors(String type, String location){}
+    public abstract void turnOnSensors(String type, String location);
+    public abstract void calibrateSensors(Integer resolution);
+    public abstract void collectData(Integer interval);
+    public abstract void turnOffSensors(String type, String location);
 }
