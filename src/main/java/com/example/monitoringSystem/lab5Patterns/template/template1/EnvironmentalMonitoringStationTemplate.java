@@ -18,6 +18,7 @@ abstract class EnvironmentalMonitoringStationTemplate {
         System.out.println("-> Wysyłanie danych do serwera");
     }
 
+    // Abstract methods to be implemented by subclasses
     public abstract void turnOnSensors(String type, String location);
     public abstract void calibrateSensors(Integer resolution);
     public abstract void collectData(Integer interval);
