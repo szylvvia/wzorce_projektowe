@@ -1,14 +1,27 @@
 package com.example.monitoringSystem.lab2Patterns.adapter;
 
-public class MmHgPressureAdapter implements PressureAdapter {
-    private final PressureSensor sensor;
+// odpowiedzialność: tylko konwersja ciśnienia
+public class MmHgPressureAdapter {
+    private final double hpa;
 
-    public MmHgPressureAdapter(PressureSensor sensor) {
-        this.sensor = sensor;
+    public MmHgPressureAdapter(double hpa) {
+        this.hpa = hpa;
     }
 
-    public double getPressure() {
-        return sensor.getPressure() * 0.750062;
+    public double toMmHg() {
+        return hpa * 0.75006;
     }
 }
+
+//public class MmHgPressureAdapter implements PressureAdapter {
+//    private final PressureSensor sensor;
+//
+//    public MmHgPressureAdapter(PressureSensor sensor) {
+//        this.sensor = sensor;
+//    }
+//
+//    public double getPressure() {
+//        return sensor.getPressure() * 0.750062;
+//    }
+//}
 

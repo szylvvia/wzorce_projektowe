@@ -38,20 +38,20 @@ public class Lab2Controller {
         // === Adapter Pattern ===
 
         // Adapter - konwersja temperatury
-        com.example.monitoringSystem.lab2Patterns.adapter.TemperatureSensor celsiusSensor = new CelsiusSensor();
-        TemperatureUnitAdapter tempAdapter = new TemperatureUnitAdapter(celsiusSensor);
-        double fahrenheitTemp = tempAdapter.getTemperatureInFahrenheit();
-        double kelvinTemp = tempAdapter.getTemperatureInKelvin();
+        TemperatureSensor celsiusSensor = new CelsiusSensor();
+        TemperatureUnitAdapter tempAdapter = new TemperatureUnitAdapter(celsiusSensor.getTemperature());
+        double fahrenheitTemp = tempAdapter.toFahrenheit();
+        double kelvinTemp = tempAdapter.toKelvin();
 
         // Adapter - konwersja prędkości wiatru
-        WindSpeedSensor windSensor = new KmphWindSensor();
-        WindSpeedAdapter windAdapter = new MphWindAdapter(windSensor);
-        double mphWindSpeed = windAdapter.getSpeed();
+        KmphWindSensor windSensor = new KmphWindSensor();
+        MphWindAdapter windAdapter = new MphWindAdapter(windSensor.getspeed());
+        double mphWindSpeed = windAdapter.toMph();
 
         // Adapter - konwersja ciśnienia
-        PressureSensor pressureSensor = new HpaPressureSensor();
-        PressureAdapter pressureAdapter = new MmHgPressureAdapter(pressureSensor);
-        double mmHgPressure = pressureAdapter.getPressure();
+        HpaPressureSensor pressureSensor = new HpaPressureSensor();
+        MmHgPressureAdapter pressureAdapter = new MmHgPressureAdapter(pressureSensor.getPressure());
+        double mmHgPressure = pressureAdapter.toMmHg();
 
         // Przekazanie danych do widoku
         model.addAttribute("fahrenheitTemp", fahrenheitTemp);
