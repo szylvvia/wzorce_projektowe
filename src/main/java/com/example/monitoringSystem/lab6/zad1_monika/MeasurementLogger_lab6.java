@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab6;
+package com.example.monitoringSystem.lab6.zad1_monika;
 
 import java.io.FileWriter;
 import java.io.IOException;
