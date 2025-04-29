@@ -4,5 +4,4 @@ public interface ISensorController {
     void turnOn();
     void turnOff();
     void reset();
-
 }

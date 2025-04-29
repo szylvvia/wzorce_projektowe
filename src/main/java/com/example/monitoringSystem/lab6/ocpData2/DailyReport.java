@@ -18,6 +18,7 @@ public class DailyReport implements IReport {
                 "Wind Speed", Math.random() * 20
         );
     }
+
     @Override
     public void generateReport() {
         System.out.println("[REPORT] Daily Report for " + reportDate);

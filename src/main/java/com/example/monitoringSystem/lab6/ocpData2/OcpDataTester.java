@@ -13,9 +13,8 @@ public class OcpDataTester {
            new AglomerationCity("Kraków")
         );
 
-        for (ICity city : cities) {
-            city.checkWeather();
-        }
+        OcpCity ocpCity = new OcpCity();
+        ocpCity.checkWeatherInAllCities(cities);
 
         System.out.println("-------------------------------------------------");
 
@@ -27,9 +26,8 @@ public class OcpDataTester {
             new AirQualitySensor("K-002")
         );
 
-        for (ISensor sensor : sensors) {
-            sensor.readMeasurement();
-        }
+        OcpSensor ocpSensor = new OcpSensor();
+        ocpSensor.readMeasurementFromAllSensors(sensors);
 
         System.out.println("-------------------------------------------------");
 
@@ -42,8 +40,7 @@ public class OcpDataTester {
                 new MonthlyReport("2023-11")
         );
 
-        for (IReport report : reports) {
-            report.generateReport();
-        }
+        OcpReport ocpReport = new OcpReport();
+        ocpReport.generateAllReports(reports);
     }
 }
