@@ -8,9 +8,9 @@ public class OcpDataTester {
         List<ICity> cities = List.of(
            new CapitalCity("Warszawa"),
            new CapitalCity("Budapest"),
+           new CapitalCity("Praga"),
            new AglomerationCity("Trojmiasto"),
-           new AglomerationCity("Kraków"),
-           new CapitalCity("Praga")
+           new AglomerationCity("Kraków")
         );
 
         for (ICity city : cities) {
@@ -21,10 +21,10 @@ public class OcpDataTester {
 
         List<ISensor> sensors = List.of(
             new GrassPollenSensor("W-001"),
-            new AirQualitySensor("T-112"),
             new GrassPollenSensor("B-009"),
-            new AirQualitySensor("K-002"),
-            new GrassPollenSensor("P-542")
+            new GrassPollenSensor("P-542"),
+            new AirQualitySensor("T-112"),
+            new AirQualitySensor("K-002")
         );
 
         for (ISensor sensor : sensors) {
@@ -36,9 +36,9 @@ public class OcpDataTester {
         List<IReport> reports = List.of(new DailyReport("2023-10-01"),
                 new DailyReport("2023-10-02"),
                 new DailyReport("2023-10-03"),
+                new DailyReport("2023-10-04"),
                 new MonthlyReport("2023-10"),
-                new MonthlyReport("2023-11"),
-                new DailyReport("2023-10-04")
+                new MonthlyReport("2023-11")
         );
 
         for (IReport report : reports) {
