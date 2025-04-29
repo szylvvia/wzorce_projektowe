@@ -33,7 +33,8 @@ public class OcpDataTester {
 
         System.out.println("-------------------------------------------------");
 
-        List<IReport> reports = List.of(new DailyReport("2023-10-01"),
+        List<IReport> reports = List.of(
+                new DailyReport("2023-10-01"),
                 new DailyReport("2023-10-02"),
                 new DailyReport("2023-10-03"),
                 new DailyReport("2023-10-04"),
