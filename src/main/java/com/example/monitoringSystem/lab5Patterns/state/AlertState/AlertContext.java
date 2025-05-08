@@ -1,6 +1,7 @@
 package com.example.monitoringSystem.lab5Patterns.state.AlertState;
 
-public class AlertContext {
+public class
+AlertContext {
     private AlertState currentAlertState;
 
     public void setAlertState(AlertState state) {
