@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab7.LiskoM;
+package com.example.monitoringSystem.lab7.liskov.liskovM;
 
 public class FileLogger7 extends DataLogger7 {
     @Override

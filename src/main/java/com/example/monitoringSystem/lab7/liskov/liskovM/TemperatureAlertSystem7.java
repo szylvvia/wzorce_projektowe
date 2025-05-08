@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab7.LiskoM;
+package com.example.monitoringSystem.lab7.liskov.liskovM;
 
 public class TemperatureAlertSystem7  extends AlertSystem7 {
     @Override
