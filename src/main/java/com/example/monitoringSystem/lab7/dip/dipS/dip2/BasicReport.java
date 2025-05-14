@@ -9,7 +9,7 @@ public class BasicReport extends ReportGenerator {
     @Override
     public void generateReport(String title, String date) {
         Double data = report.getDataToReport();
-        System.out.println("Generating basic report...");
+        System.out.println("Generowanie podstawowego raportu...");
         System.out.println(title+" | "+date+" | wartosc: "+data);
     }
 }

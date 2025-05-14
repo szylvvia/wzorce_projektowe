@@ -8,6 +8,6 @@ public class CostalCity extends City {
 
     @Override
     public void updateWeather() {
-        System.out.println("[COSTAL] Updated weather in " + getName() + "....");
+        System.out.println("[COSTAL] Zaktualizowanie pogody w mieście nadmorskim: " + getName());
     }
 }

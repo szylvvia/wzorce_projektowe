@@ -8,13 +8,13 @@ public class MonthlyReport extends Report {
 
     @Override
     void generateReport() {
-        System.out.println("[MONTHLY] Generating report...");
-        System.out.println("Date: " + getDate());
-        System.out.println("Author: " + getAuthor());
+        System.out.println("[MONTHLY] Generowanie raportu...");
+        System.out.println("Data: " + getDate());
+        System.out.println("Autor: " + getAuthor());
     }
 
     @Override
     void saveReport() {
-        System.out.println("[MONTHLY] Saving report...");
+        System.out.println("[MONTHLY] Zapisanie raportu...");
     }
 }

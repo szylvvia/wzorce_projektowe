@@ -8,7 +8,7 @@ public class City {
     }
 
     public void updateWeather() {
-        System.out.println("Updated weather in " + name + "....");
+        System.out.println("Zaktualizowanie pogody w mieście: " + name);
     }
 
     public String getName() {

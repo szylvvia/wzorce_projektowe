@@ -8,7 +8,7 @@ public class IndustrialCity extends City {
 
     @Override
     public void updateWeather() {
-        System.out.println("[INDUSTRIAL] Updated weather in " + getName() + "....");
+        System.out.println("[INDUSTRIAL] Zaktualizowanie pogody w mieście przemysłowym: " + getName());
     }
 
 }

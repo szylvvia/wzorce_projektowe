@@ -15,9 +15,9 @@ public class TemperatureStatistic extends Statistic{
     @Override
     void printMessageAboutStatistic() {
         if (isCritical()) {
-            System.out.println("[CRITICAL TEMPERATURE] Temperature is above threshold!");
+            System.out.println("[CRITICAL TEMPERATURE] Krytyczny poziom temperatury! Temperatura przekracza próg!");
         } else {
-            System.out.println("[OK TEMPERATURE ] Temperature is within the threshold.");
+            System.out.println("[OK TEMPERATURE ] Temperatura w normie.");
         }
     }
 

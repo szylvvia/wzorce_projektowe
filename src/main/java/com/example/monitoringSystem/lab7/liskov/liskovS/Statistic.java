@@ -51,9 +51,9 @@ public class Statistic {
 
     void printMessageAboutStatistic() {
         if (isCritical()) {
-            System.out.println("[CRITICAL] Statistic value is above threshold!");
+            System.out.println("[CRITICAL] Ktrytyczny poziom statystyki! Przekracza próg!");
         } else {
-            System.out.println("[OK] Statistic value is within the threshold.");
+            System.out.println("[OK] Statystyka w normie.");
         }
     }
 }

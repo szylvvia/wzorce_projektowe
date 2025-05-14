@@ -8,13 +8,13 @@ public class DailyReport extends Report {
 
     @Override
     void generateReport() {
-        System.out.println("[DAILY] Generating report...");
-        System.out.println("Date: " + getDate());
-        System.out.println("Author: " + getAuthor());
+        System.out.println("[DAILY] Generowanie raportu...");
+        System.out.println("Data: " + getDate());
+        System.out.println("Autor: " + getAuthor());
     }
 
     @Override
     void saveReport() {
-        System.out.println("[DAILY] Saving report...");
+        System.out.println("[DAILY] Zapisanie raportu...");
     }
 }

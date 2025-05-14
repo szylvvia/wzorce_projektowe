@@ -10,13 +10,13 @@ public class Report {
     }
 
     void generateReport() {
-        System.out.println("Generating report...");
-        System.out.println("Date: " + date);
-        System.out.println("Author: " + author);
+        System.out.println("Generowanie raportu...");
+        System.out.println("Data: " + date);
+        System.out.println("Autor: " + author);
     }
 
     void saveReport() {
-        System.out.println("Saving report..."+ date);
+        System.out.println("Zapisanie raportu...");
     }
 
     public String getDate() {

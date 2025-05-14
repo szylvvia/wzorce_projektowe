@@ -16,9 +16,9 @@ public class PressureStatistic extends Statistic {
     @Override
     void printMessageAboutStatistic() {
         if (isCritical()) {
-            System.out.println("[CRITICAL PRESSURE] Pressure is above threshold or maximum pressure is above threshold!");
+            System.out.println("[CRITICAL PRESSURE] Krytyczny poziom ciśnienia! Ciśnienie przekracza próg!");
         } else {
-            System.out.println("[OK PRESSURE] Pressure is within the threshold.");
+            System.out.println("[OK PRESSURE] Ciśnienie w normie.");
         }
     }
 }
