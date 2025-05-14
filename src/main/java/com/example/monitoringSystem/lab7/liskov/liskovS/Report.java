@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab7.liskov.liskovS.liskov1;
+package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 public class Report {
     String date;
