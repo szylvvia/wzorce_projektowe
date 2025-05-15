@@ -3,10 +3,13 @@ package com.example.monitoringSystem.controllers;
 // Mediator Calibration
 import com.example.monitoringSystem.lab4Patterns.command.*;
 import com.example.monitoringSystem.lab4Patterns.iterator.MyIterator;
+import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertComponent;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertMediatorImpl;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.SensorComponentAlert;
 import com.example.monitoringSystem.lab4Patterns.mediator.calibration.CalibrationMediatorImpl;
 import com.example.monitoringSystem.lab4Patterns.mediator.calibration.SensorComponentCalibration;
+import com.example.monitoringSystem.lab4Patterns.mediator.calibration.StationComponent;
+import com.example.monitoringSystem.lab4Patterns.mediator.station.ControllerComponent;
 import com.example.monitoringSystem.lab4Patterns.mediator.station.SensorComponentStation;
 import com.example.monitoringSystem.lab4Patterns.mediator.station.StationMediatorImpl;
 
@@ -62,10 +65,12 @@ public class Lab4Controller {
         SensorMemento sensor = new SensorMemento();
         SensorCalibrationCaretaker sensorCaretaker = new SensorCalibrationCaretaker();
 
-        sensor.setCalibration(1.5);
+        double basicCalibrationForSensor = 1.5;
+        sensor.setCalibration(basicCalibrationForSensor);
         sensorCaretaker.saveCalibration(sensor.saveCalibration());
 
-        sensor.setCalibration(2.0);
+        double adjustedCalibrationForSensor = 2.0;
+        sensor.setCalibration(adjustedCalibrationForSensor);
         sensorCaretaker.saveCalibration(sensor.saveCalibration());
 
         sensor.restoreCalibration(sensorCaretaker.restoreCalibration());
@@ -87,23 +92,31 @@ public class Lab4Controller {
         System.out.println("\n=== Iterator Patterns ===");
 
         SensorData data = new SensorData();
-        data.addMeasurement(23.5);
-        data.addMeasurement(26.1);
-        data.addMeasurement(22.8);
+
+        double valueFromSensorMorning = 22.5;
+        double valueFromSensorAfternoon = 25.0;
+        double valueFromSensorEvening = 20.0;
+
+        data.addMeasurement(valueFromSensorMorning);
+        data.addMeasurement(valueFromSensorAfternoon);
+        data.addMeasurement(valueFromSensorEvening);
 
         MyIterator<Double> sensorIterator = data.createIterator();
         while (sensorIterator.hasNext()) {
             System.out.println("Sensor measurement: " + sensorIterator.next());
         }
 
-        CalibrationHistory calibHist = new CalibrationHistory();
-        calibHist.addCalibration(1.1);
-        calibHist.addCalibration(1.2);
-        calibHist.addCalibration(1.3);
+        CalibrationHistory calibrationHistory = new CalibrationHistory();
 
-        MyIterator<Double> calibIterator = calibHist.createIterator();
-        while (calibIterator.hasNext()) {
-            System.out.println("Calibration history: " + calibIterator.next());
+        double advancedCalibrationForSensor = 3.0;
+
+        calibrationHistory.addCalibration(basicCalibrationForSensor);
+        calibrationHistory.addCalibration(adjustedCalibrationForSensor);
+        calibrationHistory.addCalibration(advancedCalibrationForSensor);
+
+        MyIterator<Double> calibrationHistoryIterator = calibrationHistory.createIterator();
+        while (calibrationHistoryIterator.hasNext()) {
+            System.out.println("Calibration history: " + calibrationHistoryIterator.next());
         }
 
         AlertHistory alertHist = new AlertHistory();
@@ -118,28 +131,29 @@ public class Lab4Controller {
 
         System.out.println("\n=== Testing Mediator Pattern - Calibration ===");
 
-        CalibrationMediatorImpl calibMediator = new CalibrationMediatorImpl();
-        var calibSensor = new SensorComponentCalibration(calibMediator);
-        var calibStation = new com.example.monitoringSystem.lab4Patterns.mediator.calibration.StationComponent(calibMediator);
-        calibMediator.registerComponents(calibSensor, calibStation);
-        calibStation.startCalibration();
+        CalibrationMediatorImpl calibrationMediator = new CalibrationMediatorImpl();
+        var sensorComponentCalibration = new SensorComponentCalibration(calibrationMediator);
+        var stationComponent = new StationComponent(calibrationMediator);
+        calibrationMediator.registerComponents(sensorComponentCalibration, stationComponent);
+        stationComponent.startCalibration();
 
         System.out.println("\n=== Testing Mediator Pattern - Station ===");
 
         StationMediatorImpl stationMediator = new StationMediatorImpl();
         var stationSensor = new SensorComponentStation(stationMediator);
-        var controller = new com.example.monitoringSystem.lab4Patterns.mediator.station.ControllerComponent(stationMediator);
-        stationMediator.register(stationSensor, controller);
+        var controllerComponent = new ControllerComponent(stationMediator);
+        stationMediator.register(stationSensor, controllerComponent);
         stationSensor.detect();
 
         System.out.println("\n=== Testing Mediator Pattern - Alert ===");
 
         AlertMediatorImpl alertMediator = new AlertMediatorImpl();
         var alertSensor = new SensorComponentAlert(alertMediator);
-        var alertComponent = new com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertComponent(alertMediator);
+        var alertComponent = new AlertComponent(alertMediator);
         alertMediator.register(alertSensor, alertComponent);
-        alertSensor.readTemperature(105);
 
+        int temperatureValueForAlert = 100;
+        alertSensor.readTemperature(temperatureValueForAlert);
 
         return "lab4";
     }
