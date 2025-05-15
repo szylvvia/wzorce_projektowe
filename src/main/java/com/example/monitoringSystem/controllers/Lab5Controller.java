@@ -21,7 +21,12 @@ public class Lab5Controller {
         station.registerObserver(new HumidityObserver());
 
         // Simulate new measurement
-        station.setMeasurements(23.5f, 1013.25f, 55.0f);
+
+        float temperatureFromStation = 23.5f;
+        float pressureFromStation = 1013.25f;
+        float humidityFromStation = 55.0f;
+
+        station.setMeasurements(temperatureFromStation, pressureFromStation, humidityFromStation);
 
         return "lab5";
     }
