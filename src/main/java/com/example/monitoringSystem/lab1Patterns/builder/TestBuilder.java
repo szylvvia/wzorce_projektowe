@@ -4,10 +4,14 @@ public class TestBuilder {
     public static void main(String[] args) {
         MeasuringStation station = new MeasuringStation.StationBuilder("Station A", "New York").build();
 
+        double pressureForReport = 1013.25;
+        double temperatureForReport = 22.5;
+        double humidityForReport = 65.0;
+
         Report report = new Report.ReportBuilder("2025-03-12", "New York", "Daily Report", station.name)
-                .setPressure(1013.25)
-                .setTemperature(22.5)
-                .setHumidity(65.0)
+                .setPressure(pressureForReport)
+                .setTemperature(temperatureForReport)
+                .setHumidity(humidityForReport)
                 .build();
 
         Notification notification = new Notification.NotificationBuilder("New report available for Station A").build();
