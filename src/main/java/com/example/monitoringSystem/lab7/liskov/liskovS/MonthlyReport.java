@@ -6,6 +6,7 @@ public class MonthlyReport extends Report {
         super(date, author);
     }
 
+
     @Override
     void generateReport() {
         System.out.println("[MONTHLY] Generowanie raportu...");
