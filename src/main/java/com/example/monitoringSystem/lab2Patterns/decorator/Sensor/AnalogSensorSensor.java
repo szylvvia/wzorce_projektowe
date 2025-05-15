@@ -1,9 +1,9 @@
 package com.example.monitoringSystem.lab2Patterns.decorator.Sensor;
 
-public class AnalogSensor extends SensorDecorator {
+public class AnalogSensorSensor extends SensorSensorDecorator {
 
-    public AnalogSensor(SensorD sensorD) {
-        super(sensorD);
+    public AnalogSensorSensor(SensorSensor sensorSensor) {
+        super(sensorSensor);
     }
 
     @Override

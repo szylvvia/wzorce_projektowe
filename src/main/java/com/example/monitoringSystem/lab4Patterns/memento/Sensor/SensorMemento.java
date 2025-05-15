@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab4Patterns.memento.Sensor;
 
-public class SensorM {
+public class SensorMemento {
     private double calibrationValue;
 
     public void setCalibration(double value) {

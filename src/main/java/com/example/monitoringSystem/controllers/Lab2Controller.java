@@ -8,15 +8,15 @@ import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.Tem
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.*;
 
 import com.example.monitoringSystem.lab2Patterns.composite.*;
-import com.example.monitoringSystem.lab2Patterns.decorator.Alart.AlertDecorator;
-import com.example.monitoringSystem.lab2Patterns.decorator.Alart.BasicMeasurementStation;
-import com.example.monitoringSystem.lab2Patterns.decorator.Alart.LoggingDecorator;
+import com.example.monitoringSystem.lab2Patterns.decorator.Alert.AlertDecorator;
+import com.example.monitoringSystem.lab2Patterns.decorator.Alert.BasicMeasurementStation;
+import com.example.monitoringSystem.lab2Patterns.decorator.Alert.LoggingDecorator;
 
-import com.example.monitoringSystem.lab2Patterns.decorator.Alart.MeasurementStation;
-import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AllPurposeSensor;
-import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AnalogSensor;
-import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.DigitalSensor;
-import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.SensorD;
+import com.example.monitoringSystem.lab2Patterns.decorator.Alert.MeasurementStation;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AllPurposeSensorSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AnalogSensorSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.DigitalSensorSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.SensorSensor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -110,9 +110,9 @@ public class Lab2Controller {
 
         // === Decorator 3: Kalibracja sensorów ===
         System.out.println("--- Dekorator 3 ---");
-        SensorD digitalSensor = new DigitalSensor(new AllPurposeSensor());
-        SensorD analogSensor = new AnalogSensor(new AllPurposeSensor());
-        SensorD digitalAnalogSensor =  new DigitalSensor(new AnalogSensor(new AllPurposeSensor()));
+        SensorSensor digitalSensor = new DigitalSensorSensor(new AllPurposeSensorSensor());
+        SensorSensor analogSensor = new AnalogSensorSensor(new AllPurposeSensorSensor());
+        SensorSensor digitalAnalogSensor =  new DigitalSensorSensor(new AnalogSensorSensor(new AllPurposeSensorSensor()));
 
         digitalSensor.calibrateSensor();
         analogSensor.calibrateSensor();

@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab2Patterns.decorator.Alart;
+package com.example.monitoringSystem.lab2Patterns.decorator.Alert;
 
 // Decorator - Abstract class for additional functionality
 abstract class MeasurementDecorator implements MeasurementStation {

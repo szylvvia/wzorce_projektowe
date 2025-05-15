@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab2Patterns.decorator.Alart;
+package com.example.monitoringSystem.lab2Patterns.decorator.Alert;
 
 // Component interface
 public interface MeasurementStation {

@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab2Patterns.decorator.Alart;
+package com.example.monitoringSystem.lab2Patterns.decorator.Alert;
 
 // Concrete Decorator - Logging measurements
 public class LoggingDecorator extends MeasurementDecorator {

@@ -13,7 +13,7 @@ import com.example.monitoringSystem.lab4Patterns.mediator.station.StationMediato
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertSystem;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorCalibrationCaretaker;
-import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorM;
+import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorMemento;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.MeasuringStationMemento;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.StateHistoryCaretaker;
 // Iterator imports
@@ -59,7 +59,7 @@ public class Lab4Controller {
         station2.restoreState(caretaker.restoreMemento());
 
         // Test 2: Sensor Calibration
-        SensorM sensor = new SensorM();
+        SensorMemento sensor = new SensorMemento();
         SensorCalibrationCaretaker sensorCaretaker = new SensorCalibrationCaretaker();
 
         sensor.setCalibration(1.5);
