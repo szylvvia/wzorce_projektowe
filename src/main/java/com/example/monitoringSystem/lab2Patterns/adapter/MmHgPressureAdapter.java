@@ -19,7 +19,8 @@ public class MmHgPressureAdapter {
     }
 
     public double toMmHg() {
-        return hpa * 0.75006;
+        double conversionFactor = 0.75006;
+        return hpa * conversionFactor;
     }
 
     public double toPsi() {

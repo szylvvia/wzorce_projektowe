@@ -18,7 +18,8 @@ public class MphWindAdapter {
     }
 
     public double toMph() {
-        return kmPerHour / 1.609;
+        double conversionFactor = 1.60934;
+        return kmPerHour / conversionFactor;
     }
 
     public double toKnots() {

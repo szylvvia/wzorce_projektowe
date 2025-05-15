@@ -19,11 +19,14 @@ public class TemperatureUnitAdapter {
     }
 
     public double toFahrenheit() {
-        return celsius * 9 / 5 + 32;
+        double conversionFactor = 9/5.0;
+        int offset = 32;
+        return celsius * conversionFactor + offset;
     }
 
     public double toKelvin() {
-        return celsius + 273.15;
+        double zeroCelsius = 273.15;
+        return celsius + zeroCelsius;
     }
 
     public double toRankine() {
