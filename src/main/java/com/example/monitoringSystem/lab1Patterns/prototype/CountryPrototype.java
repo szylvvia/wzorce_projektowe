@@ -15,9 +15,13 @@ public class CountryPrototype implements Cloneable {
     }
 
     public void loadData(){
-        listCities.add(new City("Warszawa", 1790658, true));
-        listCities.add(new City("Kraków", 779115, false));
-        listCities.add(new City("Łódź", 679941, false));
+        int populationInWarsaw = 1790658;
+        int populationInKrakow = 779115;
+        int populationInLodz = 679941;
+
+        listCities.add(new City("Warszawa", populationInWarsaw, true));
+        listCities.add(new City("Kraków", populationInKrakow, false));
+        listCities.add(new City("Łódź", populationInLodz, false));
     }
 
     public List<City> getListCities() {
