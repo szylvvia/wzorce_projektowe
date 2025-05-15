@@ -6,12 +6,12 @@ import java.time.LocalDate;
 public class Measurement implements TimeInterval{
     private LocalDate date;
     private String pollutionLevel;
-    private String temperature;
-    private String humidity;
-    private String pressure;
+    private double temperature;
+    private double humidity;
+    private double pressure;
 
 
-    public Measurement(LocalDate date, String pollutionLevel, String temperature, String humidity, String pressure) {
+    public Measurement(LocalDate date, String pollutionLevel, double temperature, double humidity, double pressure) {
         this.date = date;
         this.pollutionLevel = pollutionLevel;
         this.temperature = temperature;

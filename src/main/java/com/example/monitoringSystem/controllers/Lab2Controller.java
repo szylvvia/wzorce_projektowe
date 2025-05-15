@@ -94,14 +94,10 @@ public class Lab2Controller {
         model.addAttribute("industrialReportResult", industrialReportResult);
 
         // === Decorator 1: Logging and Alerts ===
-        //Decorator Logging and Alerts
-        // Base measurement station
         MeasurementStation station = new BasicMeasurementStation();
-        // Alert
         MeasurementStation fullFeatureStation = new LoggingDecorator(new AlertDecorator(station));
-        // Perform measurement and capture results
+
         String measurementResults = fullFeatureStation.measure();
-        // Pass results to the HTML template
         model.addAttribute("measurementResults", measurementResults);
 
         // === Decorator 2: Autoryzacja ===
@@ -159,9 +155,9 @@ public class Lab2Controller {
         regionStation.showPollutions();
 
         System.out.println("--- Kompozyt 3 ---");
-        Measurement measurement1 = new Measurement(LocalDate.now(), "high", "20", "60", "1013");
-        Measurement measurement2 = new Measurement(LocalDate.now().minusDays(1), "low", "25", "70", "1015");
-        Measurement measurement3 = new Measurement(LocalDate.now().minusDays(2), "medium", "22", "65", "1010");
+        Measurement measurement1 = new Measurement(LocalDate.now(), "high", 20, 60, 1013);
+        Measurement measurement2 = new Measurement(LocalDate.now().minusDays(1), "low", 25, 70, 1015);
+        Measurement measurement3 = new Measurement(LocalDate.now().minusDays(2), "medium", 22, 65, 1010);
 
         List<TimeInterval> measurements = new ArrayList<>(List.of(measurement1, measurement2));
 
