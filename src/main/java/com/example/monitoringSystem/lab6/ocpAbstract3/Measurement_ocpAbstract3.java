@@ -1,12 +1,12 @@
-package com.example.monitoringSystem.lab6.zad1_monika;
+package com.example.monitoringSystem.lab6.ocpAbstract3;
 
-public class Measurement_lab6 {
+public class Measurement_ocpAbstract3 {
 
     private double temperature;
     private double humidity;
     private double pressure;
 
-    public Measurement_lab6(double temperature, double humidity, double pressure) {
+    public Measurement_ocpAbstract3(double temperature, double humidity, double pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;

@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab7.liskov.liskovM;
 
-public class TemperatureAlertSystem7  extends AlertSystem7 {
+public class TemperatureAlertSystem_liskov extends AlertSystem_liskov {
     @Override
     public void checkAndAlert(double value) {
         if (value > 30.0) {

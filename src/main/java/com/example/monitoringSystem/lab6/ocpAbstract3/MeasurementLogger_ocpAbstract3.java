@@ -1,11 +1,11 @@
-package com.example.monitoringSystem.lab6.zad1_monika;
+package com.example.monitoringSystem.lab6.ocpAbstract3;
 
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class MeasurementLogger_lab6 {
+public class MeasurementLogger_ocpAbstract3 {
 
-    public void log(Measurement_lab6 measurement) {
+    public void log(Measurement_ocpAbstract3 measurement) {
         try (FileWriter writer = new FileWriter("log.txt", true)) {
             writer.write(measurement.toString() + "\n");
         } catch (IOException e) {

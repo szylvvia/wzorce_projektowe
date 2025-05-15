@@ -1,15 +1,15 @@
-package com.example.monitoringSystem.lab6.zad1_monika;
+package com.example.monitoringSystem.lab6.ocpAbstract3;
 
-public class MeasurementStation_lab6 {
+public class MeasurementStation_ocpAbstract3 {
 
     public static void main(String[] args) {
-        MeasurementCollector_lab6 collector = new MeasurementCollector_lab6();
-        MeasurementLogger_lab6 logger = new MeasurementLogger_lab6();
+        MeasurementCollector_ocpAbstract3 collector = new MeasurementCollector_ocpAbstract3();
+        MeasurementLogger_ocpAbstract3 logger = new MeasurementLogger_ocpAbstract3();
 
         System.out.println("Symulacja stacji pomiarowej");
 
         for (int i = 0; i < 5; i++) {
-            Measurement_lab6 measurement = collector.collect();
+            Measurement_ocpAbstract3 measurement = collector.collect();
             System.out.println("Zebrano pomiar: " + measurement);
             logger.log(measurement);
 

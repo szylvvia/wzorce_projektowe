@@ -1,7 +1,7 @@
 package com.example.monitoringSystem.controllers;
 
 
-import com.example.monitoringSystem.lab5Patterns.observer.MeasuringStationO;
+import com.example.monitoringSystem.lab5Patterns.observer.MeasuringStationObserver;
 import com.example.monitoringSystem.lab5Patterns.observer.PressureObserver;
 import com.example.monitoringSystem.lab5Patterns.observer.TemperatureObserver;
 import com.example.monitoringSystem.lab5Patterns.observer.HumidityObserver;
@@ -15,7 +15,7 @@ public class Lab5Controller {
     @GetMapping("/lab5")
     public String showLab5Page() {
         // Set up subject and observers
-        MeasuringStationO station = new MeasuringStationO();
+        MeasuringStationObserver station = new MeasuringStationObserver();
         station.registerObserver(new TemperatureObserver());
         station.registerObserver(new PressureObserver());
         station.registerObserver(new HumidityObserver());
