@@ -37,9 +37,9 @@ public class Lab2Controller {
 
         // Adapter - konwersja temperatury
         TemperatureSensor celsiusSensor = new CelsiusSensor();
-        TemperatureUnitAdapter tempAdapter = new TemperatureUnitAdapter(celsiusSensor.getTemperature());
-        double fahrenheitTemp = tempAdapter.toFahrenheit();
-        double kelvinTemp = tempAdapter.toKelvin();
+        TemperatureUnitAdapter temperatureAdapter = new TemperatureUnitAdapter(celsiusSensor.getTemperature());
+        double fahrenheitTemperature = temperatureAdapter.toFahrenheit();
+        double kelvinTemperature = temperatureAdapter.toKelvin();
 
         // Adapter - konwersja prędkości wiatru
         KmphWindSensor windSensor = new KmphWindSensor();
@@ -52,11 +52,10 @@ public class Lab2Controller {
         double mmHgPressure = pressureAdapter.toMmHg();
 
         // Przekazanie danych do widoku
-        model.addAttribute("fahrenheitTemp", fahrenheitTemp);
-        model.addAttribute("kelvinTemp", kelvinTemp);
+        model.addAttribute("fahrenheitTemp", fahrenheitTemperature);
+        model.addAttribute("kelvinTemp", kelvinTemperature);
         model.addAttribute("mphWindSpeed", mphWindSpeed);
         model.addAttribute("mmHgPressure", mmHgPressure);
-
 
         // === Bridge Pattern: Sensor Stations ===
         MeasurementStationBridge weatherStation = new WeatherStationBridge(new TemperatureSensorBridge());
@@ -121,9 +120,13 @@ public class Lab2Controller {
         //Composite pattern
         System.out.println("--- Kompozyt 1 ---");
 
-        TemperatureSensorComposite tempSensorC = new TemperatureSensorComposite("S001",21.9);
-        PressureSensorComposite pressureSensorComposite = new PressureSensorComposite("S002", 1013.25);
-        HumiditySensorComposite humiditySensorComposite = new HumiditySensorComposite("S003", 65.0);
+        double temperatureFromSensorS001 = 21.9;
+        double pressureFromSensorS002 = 1013.25;
+        double humidityFromSensorS003 = 65.0;
+
+        TemperatureSensorComposite tempSensorC = new TemperatureSensorComposite("S001", temperatureFromSensorS001);
+        PressureSensorComposite pressureSensorComposite = new PressureSensorComposite("S002", pressureFromSensorS002);
+        HumiditySensorComposite humiditySensorComposite = new HumiditySensorComposite("S003", humidityFromSensorS003);
 
         tempSensorC.getTemperature();
         pressureSensorComposite.getPressure();
@@ -155,14 +158,30 @@ public class Lab2Controller {
         regionStation.showPollutions();
 
         System.out.println("--- Kompozyt 3 ---");
-        Measurement measurement1 = new Measurement(LocalDate.now(), "high", 20, 60, 1013);
-        Measurement measurement2 = new Measurement(LocalDate.now().minusDays(1), "low", 25, 70, 1015);
-        Measurement measurement3 = new Measurement(LocalDate.now().minusDays(2), "medium", 22, 65, 1010);
 
-        List<TimeInterval> measurements = new ArrayList<>(List.of(measurement1, measurement2));
+        double temperatureValueCity = 25.0;
+        double humidityValueCity = 60.0;
+        double pressureValueCity = 1013.0;
+
+        double temperatureValueVillage = 22.0;
+        double humidityValueVillage = 55.0;
+        double pressureValueVillage = 1010.0;
+        int dayToSubtractVillage = 1;
+
+        double temperatureValueCoastal = 20.0;
+        double humidityValueCoastal = 70.0;
+        double pressureValueCoastal = 1005.0;
+        int dayToSubtractCoastal = 2;
+
+
+        Measurement measurementFromCity = new Measurement(LocalDate.now(), "high", temperatureValueCity, humidityValueCity, pressureValueCity);
+        Measurement measurementFromVillage = new Measurement(LocalDate.now().minusDays(dayToSubtractVillage), "low", temperatureValueVillage, humidityValueVillage, pressureValueVillage);
+        Measurement measurementFromCoastal = new Measurement(LocalDate.now().minusDays(dayToSubtractCoastal), "medium", temperatureValueCoastal, humidityValueCoastal, pressureValueCoastal);
+
+        List<TimeInterval> measurements = new ArrayList<>(List.of(measurementFromCity, measurementFromVillage));
 
         CityMeasurementsGroup cityMeasurementsGroup = new CityMeasurementsGroup("Lublin", measurements);
-        cityMeasurementsGroup.addMeasurement(measurement3);
+        cityMeasurementsGroup.addMeasurement(measurementFromCoastal);
 
         cityMeasurementsGroup.showMeasurement();
 
