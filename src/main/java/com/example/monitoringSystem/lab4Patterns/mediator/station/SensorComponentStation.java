@@ -1,7 +1,7 @@
 package com.example.monitoringSystem.lab4Patterns.mediator.station;
 
-public class SensorComponentS extends Component {
-    public SensorComponentS(StationMediator mediator) {
+public class SensorComponentStation extends Component {
+    public SensorComponentStation(StationMediator mediator) {
         super(mediator);
     }
 

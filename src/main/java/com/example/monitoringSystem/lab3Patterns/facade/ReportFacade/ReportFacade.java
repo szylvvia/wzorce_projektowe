@@ -4,9 +4,9 @@ public class ReportFacade {
     private final DatabaseService airQualityDatabase;
     private final DatabaseService temperatureDatabase;
     private final DatabaseService noiseLevelDatabase;
-    private final ReportGeneratorF reportGenerator;
+    private final ReportGeneratorFacade reportGenerator;
 
-    public ReportFacade(ReportGeneratorF reportGenerator) {
+    public ReportFacade(ReportGeneratorFacade reportGenerator) {
         this.airQualityDatabase = new AirQualityDatabase();
         this.temperatureDatabase = new TemperatureDatabase();
         this.noiseLevelDatabase = new NoiseLevelDatabase();

@@ -1,8 +1,8 @@
 package com.example.monitoringSystem.lab3Patterns.facade.ReportFacade;
 
-public class JsonReportGeneratorF implements ReportGeneratorF {
+public class CsvReportGeneratorFacade implements ReportGeneratorFacade {
     @Override
     public String generateReport(String data) {
-        return "Generated JSON report: " + data;
+        return "Generated CSV report: " + data;
     }
 }

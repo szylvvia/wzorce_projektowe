@@ -1,7 +1,7 @@
 package com.example.monitoringSystem.lab4Patterns.mediator.calibration;
 
-public class SensorComponentC extends Component {
-    public SensorComponentC(CalibrationMediator mediator) {
+public class SensorComponentCalibration extends Component {
+    public SensorComponentCalibration(CalibrationMediator mediator) {
         super(mediator);
     }
 

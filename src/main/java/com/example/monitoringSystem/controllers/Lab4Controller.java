@@ -4,17 +4,17 @@ package com.example.monitoringSystem.controllers;
 import com.example.monitoringSystem.lab4Patterns.command.*;
 import com.example.monitoringSystem.lab4Patterns.iterator.MyIterator;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertMediatorImpl;
-import com.example.monitoringSystem.lab4Patterns.mediator.alert.SensorComponentA;
+import com.example.monitoringSystem.lab4Patterns.mediator.alert.SensorComponentAlert;
 import com.example.monitoringSystem.lab4Patterns.mediator.calibration.CalibrationMediatorImpl;
-import com.example.monitoringSystem.lab4Patterns.mediator.calibration.SensorComponentC;
-import com.example.monitoringSystem.lab4Patterns.mediator.station.SensorComponentS;
+import com.example.monitoringSystem.lab4Patterns.mediator.calibration.SensorComponentCalibration;
+import com.example.monitoringSystem.lab4Patterns.mediator.station.SensorComponentStation;
 import com.example.monitoringSystem.lab4Patterns.mediator.station.StationMediatorImpl;
 
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertSystem;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorCalibrationCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorM;
-import com.example.monitoringSystem.lab4Patterns.memento.Station.MeasuringStationM;
+import com.example.monitoringSystem.lab4Patterns.memento.Station.MeasuringStationMemento;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.StateHistoryCaretaker;
 // Iterator imports
 import com.example.monitoringSystem.lab4Patterns.iterator.SensorData;
@@ -44,7 +44,7 @@ public class Lab4Controller {
         System.out.println("\n=== Testing Memento Pattern ===");
 
         // Test 1: Station state
-        MeasuringStationM station2 = new MeasuringStationM();
+        MeasuringStationMemento station2 = new MeasuringStationMemento();
         StateHistoryCaretaker caretaker = new StateHistoryCaretaker();
 
         station2.setState("Idle");
@@ -119,7 +119,7 @@ public class Lab4Controller {
         System.out.println("\n=== Testing Mediator Pattern - Calibration ===");
 
         CalibrationMediatorImpl calibMediator = new CalibrationMediatorImpl();
-        var calibSensor = new SensorComponentC(calibMediator);
+        var calibSensor = new SensorComponentCalibration(calibMediator);
         var calibStation = new com.example.monitoringSystem.lab4Patterns.mediator.calibration.StationComponent(calibMediator);
         calibMediator.registerComponents(calibSensor, calibStation);
         calibStation.startCalibration();
@@ -127,7 +127,7 @@ public class Lab4Controller {
         System.out.println("\n=== Testing Mediator Pattern - Station ===");
 
         StationMediatorImpl stationMediator = new StationMediatorImpl();
-        var stationSensor = new SensorComponentS(stationMediator);
+        var stationSensor = new SensorComponentStation(stationMediator);
         var controller = new com.example.monitoringSystem.lab4Patterns.mediator.station.ControllerComponent(stationMediator);
         stationMediator.register(stationSensor, controller);
         stationSensor.detect();
@@ -135,7 +135,7 @@ public class Lab4Controller {
         System.out.println("\n=== Testing Mediator Pattern - Alert ===");
 
         AlertMediatorImpl alertMediator = new AlertMediatorImpl();
-        var alertSensor = new SensorComponentA(alertMediator);
+        var alertSensor = new SensorComponentAlert(alertMediator);
         var alertComponent = new com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertComponent(alertMediator);
         alertMediator.register(alertSensor, alertComponent);
         alertSensor.readTemperature(105);

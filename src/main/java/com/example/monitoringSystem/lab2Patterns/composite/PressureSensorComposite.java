@@ -1,10 +1,10 @@
 package com.example.monitoringSystem.lab2Patterns.composite;
 
-public class PressureSensorC implements SensorC {
+public class PressureSensorComposite implements SensorComposite {
     private String name;
     private Double pressure;
 
-    public PressureSensorC(String name, Double pressure) {
+    public PressureSensorComposite(String name, Double pressure) {
         this.name = name;
         this.pressure = pressure;
     }

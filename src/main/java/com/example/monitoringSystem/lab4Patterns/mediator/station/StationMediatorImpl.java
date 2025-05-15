@@ -1,10 +1,10 @@
 package com.example.monitoringSystem.lab4Patterns.mediator.station;
 
 public class StationMediatorImpl implements StationMediator {
-    private SensorComponentS sensor;
+    private SensorComponentStation sensor;
     private ControllerComponent controller;
 
-    public void register(SensorComponentS sensor, ControllerComponent controller) {
+    public void register(SensorComponentStation sensor, ControllerComponent controller) {
         this.sensor = sensor;
         this.controller = controller;
     }

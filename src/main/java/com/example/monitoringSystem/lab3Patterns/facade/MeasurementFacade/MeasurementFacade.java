@@ -6,9 +6,9 @@ public class MeasurementFacade {
     private final SensorFacade pressureSensor;
 
     public MeasurementFacade() {
-        this.temperatureSensor = new TemperatureSensorF();
-        this.humiditySensor = new HumiditySensorF();
-        this.pressureSensor = new PressureSensorF();
+        this.temperatureSensor = new TemperatureSensorFacade();
+        this.humiditySensor = new HumiditySensorFacade();
+        this.pressureSensor = new PressureSensorFacade();
     }
 
     public double getTemperature() {

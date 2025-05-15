@@ -1,10 +1,9 @@
 package com.example.monitoringSystem.controllers;
 
 
-import com.example.monitoringSystem.lab1Patterns.factory.SensorF;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.*;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.*;
-import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.TemperatureSensorB;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.TemperatureSensorBridge;
 
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.*;
 
@@ -24,7 +23,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import com.example.monitoringSystem.lab2Patterns.adapter.*;
 import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.*;
 
-import java.sql.Time;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,9 +59,9 @@ public class Lab2Controller {
 
 
         // === Bridge Pattern: Sensor Stations ===
-        MeasurementStationB weatherStation = new WeatherStationB(new TemperatureSensorB());
-        MeasurementStationB industrialStation = new IndustrialStationB(new HumiditySensorB());
-        MeasurementStationB multiSensorStation = new MultiSensorStationB(new TemperatureSensorB(), new HumiditySensorB());
+        MeasurementStationBridge weatherStation = new WeatherStationBridge(new TemperatureSensorBridge());
+        MeasurementStationBridge industrialStation = new IndustrialStationBridge(new HumiditySensorBridge());
+        MeasurementStationBridge multiSensorStation = new MultiSensorStationBridge(new TemperatureSensorBridge(), new HumiditySensorBridge());
 
         // Perform measurement and get results
         String weatherStationResults = weatherStation.measure();
@@ -127,20 +125,20 @@ public class Lab2Controller {
         //Composite pattern
         System.out.println("--- Kompozyt 1 ---");
 
-        TemperatureSensorC tempSensorC = new TemperatureSensorC("S001",21.9);
-        PressureSensorC pressureSensorC = new PressureSensorC("S002", 1013.25);
-        HumiditySensorC humiditySensorC = new HumiditySensorC("S003", 65.0);
+        TemperatureSensorComposite tempSensorC = new TemperatureSensorComposite("S001",21.9);
+        PressureSensorComposite pressureSensorComposite = new PressureSensorComposite("S002", 1013.25);
+        HumiditySensorComposite humiditySensorComposite = new HumiditySensorComposite("S003", 65.0);
 
         tempSensorC.getTemperature();
-        pressureSensorC.getPressure();
-        humiditySensorC.getHumidity();
+        pressureSensorComposite.getPressure();
+        humiditySensorComposite.getHumidity();
 
         tempSensorC.showMeasurement();
         tempSensorC.reset();
 
-        List<SensorC> sensors = List.of(tempSensorC, pressureSensorC, humiditySensorC);
+        List<SensorComposite> sensors = List.of(tempSensorC, pressureSensorComposite, humiditySensorComposite);
 
-        MonitoringStationC stationC = new MonitoringStationC("Station A", sensors);
+        MonitoringStationComposite stationC = new MonitoringStationComposite("Station A", sensors);
         stationC.showMeasurement();
         stationC.reset();
 
@@ -155,7 +153,7 @@ public class Lab2Controller {
         cityStation.showPollutions();
         cityStation.setPollutionLevel("high");
 
-        List<CityC> lub = List.of(cityStation, cityStation2, cityStation3);
+        List<CityComposite> lub = List.of(cityStation, cityStation2, cityStation3);
 
         MeasurementStationRegion regionStation = new MeasurementStationRegion(lub, "Lubelskie");
         regionStation.showPollutions();

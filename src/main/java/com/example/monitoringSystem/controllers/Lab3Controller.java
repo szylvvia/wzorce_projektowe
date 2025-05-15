@@ -5,9 +5,9 @@ import com.example.monitoringSystem.lab3Patterns.Proxy.P2.ProtectionMeasuringSta
 import com.example.monitoringSystem.lab3Patterns.Proxy.P3.RemoteMeasuringStationProxy;
 import com.example.monitoringSystem.lab3Patterns.facade.AlertFacade.AlertFacade;
 import com.example.monitoringSystem.lab3Patterns.facade.MeasurementFacade.MeasurementFacade;
-import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.CsvReportGeneratorF;
-import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.JsonReportGeneratorF;
-import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.PdfReportGeneratorF;
+import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.CsvReportGeneratorFacade;
+import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.JsonReportGeneratorFacade;
+import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.PdfReportGeneratorFacade;
 import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.ReportFacade;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -42,13 +42,13 @@ public class Lab3Controller {
         //----Facade----//
 
         // Report Facade
-        ReportFacade reportFacadePdf = new ReportFacade(new PdfReportGeneratorF());
+        ReportFacade reportFacadePdf = new ReportFacade(new PdfReportGeneratorFacade());
         String pdfReport = reportFacadePdf.generateEnvironmentalReport();
 
-        ReportFacade reportFacadeCsv = new ReportFacade(new CsvReportGeneratorF());
+        ReportFacade reportFacadeCsv = new ReportFacade(new CsvReportGeneratorFacade());
         String csvReport = reportFacadeCsv.generateEnvironmentalReport();
 
-        ReportFacade reportFacadeJson = new ReportFacade(new JsonReportGeneratorF());
+        ReportFacade reportFacadeJson = new ReportFacade(new JsonReportGeneratorFacade());
         String jsonReport = reportFacadeJson.generateEnvironmentalReport();
 
         model.addAttribute("pdfReport", pdfReport);

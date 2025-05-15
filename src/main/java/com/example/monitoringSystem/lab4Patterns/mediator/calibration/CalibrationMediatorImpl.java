@@ -1,10 +1,10 @@
 package com.example.monitoringSystem.lab4Patterns.mediator.calibration;
 
 public class CalibrationMediatorImpl implements CalibrationMediator {
-    private SensorComponentC sensor;
+    private SensorComponentCalibration sensor;
     private StationComponent station;
 
-    public void registerComponents(SensorComponentC sensor, StationComponent station) {
+    public void registerComponents(SensorComponentCalibration sensor, StationComponent station) {
         this.sensor = sensor;
         this.station = station;
     }

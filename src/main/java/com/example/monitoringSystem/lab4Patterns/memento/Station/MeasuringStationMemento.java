@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab4Patterns.memento.Station;
 
-public class MeasuringStationM {
+public class MeasuringStationMemento {
     private String state;
 
     public void setState(String state) {

@@ -1,10 +1,10 @@
 package com.example.monitoringSystem.lab4Patterns.mediator.alert;
 
 public class AlertMediatorImpl implements AlertMediator {
-    private SensorComponentA sensor;
+    private SensorComponentAlert sensor;
     private AlertComponent alert;
 
-    public void register(SensorComponentA sensor, AlertComponent alert) {
+    public void register(SensorComponentAlert sensor, AlertComponent alert) {
         this.sensor = sensor;
         this.alert = alert;
     }

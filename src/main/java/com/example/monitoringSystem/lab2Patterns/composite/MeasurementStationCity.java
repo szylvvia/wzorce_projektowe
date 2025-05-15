@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab2Patterns.composite;
 
-public class MeasurementStationCity implements CityC{
+public class MeasurementStationCity implements CityComposite {
     public String getCityName() {
         return cityName;
     }

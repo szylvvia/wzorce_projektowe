@@ -1,8 +1,8 @@
 package com.example.monitoringSystem.lab3Patterns.facade.MeasurementFacade;
 
-public class HumiditySensorF implements SensorFacade{
+public class TemperatureSensorFacade implements SensorFacade{
     @Override
     public double measure() {
-        return 65.0; // Przykładowa wilgotność
+        return 22.5; // Przykładowa temperatura
     }
 }
