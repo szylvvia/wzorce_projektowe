@@ -9,10 +9,13 @@ public class MmHgPressureAdapter {
     private final double hpa;
 
     public MmHgPressureAdapter(double hpa) {
-        if (hpa < 0) {
+        int minPressure = 0;
+        int maxPressure = 2000;
+
+        if (hpa < minPressure) {
             throw new InvalidMeasurementException("Pressure cannot be negative.");
         }
-        if (hpa > 2000) {
+        if (hpa > maxPressure) {
             throw new OutOfRangeMeasurementException("Pressure exceeds realistic range.");
         }
         this.hpa = hpa;

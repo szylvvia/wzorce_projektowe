@@ -8,10 +8,13 @@ public class MphWindAdapter {
     private final double kmPerHour;
 
     public MphWindAdapter(double kmPerHour) {
-        if (kmPerHour < 0) {
+        int minSpeed = 0;
+        int maxSpeed = 400;
+
+        if (kmPerHour < minSpeed) {
             throw new InvalidMeasurementException("Wind speed cannot be negative.");
         }
-        if (kmPerHour > 400) {
+        if (kmPerHour > maxSpeed) {
             throw new OutOfRangeMeasurementException("Wind speed exceeds realistic limits.");
         }
         this.kmPerHour = kmPerHour;

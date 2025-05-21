@@ -9,10 +9,14 @@ public class TemperatureUnitAdapter {
     private final double celsius;
 
     public TemperatureUnitAdapter(double celsius) {
-        if (celsius < -273.15) {
+        double zeroAbsolute = -273.15;
+        int maxTemperature = 1000;
+
+        if (celsius < zeroAbsolute) {
             throw new InvalidMeasurementException("Temperature cannot be below absolute zero (-273.15°C).");
         }
-        if (celsius > 1000) {
+
+        if (celsius > maxTemperature) {
             throw new OutOfRangeMeasurementException("Temperature exceeds realistic range for this system.");
         }
         this.celsius = celsius;
