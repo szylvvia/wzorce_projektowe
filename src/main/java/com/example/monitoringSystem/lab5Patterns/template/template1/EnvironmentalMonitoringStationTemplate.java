@@ -1,10 +1,17 @@
 package com.example.monitoringSystem.lab5Patterns.template.template1;
 
+import java.util.Map;
+
 abstract class EnvironmentalMonitoringStationTemplate {
 
-    // Template method
-    public final void runCycle(String type, String location, Integer resolution, Integer interval){
+    //change function to get max 3 params
+    public final void runCycle(Map<String, Object> data) {
         System.out.println("--- Uruchomiono cykl monitorowania środowiska ---");
+        String type = (String) data.get("typeMeasurement");
+        String location = (String) data.get("location");
+        Integer resolution = (Integer) data.get("resolution");
+        Integer interval = (Integer) data.get("interval");
+
         turnOnSensors(type, location);
         calibrateSensors(resolution);
         collectData(interval);

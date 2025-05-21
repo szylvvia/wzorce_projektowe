@@ -3,10 +3,10 @@ import java.util.Map;
 
 abstract class EnvironmentalDataAnalyzerTemplate {
 
-        public final void analyzeData(Map<String, Double> temperature, Map<String, Double> humidity, Double tempThre, Double humThre) {
+        public final void analyzeData(Map<String, Double> temperature, Map<String, Double> humidity, Map<String,Double> thresholds) {
             analyze(temperature, humidity);
-            checkThreshold(tempThre, humThre);
-            prepareAlert(temperature, humidity, tempThre, humThre);
+            checkThreshold(thresholds.get("Temperature"), thresholds.get("Humidity"));
+            prepareAlert(temperature, humidity, thresholds);
             sendAnalyzedData();
         }
 
@@ -17,15 +17,15 @@ abstract class EnvironmentalDataAnalyzerTemplate {
         public void checkThreshold(Double tempThre, Double humThre) {
             System.out.println("-> Sprawdzanie progów: " + tempThre + ", " + humThre);
         }
-        public void prepareAlert(Map<String, Double> temperature, Map<String, Double> humidity, Double tempThre, Double humThre) {
+        public void prepareAlert(Map<String, Double> temperature, Map<String, Double> humidity, Map<String,Double> thresholds) {
             int otherValue = 0;
             double tempAvg = temperature.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
             double humAvg = humidity.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
 
-            if(tempAvg > tempThre) {
+            if(tempAvg > thresholds.get("Temperature")) {
                 System.out.println("-> Alert: Wysoka temperatura! Średnia: " + tempAvg);
             }
-            if(humAvg > humThre) {
+            if(humAvg > thresholds.get("Humidity")) {
                 System.out.println("-> Alert: Wysoka wilgotność! Średnia: " + humAvg);
             }
         }

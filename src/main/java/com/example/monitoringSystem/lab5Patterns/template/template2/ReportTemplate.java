@@ -4,7 +4,12 @@ import java.util.Map;
 
 abstract class ReportTemplate {
 
-    public final void generateReport(String type, String location, Map<String, Double> data, String author, String date, String fileName) {
+    public final void generateReport(Map<String, String> reportDetails, Map<String, Double> data) {
+        String type = reportDetails.get("type");
+        String location = reportDetails.get("location");
+        String author = reportDetails.get("author");
+        String date = reportDetails.get("date");
+
         prepareHeader(type, location);
         prepareBody(data);
         prepareFooter(author, date);

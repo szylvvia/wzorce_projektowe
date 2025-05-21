@@ -15,15 +15,15 @@ public class CityDataAnalyzer extends EnvironmentalDataAnalyzerTemplate {
     }
 
     @Override
-    public void prepareAlert(Map<String, Double> temperature, Map<String, Double> humidity, Double tempThre, Double humThre) {
+    public void prepareAlert(Map<String, Double> temperature, Map<String, Double> humidity, Map<String, Double> thresholds) {
         int otherValue = 0;
         double tempAvg = temperature.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
         double humAvg = humidity.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
 
-        if(tempAvg > tempThre) {
+        if(tempAvg > thresholds.get("Temperature")) {
             System.out.println("-> [CITY ALERT] Wysoka temperatura w mieście! Średnia: " + tempAvg);
         }
-        if(humAvg > humThre) {
+        if(humAvg > thresholds.get("Humidity")) {
             System.out.println("-> [CITY ALERT] Wysoka wilgotność w mieście! Średnia: " + humAvg);
         }
     }
