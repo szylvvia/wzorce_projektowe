@@ -8,13 +8,14 @@ public class DigitalSensorTester {
 
     public DigitalSensorTester()
     {
-        for(int i=0; i<10; i++) {
+        int loopCount = 10;
+        for(int i=0; i<loopCount; i++) {
             appendSenorWithDetails(EnvironmentalDetailsFactory.SensorType.TEMPERATURE);
         }
-        for(int i=0; i<10; i++) {
+        for(int i=0; i<loopCount; i++) {
             appendSenorWithDetails(EnvironmentalDetailsFactory.SensorType.HUMIDITY);
         }
-        for(int i=0; i<10; i++) {
+        for(int i=0; i<loopCount; i++) {
             appendSenorWithDetails(EnvironmentalDetailsFactory.SensorType.PRESSURE);
         }
     }
@@ -22,8 +23,10 @@ public class DigitalSensorTester {
     private void appendSenorWithDetails(EnvironmentalDetailsFactory.SensorType sensorType) {
         EnvironmentalFlySensorDetails environmentalFlySensorDetails = EnvironmentalDetailsFactory.getEnvironmentalFlySensorDetails(sensorType);
 
-        int value = (int) (Math.random() * 100);
-        int value2 = (int) (Math.random() * 10);
+        int randomRangeForValue1 = 100;
+        int randomRangeForValue2 = 10;
+        int value = (int) (Math.random() * randomRangeForValue1);
+        int value2 = (int) (Math.random() * randomRangeForValue2);
         String str = String.valueOf(value);
         String str2 = "Model "+value2;
         DigitalSensor digital1 = new DigitalSensor(str, str2);

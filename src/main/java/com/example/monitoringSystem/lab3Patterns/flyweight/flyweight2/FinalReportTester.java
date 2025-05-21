@@ -12,20 +12,22 @@ public class FinalReportTester {
 
     public FinalReportTester()
     {
-        for(int i=0; i<10; i++) {
+        int loopCount = 10;
+        for(int i=0; i<loopCount; i++) {
             appendReportWithData(RepeatFlyReportDataFactory.ReportType.DAILY);
         }
-        for(int i=0; i<10; i++) {
+        for(int i=0; i<loopCount; i++) {
             appendReportWithData(RepeatFlyReportDataFactory.ReportType.MONTHLY);
         }
-        for(int i=0; i<10; i++) {
+        for(int i=0; i<loopCount; i++) {
             appendReportWithData(RepeatFlyReportDataFactory.ReportType.WEEKLY);
         }
     }
     private void appendReportWithData(RepeatFlyReportDataFactory.ReportType reportType){
         RepeatFlyReportData reportData = RepeatFlyReportDataFactory.getReportData(reportType);
         Date date = new Date();
-        int value2 = (int) (Math.random() * 10);
+        int randomRangeForValue2 = 10;
+        int value2 = (int) (Math.random() * randomRangeForValue2);
         FinalReport finalReport = new FinalReport(date, "Author" + value2);
         finalReport.setRepeatFlyReportData(reportData);
         System.out.println(finalReport);

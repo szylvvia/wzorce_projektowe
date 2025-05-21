@@ -2,8 +2,9 @@ package com.example.monitoringSystem.lab3Patterns.Proxy.P1;
 
 public class RealMeasuringStation implements MeasuringStationP1 {
     public RealMeasuringStation() {
+        int sleepTimeInMillis = 2000;
         System.out.println("Initializing Real Measuring Station...");
-        try { Thread.sleep(2000); } catch (InterruptedException ignored) {}
+        try { Thread.sleep(sleepTimeInMillis); } catch (InterruptedException ignored) {}
     }
 
     @Override

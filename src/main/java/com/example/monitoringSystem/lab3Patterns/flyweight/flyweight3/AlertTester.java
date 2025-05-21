@@ -14,13 +14,14 @@ public class AlertTester {
 
     public AlertTester()
     {
-        for(int i=0; i<10; i++) {
+        int loopCount = 10;
+        for(int i=0; i<loopCount; i++) {
         appendAlertWithData(DangerFlyAlertDetailsFactory.AlertType.LOW);
         }
-        for(int i=0; i<10; i++) {
+        for(int i=0; i<loopCount; i++) {
             appendAlertWithData(DangerFlyAlertDetailsFactory.AlertType.MEDIUM);
         }
-        for(int i=0; i<10; i++) {
+        for(int i=0; i<loopCount; i++) {
             appendAlertWithData(DangerFlyAlertDetailsFactory.AlertType.HIGH);
         }
     }
