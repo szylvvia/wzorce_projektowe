@@ -26,22 +26,31 @@ public class InterpreterTester {
                 )
         );
 
-        AbstractExpression tempExp = new TemperatureAnomalyChecker(2);
-        boolean tempResult = tempExp.interpret(data, "2025-04-01");
+        int thresholdTemperatureForInterpreter = 25;
+        String dateForTemperatureInterpreter = "2025-04-01";
+        AbstractExpression tempExp = new TemperatureAnomalyChecker(thresholdTemperatureForInterpreter);
+        boolean tempResult = tempExp.interpret(data, dateForTemperatureInterpreter);
         System.out.println("Temperature Anomaly: " + tempResult);
 
-        AbstractExpression humidityExp = new HumidityAnomalyChecker(20.0);
-        boolean humidityResult = humidityExp.interpret(data, "2025-04-02");
+        double thresholdHumidityForInterpreter = 30.0;
+        String dateForHumidityInterpreter = "2025-04-02";
+        AbstractExpression humidityExp = new HumidityAnomalyChecker(thresholdHumidityForInterpreter);
+        boolean humidityResult = humidityExp.interpret(data, dateForHumidityInterpreter);
         System.out.println("Humidity Anomaly: " + humidityResult);
 
-        AbstractExpression pressureExp = new PressureAnomalyChecker(0);
-        boolean pressureResult = pressureExp.interpret(data, "2025-04-03");
+        double thresholdPressureForInterpreter = 0;
+        String dateForPressureInterpreter = "2025-04-03";
+        AbstractExpression pressureExp = new PressureAnomalyChecker(thresholdPressureForInterpreter);
+        boolean pressureResult = pressureExp.interpret(data, dateForPressureInterpreter);
         System.out.println("Pressure Anomaly: " + pressureResult);
 
+        double thresholdHumidityForAnomalyChecker = 10.0;
+        int thresholdTemperatureForAnomalyChecker = 7;
+        String dateForAnomalyChecker = "2025-04-04";
         AbstractExpression condition = new AnomalyChecker(
-                new HumidityAnomalyChecker(10),
-                new TemperatureAnomalyChecker(7));
-        boolean conditionResult = condition.interpret(data, "2025-04-01");
+                new HumidityAnomalyChecker(thresholdHumidityForAnomalyChecker),
+                new TemperatureAnomalyChecker(thresholdTemperatureForAnomalyChecker));
+        boolean conditionResult = condition.interpret(data, dateForAnomalyChecker);
         System.out.println("Condition Anomaly: " + conditionResult);
     }
 }

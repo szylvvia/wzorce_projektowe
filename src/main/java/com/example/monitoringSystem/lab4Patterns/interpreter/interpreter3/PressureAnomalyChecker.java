@@ -18,7 +18,8 @@ public class PressureAnomalyChecker implements AbstractExpression {
         if (pressure.isEmpty()) {
             return false;
         }
-        double avg = pressure.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+        double otherDataElse = 0.0;
+        double avg = pressure.stream().mapToDouble(Double::doubleValue).average().orElse(otherDataElse);
         return pressure.stream().anyMatch(temp -> Math.abs(temp - avg) > threshold);
     }
 

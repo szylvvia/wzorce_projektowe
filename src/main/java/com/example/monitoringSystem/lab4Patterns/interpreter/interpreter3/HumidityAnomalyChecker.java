@@ -18,7 +18,8 @@ public class HumidityAnomalyChecker implements AbstractExpression {
         if (humidityData.isEmpty()) {
             return false;
         }
-        double avg = humidityData.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+        double otherDataElse = 0.0;
+        double avg = humidityData.stream().mapToDouble(Double::doubleValue).average().orElse(otherDataElse);
         return humidityData.stream().anyMatch(temp -> Math.abs(temp - avg) > threshold);
 
     }

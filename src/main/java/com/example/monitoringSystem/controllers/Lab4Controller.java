@@ -34,7 +34,7 @@ public class Lab4Controller {
     public String showLab4Page() {
         System.out.println("=== Testing Command Pattern ===");
 
-        MeasuringStationC station = new MeasuringStationC();
+        MeasuringStation station = new MeasuringStation();
         Command startCommand = new StartMeasurementCommand(station);
         Command stopCommand = new StopMeasurementCommand(station);
         Command calibrateCommand = new CalibrateSensorCommand(station);

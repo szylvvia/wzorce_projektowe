@@ -1,9 +1,9 @@
 package com.example.monitoringSystem.lab4Patterns.command;
 
 public class StopMeasurementCommand implements Command {
-    private MeasuringStationC station;
+    private MeasuringStation station;
 
-    public StopMeasurementCommand(MeasuringStationC station) {
+    public StopMeasurementCommand(MeasuringStation station) {
         this.station = station;
     }
 

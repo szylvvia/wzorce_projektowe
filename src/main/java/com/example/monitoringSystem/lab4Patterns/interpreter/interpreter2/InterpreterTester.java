@@ -23,28 +23,40 @@ public class InterpreterTester {
                 )
         );
 
-        AbstractExpression tempExp = new TemperatureInterpreter(22);
-        String tempResult = tempExp.interpret(data, "2025-04-01");
+        int thresholdTemperatureForInterpreter = 25;
+        String dateForTemperatureInterpreter = "2025-04-01";
+        AbstractExpression tempExp = new TemperatureInterpreter(thresholdTemperatureForInterpreter);
+        String tempResult = tempExp.interpret(data, dateForTemperatureInterpreter);
         System.out.println(tempResult);
 
-        AbstractExpression humidityExp = new HumidityInterpreter(30.0);
-        String humidityResult = humidityExp.interpret(data, "2025-04-02");
+        double thresholdHumidityForInterpreter = 30.0;
+        String dateForHumidityInterpreter = "2025-04-02";
+        AbstractExpression humidityExp = new HumidityInterpreter(thresholdHumidityForInterpreter);
+        String humidityResult = humidityExp.interpret(data, dateForHumidityInterpreter);
         System.out.println(humidityResult);
 
-        AbstractExpression pressureExp = new PressureInterpreter(1010.0);
-        String pressureResult = pressureExp.interpret(data, "2025-04-03");
+        double thresholdPressureForInterpreter = 1010.0;
+        String dateForPressureInterpreter = "2025-04-03";
+        AbstractExpression pressureExp = new PressureInterpreter(thresholdPressureForInterpreter);
+            String pressureResult = pressureExp.interpret(data, dateForPressureInterpreter);
         System.out.println(pressureResult);
 
-        AbstractExpression noneExp = new PressureInterpreter(1010.0);
-        String noneResult = noneExp.interpret(data, "2025-04-04");
+        double thresholdHumidityForNone = 10.0;
+        String dateForNoneInterpreter = "2025-04-04";
+        AbstractExpression noneExp = new PressureInterpreter(thresholdHumidityForNone);
+        String noneResult = noneExp.interpret(data, dateForNoneInterpreter);
         System.out.println(noneResult);
 
+        double thresholdHumidityForAnomalyChecker = 10.0;
+        int thresholdTemperatureForAnomalyChecker = 7;
+        double pressureThresholdForAnomalyChecker = 1010.0;
         AbstractExpression condition = new OrAnomalyChecker(
-                new HumidityInterpreter(10.0),
-                new TemperatureInterpreter(7),
-                new PressureInterpreter(1010.0));
+                new HumidityInterpreter(thresholdHumidityForAnomalyChecker),
+                new TemperatureInterpreter(thresholdTemperatureForAnomalyChecker),
+                new PressureInterpreter(pressureThresholdForAnomalyChecker));
 
-        String conditionResult = condition.interpret(data, "2025-04-01");
+        String dateForCondition = "2025-04-01";
+        String conditionResult = condition.interpret(data, dateForCondition);
         System.out.println(conditionResult);
 
     }

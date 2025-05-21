@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab4Patterns.command;
 
-public class MeasuringStationC {
+public class MeasuringStation {
     public void startMeasurement() {
         System.out.println("Measurement started.");
     }

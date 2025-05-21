@@ -6,7 +6,8 @@ public class SensorComponentAlert extends Component {
     }
 
     public void readTemperature(double value) {
-        if (value > 100) {
+        int temperatureThreshold = 100;
+        if (value > temperatureThreshold) {
             System.out.println("[Alert] Temperature = " + value);
             mediator.notify(this, "HighTemperature");
         }

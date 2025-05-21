@@ -18,7 +18,8 @@ public class TemperatureAnomalyChecker implements AbstractExpression {
         if (temperatureData.isEmpty()) {
             return false;
         }
-        double avg = temperatureData.stream().mapToDouble(Double::doubleValue).average().orElse(0.0);
+        double otherDataElse = 0.0;
+        double avg = temperatureData.stream().mapToDouble(Double::doubleValue).average().orElse(otherDataElse);
         return temperatureData.stream().anyMatch(temp -> Math.abs(temp - avg) > threshold);
     }
 

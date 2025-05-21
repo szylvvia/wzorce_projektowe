@@ -2,9 +2,9 @@ package com.example.monitoringSystem.lab4Patterns.command;
 
 
 public class StartMeasurementCommand implements Command {
-    private MeasuringStationC station;
+    private MeasuringStation station;
 
-    public StartMeasurementCommand(MeasuringStationC station) {
+    public StartMeasurementCommand(MeasuringStation station) {
         this.station = station;
     }
 
