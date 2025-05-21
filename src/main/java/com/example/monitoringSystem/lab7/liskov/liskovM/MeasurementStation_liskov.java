@@ -22,7 +22,8 @@ public class MeasurementStation_liskov {
         AlertSystem_liskov baseAlert = new AlertSystem_liskov() {
             @Override
             public void checkAndAlert(double value) {
-                if (value > 50) {
+                int thresholdForAlert = 50;
+                if (value > thresholdForAlert) {
                     System.out.println("Bazowy alert!");
                 }
             }

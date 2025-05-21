@@ -3,7 +3,8 @@ package com.example.monitoringSystem.lab7.isp.ispS.isp3;
 public class BasicSoilStation implements SoilStation, SensorMaintenance {
     @Override
     public void monitorSoilHumidity() {
-        System.out.println("Monitoring soil humidity... | Soil humidity: "+ Math.round(Math.random()*100)+" %");
+        double soilHumidityRange = 100;
+        System.out.println("Monitoring soil humidity... | Soil humidity: "+ Math.round(Math.random()*soilHumidityRange)+" %");
     }
 
     @Override

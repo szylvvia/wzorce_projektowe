@@ -20,8 +20,10 @@ public class Tester {
         industrialCity.updateWeather();
         updateWeatherInCity(industrialCity);
 
-        TemperatureStatistic temperatureStatistic = new TemperatureStatistic(List.of(25.0, 30.0, 28.0), 27.0);
-        PressureStatistic pressureStatistic = new PressureStatistic(List.of(1010.0, 1020.0, 1030.0), 1025.0);
+        double thresholdForTemperatureStatistic = 27.0;
+        double thresholdForPressureStatistic = 1025.0;
+        TemperatureStatistic temperatureStatistic = new TemperatureStatistic(List.of(25.0, 30.0, 28.0), thresholdForTemperatureStatistic);
+        PressureStatistic pressureStatistic = new PressureStatistic(List.of(1010.0, 1020.0, 1030.0), thresholdForPressureStatistic);
 
         temperatureStatistic.printMessageAboutStatistic();
         checkStatistic(temperatureStatistic);

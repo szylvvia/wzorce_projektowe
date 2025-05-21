@@ -3,7 +3,8 @@ package com.example.monitoringSystem.lab7.isp.ispS.isp3;
 public class AdvancedAirStation implements AirStation, SensorMaintenance {
     @Override
     public void monitorAirPollution() {
-        System.out.println("[ADV AIR ST] Monitoring air pollution... | Air pollution:"+ Math.round(Math.random()*10));
+        int airPollutionRange = 10;
+        System.out.println("[ADV AIR ST] Monitoring air pollution... | Air pollution:"+ Math.round(Math.random()*airPollutionRange) / airPollutionRange);
     }
 
     @Override

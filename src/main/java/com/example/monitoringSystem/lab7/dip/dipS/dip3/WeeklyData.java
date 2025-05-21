@@ -7,18 +7,20 @@ public class WeeklyData implements StatisticData {
 
     @Override
     public List<Double> getTemperatureData() {
-        List<Double> data = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            data.add(i, (double) Math.round(Math.random() * 100));
-        }
-        return data;
+        return getDoubles();
     }
 
     @Override
     public List<Double> getHumidityData() {
+        return getDoubles();
+    }
+
+    private List<Double> getDoubles() {
         List<Double> data = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            data.add(i, (double) Math.round(Math.random() * 100));
+        int loopCount = 7;
+        int randomValueRange = 100;
+        for (int i = 0; i < loopCount; i++) {
+            data.add(i, (double) Math.round(Math.random() * randomValueRange));
         }
         return data;
     }

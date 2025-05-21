@@ -4,8 +4,10 @@ public class DailyTemperatureStats implements TemperatureStats {
 
     @Override
     public void calculateTemperatureValue() {
-        double val = Math.random() * 100;
-        System.out.println("Calculated temperature value: " + Math.round(val * 40) / 40.0);
+        int valueRange = 100;
+        double roundingFactor = 40.0;
+        double val = Math.random() * valueRange;
+        System.out.println("Calculated temperature value: " + Math.round(val * roundingFactor) / roundingFactor);
     }
 
 }

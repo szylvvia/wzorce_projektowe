@@ -17,8 +17,11 @@ public class Tester {
         ISensor sensor = new MyDIPSensorDevice();
         SensorDevice sensorDevice = new DIPSensorDevice(sensor);
 
-        sensorDevice.measure(0.5);
-        sensorDevice.measure(1.0);
+        double sensorResolutionMin = 0.5;
+        double sensorResolutionMax = 1.0;
+
+        sensorDevice.measure(sensorResolutionMin);
+        sensorDevice.measure(sensorResolutionMax);
 
         System.out.println("--------------------------------------------------------------");
 

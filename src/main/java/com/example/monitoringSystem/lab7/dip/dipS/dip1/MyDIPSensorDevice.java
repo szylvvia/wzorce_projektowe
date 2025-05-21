@@ -4,8 +4,10 @@ public class MyDIPSensorDevice implements ISensor {
 
     @Override
     public void readValue() {
-        double randomValue = Math.random() * 100;
-        randomValue = Math.round(randomValue * 100.0) / 100.0;
+        int randomValueRange = 100;
+        double randomRoundValue = 100.0;
+        double randomValue = Math.random() * randomValueRange;
+        randomValue = Math.round(randomValue * randomRoundValue) / randomRoundValue;
         System.out.println("Pomiar wartosci..." + randomValue);
     }
 }

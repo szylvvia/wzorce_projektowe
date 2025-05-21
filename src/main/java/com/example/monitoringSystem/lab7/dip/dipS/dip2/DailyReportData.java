@@ -4,6 +4,7 @@ public class DailyReportData implements IReport {
 
     @Override
     public Double getDataToReport() {
-       return (double) Math.round(Math.random() * 100);
+        int randomValueRange = 100;
+        return (double) Math.round(Math.random() * randomValueRange);
     }
 }
