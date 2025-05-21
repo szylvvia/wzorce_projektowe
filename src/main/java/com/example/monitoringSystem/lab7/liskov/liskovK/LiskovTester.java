@@ -5,24 +5,24 @@ public class LiskovTester {
         System.out.println("=== Liskov Substitution Principle Test ===");
 
         // === MonitoringStation ===
-        MonitoringStation abstractStation = new AirMonitoringStation("Warsaw"); // abstrakcyjnie
+        MonitoringStation abstractStation = new AirMonitoringStation("Warsaw");
         abstractStation.collectData();
 
-        AirMonitoringStation concreteStation = new AirMonitoringStation("Frankfurt"); // konkretnie
+        AirMonitoringStation concreteStation = new AirMonitoringStation("Frankfurt");
         concreteStation.collectData();
 
         // === DataTransmitter ===
-        DataTransmitter abstractTransmitter = new WifiTransmitter(); // abstrakcyjnie
+        DataTransmitter abstractTransmitter = new WifiTransmitter();
         abstractTransmitter.transmitData("Temperature=24");
 
-        WifiTransmitter concreteTransmitter = new WifiTransmitter(); // konkretnie
+        WifiTransmitter concreteTransmitter = new WifiTransmitter();
         concreteTransmitter.transmitData("Humidity=40");
 
         // === EventHandler ===
-        EventHandler abstractHandler = new SensorFailureHandler(); // abstrakcyjnie
+        EventHandler abstractHandler = new SensorFailureHandler();
         abstractHandler.handleEvent("Pressure > max");
 
-        SensorFailureHandler concreteHandler = new SensorFailureHandler(); // konkretnie
+        SensorFailureHandler concreteHandler = new SensorFailureHandler();
         concreteHandler.handleEvent("Temperature < min");
     }
 }
