@@ -40,9 +40,13 @@ public class StrategyTester {
         System.out.println("Threshold Alert: " + evaluator.evaluate(sensorValue, threshold, new ThresholdAlertStrategy()));
 
         RateOfChangeAlertStrategy rateStrategy = new RateOfChangeAlertStrategy();
-        System.out.println("Rate of Change Alert (first call): " + rateStrategy.shouldTrigger(25.0, 5.0)); // false
-        System.out.println("Rate of Change Alert (second call): " + rateStrategy.shouldTrigger(32.0, 5.0)); // true, jeśli różnica > 5
+        double sensorValueForFirstCall = 25.0;
+        double sensorValueForSecondCall = 32.0;
+        double thresholdForRate = 5.0;
+        System.out.println("Rate of Change Alert (first call): " + rateStrategy.shouldTrigger(sensorValueForFirstCall,thresholdForRate)); // false
+        System.out.println("Rate of Change Alert (second call): " + rateStrategy.shouldTrigger(sensorValueForSecondCall, thresholdForRate)); // true, jeśli różnica > 5
 
-        System.out.println("Statistical Alert: " + evaluator.evaluate(sensorValue, 20.0, new StatisticalAlertStrategy()));
+        double thresholdForStatistical = 20.0;
+        System.out.println("Statistical Alert: " + evaluator.evaluate(sensorValue, thresholdForStatistical, new StatisticalAlertStrategy()));
     }
 }

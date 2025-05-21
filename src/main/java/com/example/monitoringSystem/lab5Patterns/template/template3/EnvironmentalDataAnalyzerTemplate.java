@@ -1,5 +1,4 @@
 package com.example.monitoringSystem.lab5Patterns.template.template3;
-
 import java.util.Map;
 
 abstract class EnvironmentalDataAnalyzerTemplate {
@@ -19,8 +18,9 @@ abstract class EnvironmentalDataAnalyzerTemplate {
             System.out.println("-> Sprawdzanie progów: " + tempThre + ", " + humThre);
         }
         public void prepareAlert(Map<String, Double> temperature, Map<String, Double> humidity, Double tempThre, Double humThre) {
-            double tempAvg = temperature.values().stream().mapToDouble(Double::doubleValue).average().orElse(0);
-            double humAvg = humidity.values().stream().mapToDouble(Double::doubleValue).average().orElse(0);
+            int otherValue = 0;
+            double tempAvg = temperature.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
+            double humAvg = humidity.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
 
             if(tempAvg > tempThre) {
                 System.out.println("-> Alert: Wysoka temperatura! Średnia: " + tempAvg);

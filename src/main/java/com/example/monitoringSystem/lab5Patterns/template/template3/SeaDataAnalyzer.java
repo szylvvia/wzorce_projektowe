@@ -16,8 +16,9 @@ public class SeaDataAnalyzer extends EnvironmentalDataAnalyzerTemplate {
 
     @Override
     public void prepareAlert(Map<String, Double> temperature, Map<String, Double> humidity, Double tempThre, Double humThre) {
-        double tempAvg = temperature.values().stream().mapToDouble(Double::doubleValue).average().orElse(0);
-        double humAvg = humidity.values().stream().mapToDouble(Double::doubleValue).average().orElse(0);
+        int otherValue = 0;
+        double tempAvg = temperature.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
+        double humAvg = humidity.values().stream().mapToDouble(Double::doubleValue).average().orElse(otherValue);
 
         if(tempAvg > tempThre) {
             System.out.println("-> [SEA ALERT] Wysoka temperatura na morzu! Średnia: " + tempAvg);
