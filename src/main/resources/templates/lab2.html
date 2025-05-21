@@ -34,11 +34,15 @@
 
 <h2>Bridge - Generowanie Raportów</h2>
 
-<h3>Raport Stacji Pogodowej (PDF)</h3>
-<p th:text="${weatherReportResult}"></p>
+<!--<h3>Raport Stacji Pogodowej (PDF)</h3>-->
+<!--<p th:text="${weatherReportResult}"></p>-->
 
-<h3>Raport Stacji Przemysłowej (CSV)</h3>
-<p th:text="${industrialReportResult}"></p>
+<!--<h3>Raport Stacji Przemysłowej (CSV)</h3>-->
+<!--<p th:text="${industrialReportResult}"></p>-->
+
+<h3>Raport Stacji Pogodowej (PDF)</h3>
+<p th:if="${weatherReportResult.startsWith('❌')}" style="color: red;" th:text="${weatherReportResult}"></p>
+<p th:unless="${weatherReportResult.startsWith('❌')}" th:text="${weatherReportResult}"></p>
 
 
 <h2>Kompozycja - Stacja złożona z sensorów</h2>

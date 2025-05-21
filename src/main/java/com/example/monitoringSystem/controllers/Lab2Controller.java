@@ -7,6 +7,7 @@ import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.Tem
 
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.*;
 
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.exceptions.ReportGenerationException;
 import com.example.monitoringSystem.lab2Patterns.composite.*;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alert.AlertDecorator;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alert.BasicMeasurementStation;
@@ -86,11 +87,24 @@ public class Lab2Controller {
         ReportableMeasurementStation industrialStationR = new IndustrialStationWithReports(new CsvReportGenerator());
 
         // Generate reports
-        String weatherReportResult = weatherStationR.measureAndReport("WeatherReport");
-        String industrialReportResult = industrialStationR.measureAndReport("IndustrialReport");
+//        String weatherReportResult = weatherStationR.measureAndReport("WeatherReport");
+//        String industrialReportResult = industrialStationR.measureAndReport("IndustrialReport");
+//
+//        model.addAttribute("weatherReportResult", weatherReportResult);
+//        model.addAttribute("industrialReportResult", industrialReportResult);
+        try {
+            String weatherReportResult = weatherStationR.measureAndReport("WeatherReport");
 
-        model.addAttribute("weatherReportResult", weatherReportResult);
-        model.addAttribute("industrialReportResult", industrialReportResult);
+            String industrialReportResult = industrialStationR.measureAndReport("IndustrialReport");
+
+            model.addAttribute("weatherReportResult", weatherReportResult);
+            model.addAttribute("industrialReportResult", industrialReportResult);
+        } catch (ReportGenerationException e) {
+            model.addAttribute("weatherReportResult", "❌ Weather report failed: " + e.getMessage());
+            model.addAttribute("industrialReportResult", "❌ Industrial report failed: " + e.getMessage());
+            e.printStackTrace();
+        }
+
 
         // === Decorator 1: Logging and Alerts ===
         MeasurementStation station = new BasicMeasurementStation();
