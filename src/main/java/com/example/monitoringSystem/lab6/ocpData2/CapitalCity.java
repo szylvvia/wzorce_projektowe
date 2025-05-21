@@ -9,7 +9,8 @@ public class CapitalCity implements ICity{
 
     @Override
     public void checkWeather() {
-        double temperature = Math.random() * 40;
+        int temperatureMultiplier = 40;
+        double temperature = Math.random() * temperatureMultiplier;
         System.out.println("[CITY] Temperature in " + name + ": " + temperature + "°C");
     }
 }

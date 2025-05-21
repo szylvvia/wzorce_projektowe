@@ -12,9 +12,11 @@ public class AglomerationCity implements ICity{
 
     @Override
     public void checkWeather() {
+        int loopCount = 3;
+        int temperatureMultiplier = 40;
         System.out.print("[CITY] Temperatures in " + name + ": ");
-        for (int i = 0; i < 3; i++) {
-           System.out.print((Math.random() * 40) + "°C, ");
+        for (int i = 0; i < loopCount; i++) {
+           System.out.print((Math.random() * temperatureMultiplier) + "°C, ");
         }
         System.out.println();
     }

@@ -11,11 +11,14 @@ public class DailyReport implements IReport {
     }
 
     public Map<String, Double> getWeatherData() {
-        // Simulate fetching weather data
+        int temperatureMultiplier = 40;
+        int humidityMultiplier = 100;
+        int windSpeedMultiplier = 20;
+
         return Map.of(
-                "Temperature", Math.random() * 40,
-                "Humidity", Math.random() * 100,
-                "Wind Speed", Math.random() * 20
+            "Temperature", Math.random() * temperatureMultiplier,
+            "Humidity", Math.random() * humidityMultiplier,
+            "Wind Speed", Math.random() * windSpeedMultiplier
         );
     }
 

@@ -8,13 +8,15 @@ public class MeasurementStation_ocpAbstract3 {
 
         System.out.println("Symulacja stacji pomiarowej");
 
-        for (int i = 0; i < 5; i++) {
+        int loopCount = 5;
+        for (int i = 0; i < loopCount; i++) {
             Measurement_ocpAbstract3 measurement = collector.collect();
             System.out.println("Zebrano pomiar: " + measurement);
             logger.log(measurement);
 
+            int sleepTimeInMillis = 1000; // 1s
             try {
-                Thread.sleep(1000); // 1s przerwy między pomiarami
+                Thread.sleep(sleepTimeInMillis); // 1s przerwy między pomiarami
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

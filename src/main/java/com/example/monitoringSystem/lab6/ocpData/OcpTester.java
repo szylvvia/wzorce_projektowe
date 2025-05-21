@@ -22,10 +22,17 @@ public class OcpTester {
 
         // Sprawdzanie wartości progowych
 
+        double currentCO2 = 420.0;
+        double currentTemperature = 22.5;
+        double currentUV = 6.5;
+        double thresholdCO2 = 400.0;
+        double thresholdTemperature = 25.0;
+        double thresholdUV = 6.0;
+
         List<SensorThreshold> data = List.of(
-                new SensorThreshold("CO2", 420.0, 400.0),
-                new SensorThreshold("Temperature", 22.5, 25.0),
-                new SensorThreshold("UV", 6.5, 6.0)
+                new SensorThreshold("CO2", currentCO2, thresholdCO2),
+                new SensorThreshold("Temperature", currentTemperature, thresholdTemperature),
+                new SensorThreshold("UV", currentUV, thresholdUV)
         );
 
         ThresholdChecker checker = new ThresholdChecker();

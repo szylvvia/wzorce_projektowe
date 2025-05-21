@@ -9,7 +9,8 @@ public class AirQualitySensor implements ISensor {
 
     @Override
     public void readMeasurement() {
-        double value = Math.random() * 100;
+        int valueMultiplier = 100;
+        double value = Math.random() * valueMultiplier;
         System.out.println("[SENSOR] Air Quality Sensor at " + location + " read value: " + value);
     }
 }
