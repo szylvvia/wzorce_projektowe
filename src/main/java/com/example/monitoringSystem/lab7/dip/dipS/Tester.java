@@ -19,17 +19,44 @@ public class Tester {
 
         double sensorResolutionMin = 0.5;
         double sensorResolutionMax = 1.0;
+        double sensorNegativeResolution = -0.5;
 
-        sensorDevice.measure(sensorResolutionMin);
-        sensorDevice.measure(sensorResolutionMax);
+        try {
+            sensorDevice.measure(sensorNegativeResolution);
+        } catch (RuntimeException e) {
+            System.out.println("Wystąpił błąd: " + e.getMessage());
+        }
+
+        try {
+            sensorDevice.measure(sensorResolutionMin);
+            sensorDevice.measure(sensorResolutionMax);
+        } catch (RuntimeException e) {
+            System.out.println("Wystąpił błąd: " + e.getMessage());
+        }
 
         System.out.println("--------------------------------------------------------------");
 
         DailyReportData reportData = new DailyReportData();
         ReportGenerator reportGenerator = new BasicReport(reportData);
 
-        reportGenerator.generateReport("Dzienny raport", "2023-10-01");
-        reportGenerator.generateReport("Raport tygodniowy", "2023-10-07");
+        try {
+            reportGenerator.generateReport("Dzienny raport", "2023-10-01");
+            reportGenerator.generateReport("Raport tygodniowy", "2023-10-07");
+        } catch (RuntimeException e) {
+            System.out.println("Wystąpił błąd: " + e.getMessage());
+        }
+
+        try {
+            reportGenerator.generateReport("Raport tygodniowy", "2030-10-01");
+        } catch (RuntimeException e) {
+            System.out.println("Wystąpił błąd: " + e.getMessage());
+        }
+
+        try {
+            reportGenerator.generateReport("", "2011-10-01");
+        } catch (RuntimeException e) {
+            System.out.println("Wystąpił błąd: " + e.getMessage());
+        }
 
         System.out.println("--------------------------------------------------------------");
 
