@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab8.functional;
+package com.example.monitoringSystem.lab8.functional.example1;
 
 public class FunctionalInterfacesDemo {
     public static void main(String[] args) {

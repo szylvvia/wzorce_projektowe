@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab8.functional;
+package com.example.monitoringSystem.lab8.functional.example1;
 
 @FunctionalInterface
 public interface SensorAction {
