@@ -12,7 +12,7 @@ public class CustomFunctionalInterfacesDemo {
 
         // Kalkulator z lambdą (średnia)
         StationCalculator avgCalc = values -> {
-            double sum = 0;
+            double sum = zero;
             for (double v : values) sum += v;
             return values.length > zero ? sum / values.length : zero;
         };
