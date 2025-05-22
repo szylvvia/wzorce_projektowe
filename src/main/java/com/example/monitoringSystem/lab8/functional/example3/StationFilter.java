@@ -1,4 +1,4 @@
-package com.example.monitoringSystem.lab8.functional.functionalM;
+package com.example.monitoringSystem.lab8.functional.example3;
 
 @FunctionalInterface
 interface StationFilter {

@@ -4,7 +4,9 @@ public class FunctionalInterfacesDemo {
     public static void main(String[] args) {
         // DataValidator
         double validTemp = 25;
-        DataValidator tempValidator = value -> value >= -30 && value <= 50;
+        double freezingTemp = -30;
+        double heatingTemp = 50;
+        DataValidator tempValidator = value -> value >= freezingTemp && value <= heatingTemp;
         System.out.println("Temp 25 valid? " + tempValidator.validate(validTemp));
 
         // AlertFormatter

@@ -6,8 +6,10 @@ import java.util.function.Predicate;
 
 public class PredicateFunctionDemo {
     public static void main(String[] args) {
+        double zeroTemp = 0;
+        double heatingTemp = 35;
         // EXAMPLE 1: Using Predicate and Function to check temperature
-        Predicate<Double> isDangerousTemperature = temp -> temp < 0 || temp > 35;
+        Predicate<Double> isDangerousTemperature = temp -> temp < zeroTemp || temp > heatingTemp;
         Function<Double, String> dangerLevel = temp -> {
             if (temp < 0) return "Freezing";
             else if (temp > 35) return "Overheat";
