@@ -5,13 +5,16 @@ public class CustomFunctionalInterfacesDemo {
         // Logger z lambdą
         StationLogger logger = (name, val) -> System.out.println("[" + name + "] -> " + val + " units");
 
-        logger.log("North", 24.5);
+        int zero = 0;
+        double North = 24.5;
+
+        logger.log("North", North);
 
         // Kalkulator z lambdą (średnia)
         StationCalculator avgCalc = values -> {
             double sum = 0;
             for (double v : values) sum += v;
-            return values.length > 0 ? sum / values.length : 0;
+            return values.length > zero ? sum / values.length : zero;
         };
 
         double average = avgCalc.calculate(new double[]{20.5, 22.0, 24.1});
