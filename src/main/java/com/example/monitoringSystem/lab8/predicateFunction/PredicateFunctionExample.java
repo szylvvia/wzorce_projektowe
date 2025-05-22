@@ -6,11 +6,15 @@ import java.util.function.Predicate;
 // Moniki
 
 public class PredicateFunctionExample {
+    static int lowPressure = 1005;
+    static int veryLowPressure = 1000;
+
+
     public static void main(String[] args) {
-        Predicate<Integer> isLowPressure = p -> p < 1005;
+        Predicate<Integer> isLowPressure = p -> p < lowPressure;
         Function<Integer, String> pressureCategory = p -> {
-            if (p < 1000) return "Very Low";
-            else if (p < 1010) return "Low";
+            if (p < veryLowPressure) return "Very Low";
+            else if (p < lowPressure) return "Low";
             else return "Normal";
         };
 

@@ -11,15 +11,18 @@ public class AdvancedStreamProcessing {
         List<Double> windSpeeds = Arrays.asList(5.4, 7.1, 3.8, 10.2, 6.6);
         List<String> locations = Arrays.asList("Delta", "Echo", "Foxtrot", "Golf", "Hotel");
 
+        int zero = 0;
+        double wind = 7.0;
+
         // Znajdź najwyższe ciśnienie
         int maxPressure = pressureReadings.stream()
                 .max(Integer::compare)
-                .orElse(0);
+                .orElse(zero);
         System.out.println("Max pressure: " + maxPressure + " hPa");
 
         // Zlicz dni z silnym wiatrem (> 7.0)
         long windyDays = windSpeeds.stream()
-                .filter(ws -> ws > 7.0)
+                .filter(ws -> ws > wind)
                 .count();
         System.out.println("Number of windy days: " + windyDays);
 
