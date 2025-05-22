@@ -1,0 +1,8 @@
+<aspectj>
+    <aspects>
+        <aspect name="com.example.monitoringSystem.lab9.AspectJ1.LoggingAspect"/>
+        <aspect name="com.example.monitoringSystem.lab9.AspectJ1.ValidationAspect"/>
+        <aspect name="com.example.monitoringSystem.lab9.AspectJ1.ExecutionTimeAspect"/>
+    </aspects>
+</aspectj>
+
