@@ -9,7 +9,7 @@ import java.util.List;
 public class ReportGeneratorService {
 
     final int MAX_MEASUREMENTS = 3;
-    List<Double> dataMeasurements = new ArrayList<>();
+    public List<Double> dataMeasurements = new ArrayList<>();
 
     public String generateReport(String date) {
         for (int i = 0; i < MAX_MEASUREMENTS; i++) {
