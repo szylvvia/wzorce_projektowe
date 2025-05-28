@@ -31,6 +31,7 @@ public class Aspect3Tester implements CommandLineRunner {
         String report2 = reportGeneratorService.generateReport("2025-05-29");
 
         System.out.println("--- END --- ASPECTJ 3: Report Generator Service ---");
+        System.out.println();
     }
 
 }

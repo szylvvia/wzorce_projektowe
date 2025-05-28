@@ -35,5 +35,6 @@ public class AspectTester implements CommandLineRunner {
         monitoringSystemService.saveMeasurement("TEMP-3", 99.1);
 
         System.out.println("=== AOP Test Finished ===");
+        System.out.println();
     }
 }
