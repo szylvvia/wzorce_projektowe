@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
 
+//Tydzień 8, Zasada LSP (Liskov Substitution Principle), klasa pochodna z rozszerzoną logiką sprawdzania krytyczności ciśnienia
 public class PressureStatistic extends Statistic {
 
     public PressureStatistic(List<Double> values, double threshold) {
@@ -14,11 +15,11 @@ public class PressureStatistic extends Statistic {
     }
 
     @Override
-    void printMessageAboutStatistic() {
-        if (isCritical()) {
+    void printMessageAboutStatistic() {        if (isCritical()) {
             System.out.println("[CRITICAL PRESSURE] Krytyczny poziom ciśnienia! Ciśnienie przekracza próg!");
         } else {
             System.out.println("[OK PRESSURE] Ciśnienie w normie.");
         }
     }
 }
+//Koniec, Tydzień 8, Zasada LSP

@@ -4,6 +4,7 @@ import com.example.monitoringSystem.lab2Patterns.adapter.exceptions.InvalidMeasu
 import com.example.monitoringSystem.lab2Patterns.adapter.exceptions.OutOfRangeMeasurementException;
 import com.example.monitoringSystem.lab2Patterns.adapter.exceptions.UnsupportedUnitConversionException;
 
+//Tydzień 3, Wzorzec Adapter, adapter konwertujący prędkość wiatru z km/h na mile na godzinę (mph)
 public class MphWindAdapter {
     private final double kmPerHour;
 
@@ -23,9 +24,8 @@ public class MphWindAdapter {
     public double toMph() {
         double conversionFactor = 1.60934;
         return kmPerHour / conversionFactor;
-    }
-
-    public double toKnots() {
+    }    public double toKnots() {
         throw new UnsupportedUnitConversionException("Conversion to knots is not supported.");
     }
 }
+//Koniec, Tydzień 3, Wzorzec Adapter

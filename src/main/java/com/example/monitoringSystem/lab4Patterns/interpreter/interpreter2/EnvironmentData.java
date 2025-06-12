@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 import java.util.List;
 import java.util.Map;
 
+//Tydzień 5, Interpreter Pattern, Klasa kontekstu przechowująca dane środowiskowe dla interpreterów
 public class EnvironmentData {
     private Map<String, List<Double>> temperatureData;
     private Map<String, List<Double>> humidityData;
@@ -24,3 +25,4 @@ public class EnvironmentData {
     }
 
 }
+//Koniec, Tydzień 5, Interpreter Pattern

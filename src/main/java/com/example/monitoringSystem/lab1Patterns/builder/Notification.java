@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab1Patterns.builder;
 
+//Tydzień 2, Wzorzec Builder 2
+//Builder dla powiadomień - pozwala na elastyczne tworzenie różnych typów notyfikacji
+//Izoluje logikę konstrukcji obiektu od jego reprezentacji
 public class Notification {
     private String message;
 
@@ -22,10 +25,10 @@ public class Notification {
     @Override
     public String toString() {
         return "Notification{" +
-                "message='" + message + '\'' +
-                '}';
+                "message='" + message + '\'' +                '}';
     }
 
 }
+//Koniec, Tydzień 2, Wzorzec Builder 2
 
 

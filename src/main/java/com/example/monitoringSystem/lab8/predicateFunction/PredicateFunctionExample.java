@@ -5,6 +5,7 @@ import java.util.function.Predicate;
 
 // Moniki
 
+//Tydzień 9, Programowanie funkcyjne, przykład użycia Predicate i Function dla analizy ciśnienia
 public class PredicateFunctionExample {
     static int lowPressure = 1005;
     static int veryLowPressure = 1000;
@@ -18,12 +19,11 @@ public class PredicateFunctionExample {
             else return "Normal";
         };
 
-        int currentPressure = 1002;
-
-        if (isLowPressure.test(currentPressure)) {
+        int currentPressure = 1002;        if (isLowPressure.test(currentPressure)) {
             System.out.println("Alert! Pressure too low: " + pressureCategory.apply(currentPressure));
         } else {
             System.out.println("Pressure OK: " + pressureCategory.apply(currentPressure));
         }
     }
 }
+//Koniec, Tydzień 9, Programowanie funkcyjne

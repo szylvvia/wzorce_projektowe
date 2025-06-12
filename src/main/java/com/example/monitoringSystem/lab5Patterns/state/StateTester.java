@@ -13,6 +13,7 @@ import com.example.monitoringSystem.lab5Patterns.state.StationState.IdleState;
 import com.example.monitoringSystem.lab5Patterns.state.StationState.MaintenanceState;
 import com.example.monitoringSystem.lab5Patterns.state.StationState.MonitoringStationContext;
 
+//Tydzień 6, State Pattern, Tester do testowania wzorca stanu dla różnych kontekstów systemu monitoringu
 public class StateTester {
     public static void main(String[] args) {
         System.out.println("=== Testing Monitoring Station State ===");
@@ -43,3 +44,4 @@ public class StateTester {
         alertContext.displayAlert();
     }
 }
+//Koniec, Tydzień 6, State Pattern

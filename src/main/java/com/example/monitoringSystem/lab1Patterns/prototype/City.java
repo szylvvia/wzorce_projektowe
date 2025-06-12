@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab1Patterns.prototype;
 
+//Tydzień 2, Klasa City dla wzorca Prototype
+//Model miasta wykorzystywany w prototypie kraju
+//Reprezentuje dane o miastach w systemie klonowania geograficznego
 public class City {
     public String name;
     public int population;
@@ -12,3 +15,4 @@ public class City {
     }
 
 }
+//Koniec, Tydzień 2, Klasa City dla wzorca Prototype

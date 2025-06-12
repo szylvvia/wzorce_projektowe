@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 5, Interpreter Pattern, Implementacja wyrażenia równości dla interpretacji wartości pomiarowych
 public class EqualToExpression implements AbstractExpression {
     private String name;
     private double value;
@@ -19,3 +20,4 @@ public class EqualToExpression implements AbstractExpression {
         return result;
     }
 }
+//Koniec, Tydzień 5, Interpreter Pattern

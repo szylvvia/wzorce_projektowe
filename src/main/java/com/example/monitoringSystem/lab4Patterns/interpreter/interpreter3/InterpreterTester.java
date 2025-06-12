@@ -6,6 +6,7 @@ import java.beans.Expression;
 import java.util.List;
 import java.util.Map;
 
+//Tydzień 5, Interpreter Pattern, Tester do testowania checkerów anomalii z wartościami boolean
 public class InterpreterTester {
     public static void main(String[] args) {
         EnvironmentData data = new EnvironmentData(
@@ -54,3 +55,4 @@ public class InterpreterTester {
         System.out.println("Condition Anomaly: " + conditionResult);
     }
 }
+//Koniec, Tydzień 5, Interpreter Pattern

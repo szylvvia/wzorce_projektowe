@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab7.dip.dipK;
 
+//Tydzień 8, Zasada DIP 1
+//Dependency Inversion Principle - moduły wysokiego poziomu nie powinny zależeć od modułów niskiego poziomu
+//Oba powinny zależeć od abstrakcji, a abstrakcje nie powinny zależeć od szczegółów
 
 public class DependencyInversionTester {
     public static void main(String[] args) {
@@ -16,9 +19,9 @@ public class DependencyInversionTester {
         alertService.triggerAlert("Critical humidity drop detected!");
 
         // Przykład 3: Measurement Processing
-        MeasurementProcessor processor = new AverageMeasurementProcessor();
-        MeasurementAnalyzer analyzer = new MeasurementAnalyzer(processor);
+        MeasurementProcessor processor = new AverageMeasurementProcessor();        MeasurementAnalyzer analyzer = new MeasurementAnalyzer(processor);
         analyzer.analyze(new double[]{22.5, 23.0, 21.5, 22.0});
     }
 }
+//Koniec, Tydzień 8, Zasada DIP 1
 

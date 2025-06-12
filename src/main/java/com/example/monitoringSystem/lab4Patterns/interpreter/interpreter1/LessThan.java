@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 5, Wzorzec Interpreter, terminal expression implementujący porównanie "mniejsze niż"
 public class LessThan implements AbstractExpression {
     private String key;
     private Double value;
@@ -27,7 +28,7 @@ public class LessThan implements AbstractExpression {
                     result.add(val);
                 }
             }
-        }
-        return result;
+        }        return result;
     }
 }
+//Koniec, Tydzień 5, Wzorzec Interpreter

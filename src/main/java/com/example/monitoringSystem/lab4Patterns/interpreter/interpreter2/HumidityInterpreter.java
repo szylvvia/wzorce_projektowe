@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
 
+//Tydzień 5, Interpreter Pattern, Interpreter wilgotności do interpretacji danych wilgotności względem progu
 public class HumidityInterpreter implements AbstractExpression {
     private Double threshold;
 
@@ -26,3 +27,4 @@ public class HumidityInterpreter implements AbstractExpression {
         return result;
     }
 }
+//Koniec, Tydzień 5, Interpreter Pattern

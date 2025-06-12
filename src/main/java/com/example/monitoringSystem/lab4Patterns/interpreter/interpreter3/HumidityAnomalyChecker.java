@@ -4,6 +4,7 @@ import com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2.Enviro
 
 import java.util.List;
 
+//Tydzień 5, Interpreter Pattern, Checker do wykrywania anomalii wilgotności względem progu
 public class HumidityAnomalyChecker implements AbstractExpression {
     private double threshold;
 
@@ -25,3 +26,4 @@ public class HumidityAnomalyChecker implements AbstractExpression {
     }
 
 }
+//Koniec, Tydzień 5, Interpreter Pattern

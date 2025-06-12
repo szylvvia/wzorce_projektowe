@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab2Patterns.composite;
 
+//Tydzień 3, Wzorzec Composite, liść w hierarchii reprezentujący czujnik wilgotności bez podczujników
 public class HumiditySensorComposite implements SensorComposite {
     private String name;
     private Double humidity;
@@ -26,7 +27,7 @@ public class HumiditySensorComposite implements SensorComposite {
 
     public String getName() { return name; }
     public Double getHumidity() { return humidity; }
-    public void setHumidity(Double humidity) { this.humidity = humidity; }
-    public void setName(String name) { this.name = name; }
+    public void setHumidity(Double humidity) { this.humidity = humidity; }    public void setName(String name) { this.name = name; }
 
 }
+//Koniec, Tydzień 3, Wzorzec Composite

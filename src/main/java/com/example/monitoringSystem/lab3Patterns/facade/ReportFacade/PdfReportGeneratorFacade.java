@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab3Patterns.facade.ReportFacade;
 
+//Tydzień 4, Wzorzec Facade, podsystem generowania raportów PDF ukryty za fasadą
 public class PdfReportGeneratorFacade implements ReportGeneratorFacade {
     @Override
     public String generateReport(String data) {
@@ -8,3 +9,4 @@ public class PdfReportGeneratorFacade implements ReportGeneratorFacade {
 
 
 }
+//Koniec, Tydzień 4, Wzorzec Facade

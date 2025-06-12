@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 import java.util.List;
 import java.util.Map;
 
+//Tydzień 5, Interpreter Pattern, Tester do testowania interpreterów z danymi środowiskowymi
 public class InterpreterTester {
     public static void main(String[] args) {
         EnvironmentData data = new EnvironmentData(
@@ -62,3 +63,4 @@ public class InterpreterTester {
     }
 
 }
+//Koniec, Tydzień 5, Interpreter Pattern

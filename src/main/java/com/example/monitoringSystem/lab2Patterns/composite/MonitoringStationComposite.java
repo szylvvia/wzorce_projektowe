@@ -3,6 +3,9 @@ package com.example.monitoringSystem.lab2Patterns.composite;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 3, Wzorzec Composite 1
+//Composite pattern dla stacji monitorującej - umożliwia traktowanie grupy sensorów jak pojedynczy obiekt
+//Pozwala na budowanie hierarchii obiektów i jednorodne traktowanie elementów prostych i złożonych
 public class MonitoringStationComposite implements SensorComposite {
 
     private String name;
@@ -39,8 +42,8 @@ public class MonitoringStationComposite implements SensorComposite {
 
     @Override
     public void reset() {
-        for (SensorComposite sensor : sensors){
-            sensor.reset();
+        for (SensorComposite sensor : sensors){            sensor.reset();
         }
     }
 }
+//Koniec, Tydzień 3, Wzorzec Composite 1

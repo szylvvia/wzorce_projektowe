@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.state.StationState;
 
+//Tydzień 6, State Pattern, Kontekst stacji monitoringowej zarządzający aktualnym stanem
 public class MonitoringStationContext {
     private StationState currentState;
 
@@ -15,3 +16,4 @@ public class MonitoringStationContext {
         }
     }
 }
+//Koniec, Tydzień 6, State Pattern

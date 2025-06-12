@@ -13,6 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+//Tydzień 4, Kontroler Lab3 - wzorce strukturalne zaawansowane
+//Demonstracja wzorców Proxy, Facade, Flyweight
+//Implementacja różnych typów proxy i fasad upraszczających złożone operacje
 
 @Controller
 public class Lab3Controller {
@@ -20,6 +23,9 @@ public class Lab3Controller {
     @GetMapping("/lab3")
     public String showLab3Page(Model model) {
 
+        //Tydzień 4, Wzorzec Proxy 1
+        //Demonstracja trzech typów Proxy: Virtual, Protection, Remote
+        //Kontrola dostępu, lazy loading i komunikacja zdalna
         //----Proxy----//
         // P1 - Virtual Proxy
         VirtualMeasuringStationProxy proxyP1 = new VirtualMeasuringStationProxy();
@@ -65,10 +71,7 @@ public class Lab3Controller {
         AlertFacade alertFacade = new AlertFacade();
         alertFacade.sendSmsAlert("Temperature too high!");
         alertFacade.sendEmailAlert("Pressure dropping rapidly!");
-        alertFacade.sendPushNotification("Humidity level critical!");
-
-
-
-        return "lab3";
+        alertFacade.sendPushNotification("Humidity level critical!");        return "lab3";
     }
 }
+//Koniec, Tydzień 4, Kontroler Lab3

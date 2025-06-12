@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab6.ocpData3;
 
+//Tydzień 7, Zasada OCP 1
+//Open/Closed Principle - otwarte na rozszerzenia, zamknięte na modyfikacje
+//System pomiarowy rozszerzalny o nowe formatery, alerty i wyjścia bez zmiany istniejącego kodu
 
 public class Main {
     public static void main(String[] args) {
@@ -17,10 +20,9 @@ public class Main {
         boolean alert2 = AlertPolicyEngine_ocpData3.check("temperature", m);
 
         // OUTPUT
-        OutputDispatcher_ocpData3.dispatch("console", formatted);
-
-        if (alert1 || alert2) {
+        OutputDispatcher_ocpData3.dispatch("console", formatted);        if (alert1 || alert2) {
             System.out.println("🚨 ALERT: przekroczony próg temperatury!");
         }
     }
 }
+//Koniec, Tydzień 7, Zasada OCP 1

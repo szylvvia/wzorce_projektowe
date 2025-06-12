@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab9.AspectJ1;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
+//Tydzień 10, AOP (Aspect-Oriented Programming), aspekt mierzący czas wykonania metod stacji pomiarowej
 @Aspect
 public class ExecutionTimeAspect {
 
@@ -15,3 +16,4 @@ public class ExecutionTimeAspect {
         return result;
     }
 }
+//Koniec, Tydzień 10, AOP

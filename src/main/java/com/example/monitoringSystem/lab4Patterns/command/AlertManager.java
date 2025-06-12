@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab4Patterns.command;
 
+//Tydzień 5, Wzorzec Command, receiver wykonujący rzeczywiste operacje wysyłania alertów
 public class AlertManager {
     public void sendSmsAlert(String message) {
         System.out.println("[SMS Alert] " + message);
@@ -13,3 +14,4 @@ public class AlertManager {
         System.out.println("[Push Alert] " + message);
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command

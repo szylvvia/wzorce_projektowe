@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
 
+//Tydzień 5, Interpreter Pattern, Interpreter temperatury do sprawdzania czy wartości przekraczają próg
 public class TemperatureInterpreter implements AbstractExpression {
     private double threshold;
 
@@ -31,3 +32,4 @@ public class TemperatureInterpreter implements AbstractExpression {
         return result;
     }
 }
+//Koniec, Tydzień 5, Interpreter Pattern

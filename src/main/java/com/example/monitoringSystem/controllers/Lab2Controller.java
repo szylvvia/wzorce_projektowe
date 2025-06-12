@@ -28,12 +28,18 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 3, Kontroler Lab2 - wzorce strukturalne
+//Demonstracja wzorców Adapter, Bridge, Composite, Decorator
+//Integruje różne implementacje wzorców strukturalnych w kontrolerze Spring MVC
 @Controller
 public class Lab2Controller {
 
     @GetMapping("/lab2")
     public String showLab2Page(Model model) {
 
+        //Tydzień 3, Wzorzec Adapter 3
+        //Demonstracja różnych adapterów: temperatura, prędkość wiatru, ciśnienie
+        //Konwersja między różnymi jednostkami pomiarowymi
         // === Adapter Pattern ===
 
         // Adapter - konwersja temperatury
@@ -52,12 +58,15 @@ public class Lab2Controller {
         MmHgPressureAdapter pressureAdapter = new MmHgPressureAdapter(pressureSensor.getPressure());
         double mmHgPressure = pressureAdapter.toMmHg();
 
-        // Przekazanie danych do widoku
-        model.addAttribute("fahrenheitTemp", fahrenheitTemperature);
+        // Przekazanie danych do widoku        model.addAttribute("fahrenheitTemp", fahrenheitTemperature);
         model.addAttribute("kelvinTemp", kelvinTemperature);
         model.addAttribute("mphWindSpeed", mphWindSpeed);
         model.addAttribute("mmHgPressure", mmHgPressure);
+        //Koniec, Tydzień 3, Wzorzec Adapter 3
 
+        //Tydzień 3, Wzorzec Bridge 2
+        //Bridge pattern dla stacji pomiarowych - różne typy stacji z różnymi sensorami
+        //Oddziela abstrakcję stacji od implementacji konkretnych sensorów
         // === Bridge Pattern: Sensor Stations ===
         MeasurementStationBridge weatherStation = new WeatherStationBridge(new TemperatureSensorBridge());
         MeasurementStationBridge industrialStation = new IndustrialStationBridge(new HumiditySensorBridge());
@@ -206,8 +215,8 @@ public class Lab2Controller {
         try {
             sensor.measure();
             return "Measurement successful!";
-        } catch (SecurityException e) {
-            return "Measurement failed: " + e.getMessage();
+        } catch (SecurityException e) {            return "Measurement failed: " + e.getMessage();
         }
     }
 }
+//Koniec, Tydzień 3, Kontroler Lab2

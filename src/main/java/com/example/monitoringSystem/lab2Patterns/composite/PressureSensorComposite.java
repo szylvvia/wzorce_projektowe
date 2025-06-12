@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab2Patterns.composite;
 
+//Tydzień 3, Wzorzec Composite, liść w hierarchii reprezentujący czujnik ciśnienia bez podczujników
 public class PressureSensorComposite implements SensorComposite {
     private String name;
     private Double pressure;
@@ -28,8 +29,8 @@ public class PressureSensorComposite implements SensorComposite {
         return name;
     }
     public void setName(String name) { this.name = name; }
-    public Double getPressure() { return pressure; }
-    public void setPressure(Double pressure) { this.pressure = pressure; }
+    public Double getPressure() { return pressure; }    public void setPressure(Double pressure) { this.pressure = pressure; }
 
 
 }
+//Koniec, Tydzień 3, Wzorzec Composite

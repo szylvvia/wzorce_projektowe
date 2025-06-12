@@ -3,6 +3,9 @@ package com.example.monitoringSystem.lab1Patterns.prototype;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 2, Wzorzec Prototype 3
+//Prototype krajów z listą miast - pozwala na klonowanie danych krajów
+//Umożliwia tworzenie różnych wariantów listy miast bez wpływu na oryginalną listę
 public class CountryPrototype implements Cloneable {
     private List<City> listCities;
 
@@ -34,8 +37,8 @@ public class CountryPrototype implements Cloneable {
         List<City> temp = new ArrayList<City>();
         for(City city : listCities){
             temp.add(city);
-        }
-        return new CountryPrototype(temp);
+        }        return new CountryPrototype(temp);
     }
 
 }
+//Koniec, Tydzień 2, Wzorzec Prototype 3

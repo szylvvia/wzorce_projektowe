@@ -2,6 +2,9 @@ package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
 
+//Tydzień 8, Zasada LSP 1
+//Liskov Substitution Principle - obiekty klasy pochodnej mogą zastąpić obiekty klasy bazowej
+//Wszystkie implementacje zachowują się zgodnie z kontraktem klasy bazowej
 public class Tester {
     public static void main(String[] args) {
         DailyReport dailyReport = new DailyReport("2023-10-01", "Jan Nowak");
@@ -39,9 +42,8 @@ public class Tester {
 
     public static void checkStatistic(Statistic statistic) {
         statistic.printMessageAboutStatistic();
-    }
-
-    public static void updateWeatherInCity(City city) {
+    }    public static void updateWeatherInCity(City city) {
         city.updateWeather();
     }
 }
+//Koniec, Tydzień 8, Zasada LSP 1

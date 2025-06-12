@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab9.AspectJ1;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.annotation.Aspect;
 
+//Tydzień 10, AOP (Aspect-Oriented Programming), aspekt walidacji pomiarów temperatury
 @Aspect
 public class ValidationAspect {
     final int MINTEMP = -50;
@@ -19,3 +20,4 @@ public class ValidationAspect {
         }
     }
 }
+//Koniec, Tydzień 10, AOP

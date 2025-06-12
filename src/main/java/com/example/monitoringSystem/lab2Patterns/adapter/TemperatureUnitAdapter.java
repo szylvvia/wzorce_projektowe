@@ -5,6 +5,9 @@ import com.example.monitoringSystem.lab2Patterns.adapter.exceptions.InvalidMeasu
 import com.example.monitoringSystem.lab2Patterns.adapter.exceptions.OutOfRangeMeasurementException;
 import com.example.monitoringSystem.lab2Patterns.adapter.exceptions.UnsupportedUnitConversionException;
 
+//Tydzień 3, Wzorzec Adapter 1
+//Adapter do konwersji jednostek temperatury między Celsius, Fahrenheit i Kelvin
+//Umożliwia współpracę między różnymi systemami pomiarowymi z różnymi jednostkami
 public class TemperatureUnitAdapter {
     private final double celsius;
 
@@ -31,10 +34,9 @@ public class TemperatureUnitAdapter {
     public double toKelvin() {
         double zeroCelsius = 273.15;
         return celsius + zeroCelsius;
-    }
-
-    public double toRankine() {
+    }    public double toRankine() {
         throw new UnsupportedUnitConversionException("Conversion to Rankine is not supported in this adapter.");
     }
 }
+//Koniec, Tydzień 3, Wzorzec Adapter 1
 

@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab4Patterns.command;
 
+//Tydzień 5, Wzorzec Command, konkretna komenda wysyłająca alert email
 public class TriggerEmailAlertCommand implements Command {
     private AlertManager alertManager;
     private String message;
@@ -14,3 +15,4 @@ public class TriggerEmailAlertCommand implements Command {
         alertManager.sendEmailAlert(message);
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command

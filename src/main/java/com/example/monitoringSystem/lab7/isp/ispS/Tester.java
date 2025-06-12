@@ -10,6 +10,9 @@ import com.example.monitoringSystem.lab7.isp.ispS.isp3.AdvancedAirStation;
 import com.example.monitoringSystem.lab7.isp.ispS.isp3.AdvancedWaterStation;
 import com.example.monitoringSystem.lab7.isp.ispS.isp3.BasicSoilStation;
 
+//Tydzień 8, Zasada ISP 1
+//Interface Segregation Principle - klienci nie powinni zależeć od interfejsów których nie używają
+//Podział dużych interfejsów na mniejsze, bardziej specjalistyczne interfejsy
 public class Tester {
     public static void main(String[] args) {
         BasicCSVReport basicCSVReport = new BasicCSVReport();
@@ -50,9 +53,8 @@ public class Tester {
         basicSoilStation.turnOn();
         basicSoilStation.calibrate();
         basicSoilStation.monitorSoilHumidity();
-        basicSoilStation.turnOff();
-
-        System.out.println("---------------------------------------------------");
+        basicSoilStation.turnOff();        System.out.println("---------------------------------------------------");
 
     }
 }
+//Koniec, Tydzień 8, Zasada ISP 1

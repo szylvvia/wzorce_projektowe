@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+//Testy jednostkowe dla wzorca Adapter - konwersja ciśnienia z hPa na mmHg
 public class MmHgPressureAdapterTest {
 
     @Test

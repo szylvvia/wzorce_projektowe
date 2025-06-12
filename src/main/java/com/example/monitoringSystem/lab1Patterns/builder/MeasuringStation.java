@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab1Patterns.builder;
 
+//Tydzień 2, Wzorzec Builder 1
+//Builder pattern dla obiektów MeasuringStation - umożliwia etapowe budowanie obiektu
+//Zapewnia czytelny i elastyczny sposób tworzenia złożonych obiektów
 public class MeasuringStation {
     public String name;
     public String localization;
@@ -16,10 +19,9 @@ public class MeasuringStation {
         public StationBuilder(String name, String localization) {
             this.name = name;
             this.localization = localization;
-        }
-
-        public MeasuringStation build() {
+        }        public MeasuringStation build() {
             return new MeasuringStation(this);
         }
     }
 }
+//Koniec, Tydzień 2, Wzorzec Builder 1

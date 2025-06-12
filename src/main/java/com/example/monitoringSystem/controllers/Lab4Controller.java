@@ -27,6 +27,9 @@ import com.example.monitoringSystem.lab4Patterns.iterator.AlertHistory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+//Tydzień 5, Kontroler Lab4 - wzorce behawioralne podstawowe
+//Demonstracja wzorców Command, Memento, Iterator, Mediator
+//Enkapsulacja operacji, zapisywanie stanów, iteracja i mediacja komunikacji
 @Controller
 public class Lab4Controller {
 
@@ -152,10 +155,10 @@ public class Lab4Controller {
         var alertComponent = new AlertComponent(alertMediator);
         alertMediator.register(alertSensor, alertComponent);
 
-        int temperatureValueForAlert = 100;
-        alertSensor.readTemperature(temperatureValueForAlert);
+        int temperatureValueForAlert = 100;        alertSensor.readTemperature(temperatureValueForAlert);
 
         return "lab4";
     }
 }
+//Koniec, Tydzień 5, Kontroler Lab4
 

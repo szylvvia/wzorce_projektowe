@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab4Patterns.memento.Sensor;
 
+//Tydzień 5, Wzorzec Memento, memento przechowujące stan kalibracji czujnika
 public class SensorCalibrationMemento {
     private final double calibrationValue;
 
@@ -11,3 +12,4 @@ public class SensorCalibrationMemento {
         return calibrationValue;
     }
 }
+//Koniec, Tydzień 5, Wzorzec Memento

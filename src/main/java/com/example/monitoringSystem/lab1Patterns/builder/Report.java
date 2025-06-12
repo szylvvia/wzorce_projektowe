@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab1Patterns.builder;
 
+//Tydzień 2, Wzorzec Builder 3
+//Builder dla raportów - umożliwia stopniowe budowanie złożonego obiektu raportu
+//Opcjonalne parametry można dodawać metodami łańcuchowymi (fluent interface)
 public class Report {
     private String date;
     private String localization;
@@ -64,8 +67,8 @@ public class Report {
                 ", stationName='" + stationName + '\'' +
                 ", pressure=" + pressure +
                 ", temperature=" + temperature +
-                ", humidity=" + humidity +
-                '}';
+                ", humidity=" + humidity +                '}';
     }
 
 }
+//Koniec, Tydzień 2, Wzorzec Builder 3

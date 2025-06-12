@@ -4,6 +4,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 3, Wzorzec Composite, kompozyt grupujący pomiary dla danego miasta w hierarchii pomiarów
 public class CityMeasurementsGroup implements TimeInterval {
     private String cityName;
     private List<TimeInterval> measurements = new ArrayList<>();
@@ -23,9 +24,8 @@ public class CityMeasurementsGroup implements TimeInterval {
 
     public CityMeasurementsGroup(String cityName) {
         this.cityName = cityName;
-    }
-
-    public void addMeasurement(TimeInterval measurement){
+    }    public void addMeasurement(TimeInterval measurement){
         this.measurements.add(measurement);
     }
 }
+//Koniec, Tydzień 3, Wzorzec Composite

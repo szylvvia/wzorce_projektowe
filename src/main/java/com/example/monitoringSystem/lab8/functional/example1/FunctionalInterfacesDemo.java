@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab8.functional.example1;
 
+//Tydzień 9, Programowanie funkcyjne 1
+//Functional interfaces i lambda expressions - demonstracja prostych interfejsów funkcyjnych
+//Wykorzystanie wyrażeń lambda do zwięzłego implementowania zachowań
 public class FunctionalInterfacesDemo {
     public static void main(String[] args) {
         // DataValidator
@@ -15,8 +18,8 @@ public class FunctionalInterfacesDemo {
         System.out.println(formatter.format("High Temperature", highTemp));
 
         // SensorAction
-        double loggedValue = 23.5;
-        SensorAction logAction = (name, val) -> System.out.println("Sensor [" + name + "] logged value: " + val);
+        double loggedValue = 23.5;        SensorAction logAction = (name, val) -> System.out.println("Sensor [" + name + "] logged value: " + val);
         logAction.execute("TempSensor1", loggedValue);
     }
 }
+//Koniec, Tydzień 9, Programowanie funkcyjne 1

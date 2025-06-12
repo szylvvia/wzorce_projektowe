@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab5Patterns.template.template2;
 
 import java.util.Map;
 
+//Tydzień 6, Wzorzec Template Method, abstrakcyjna klasa definiująca szablon algorytmu generowania raportów
 abstract class ReportTemplate {
 
     public final void generateReport(Map<String, String> reportDetails, Map<String, Double> data) {
@@ -26,8 +27,7 @@ abstract class ReportTemplate {
 
     public void prepareFooter(String author, String date) {
         System.out.println("-> Generowanie stopki raportu: " + author + ", " + date);
-    }
-
-    public abstract void sendReport();
+    }    public abstract void sendReport();
 
 }
+//Koniec, Tydzień 6, Wzorzec Template Method

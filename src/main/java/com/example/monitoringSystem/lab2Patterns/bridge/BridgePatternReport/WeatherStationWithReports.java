@@ -1,3 +1,4 @@
+//Tydzień 3, Bridge Pattern - konkretna abstrakcja stacji pogodowej z raportami
 package com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport;
 
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.exceptions.ReportGenerationException;
@@ -16,4 +17,5 @@ public class WeatherStationWithReports extends ReportableMeasurementStation {
     }
 
 }
+//Koniec, Tydzień 3, Bridge Pattern
 

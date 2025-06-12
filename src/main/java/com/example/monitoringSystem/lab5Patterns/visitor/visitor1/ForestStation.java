@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor1;
 
+//Tydzień 6, Wzorzec Visitor, konkretny element reprezentujący stację leśną w strukturze odwiedzanej przez visitor
 public class ForestStation implements StationVisitable {
 
     private String[][] data;
@@ -40,10 +41,9 @@ public class ForestStation implements StationVisitable {
             }
         }
         return null;
-    }
-
-    @Override
+    }    @Override
     public String accept(StationVisitor visitor) {
         return visitor.visit(this);
     }
 }
+//Koniec, Tydzień 6, Wzorzec Visitor

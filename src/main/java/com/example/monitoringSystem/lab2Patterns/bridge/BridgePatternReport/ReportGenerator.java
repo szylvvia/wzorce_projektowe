@@ -1,3 +1,4 @@
+//Tydzień 3, Bridge Pattern - interfejs implementora do generowania raportów, oddziela abstrakcję od implementacji generatora
 package com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport;
 
 //// Implementor - Report Generator Interface without exceptions
@@ -11,3 +12,4 @@ import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.exce
 public interface ReportGenerator {
     void generateReport(String data, String fileName) throws ReportGenerationException;
 }
+//Koniec, Tydzień 3, Bridge Pattern

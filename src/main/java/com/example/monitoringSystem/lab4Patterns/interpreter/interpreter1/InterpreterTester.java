@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 import java.util.List;
 import java.util.Map;
 
+//Tydzień 5, Interpreter Pattern, Tester do testowania wzorca interpretera dla wyrażeń pomiarowych
 public class InterpreterTester {
     public static void main(String[] args) {
         Context context = new Context(Map.of(
@@ -48,3 +49,4 @@ public class InterpreterTester {
         System.out.println("Values equal to " + equalToValueForOrExpression + " in temperature or (less than " + lessThanValueForOrExpression + " in humidity and greater than " + greaterThanValueForOrExpression + " in pressure): " + result5);
     }
 }
+//Koniec, Tydzień 5, Interpreter Pattern

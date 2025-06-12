@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
 
+//Tydzień 8, Zasada LSP (Liskov Substitution Principle), klasa bazowa definiująca zachowanie dla statystyk pomiarów
 public class Statistic {
     private List<Double> values;
     private double threshold;
@@ -47,9 +48,7 @@ public class Statistic {
 
     boolean isCritical() {
         return getMax() > threshold;
-    }
-
-    void printMessageAboutStatistic() {
+    }    void printMessageAboutStatistic() {
         if (isCritical()) {
             System.out.println("[CRITICAL] Ktrytyczny poziom statystyki! Przekracza próg!");
         } else {
@@ -57,3 +56,4 @@ public class Statistic {
         }
     }
 }
+//Koniec, Tydzień 8, Zasada LSP

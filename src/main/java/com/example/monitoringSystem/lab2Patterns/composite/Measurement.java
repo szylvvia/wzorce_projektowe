@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab2Patterns.composite;
 import java.sql.Time;
 import java.time.LocalDate;
 
+//Tydzień 3, Wzorzec Composite, liść w hierarchii reprezentujący pojedynczy pomiar środowiskowy
 public class Measurement implements TimeInterval{
     private LocalDate date;
     private String pollutionLevel;
@@ -17,10 +18,9 @@ public class Measurement implements TimeInterval{
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-    }
-
-    @Override
+    }    @Override
     public void showMeasurement() {
         System.out.println("Time: " + date + " Pollution level: " + pollutionLevel + " Temperature: " + temperature + " Humidity: " + humidity + " Pressure: " + pressure);
     }
 }
+//Koniec, Tydzień 3, Wzorzec Composite

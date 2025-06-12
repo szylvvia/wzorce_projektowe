@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab5Patterns.template.template2;
 
 import java.util.Map;
 
+//Tydzień 6, Wzorzec Template Method, konkretna implementacja generowania raportu PDF
 public class ReportPDF extends ReportTemplate {
 
     @Override
@@ -19,10 +20,9 @@ public class ReportPDF extends ReportTemplate {
     @Override
     public void prepareFooter(String author, String date) {
         System.out.println("-> Wykonany przez: " + author + ", " + date+"\n");
-    }
-
-    @Override
+    }    @Override
     public void sendReport() {
         System.out.println("-> Raport PDF został wysłany....");
     }
 }
+//Koniec, Tydzień 6, Wzorzec Template Method

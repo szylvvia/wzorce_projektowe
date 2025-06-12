@@ -3,6 +3,9 @@ package com.example.monitoringSystem.lab8.streamProcessing;
 import java.util.Arrays;
 import java.util.List;
 
+//Tydzień 9, Stream Processing 1
+//Stream API do przetwarzania kolekcji danych - filtrowanie, mapowanie, redukcja
+//Deklaratywne podejście do przetwarzania danych z wykorzystaniem strumieni
 public class StreamProcessingDemo {
     public static void main(String[] args) {
         List<Double> temperatures = Arrays.asList(20.5, 22.1, 19.0, 35.6, 41.2);
@@ -26,9 +29,9 @@ public class StreamProcessingDemo {
         System.out.println("Average humidity: " + avgHumidity);
 
         // Zmapuj nazwy stacji na wielkie litery i wypisz
-        System.out.println("Station names:");
-        stationNames.stream()
+        System.out.println("Station names:");        stationNames.stream()
                 .map(String::toUpperCase)
                 .forEach(System.out::println);
     }
 }
+//Koniec, Tydzień 9, Stream Processing 1
