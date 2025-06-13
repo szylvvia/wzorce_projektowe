@@ -1,3 +1,6 @@
+//Tydzień 4, Wzorzec Facade - fasada systemu alertów
+//Upraszcza interfejs do złożonego systemu powiadomień (SMS, email, push)
+//Ukrywa szczegóły implementacji różnych typów alertów za jednolitym interfejsem
 package com.example.monitoringSystem.lab3Patterns.facade.AlertFacade;
 
 public class AlertFacade {
@@ -29,3 +32,4 @@ public class AlertFacade {
         pushAlert.sendAlert(message);
     }
 }
+//Koniec, Tydzień 4, Wzorzec Facade - alerty

@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - analizator danych miejskich
+//Konkretna implementacja analizy danych dla środowiska miejskiego
+//Dostosowuje algorytm analizy do specyfiki pomiarów w mieście
 package com.example.monitoringSystem.lab5Patterns.template.template3;
 import java.util.Map;
 
@@ -34,3 +37,5 @@ public class CityDataAnalyzer extends EnvironmentalDataAnalyzerTemplate {
     }
 
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - analizator miejski

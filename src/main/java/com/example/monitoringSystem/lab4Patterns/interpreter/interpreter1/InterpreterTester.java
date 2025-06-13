@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - tester pierwszej implementacji
+//Testuje system interpretacji wyrażeń logicznych dla danych pomiarowych
+//Wzorzec Interpreter definiuje reprezentację gramatyki dla języka oraz interpreter do interpretacji zdań w tym języku
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 
 import java.util.List;
@@ -49,4 +52,4 @@ public class InterpreterTester {
         System.out.println("Values equal to " + equalToValueForOrExpression + " in temperature or (less than " + lessThanValueForOrExpression + " in humidity and greater than " + greaterThanValueForOrExpression + " in pressure): " + result5);
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - tester

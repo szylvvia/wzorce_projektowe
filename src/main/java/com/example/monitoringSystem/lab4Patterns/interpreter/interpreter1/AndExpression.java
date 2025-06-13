@@ -1,11 +1,13 @@
+//Tydzień 5, Wzorzec Interpreter - wyrażenie logiczne AND
+//Non-terminal expression łączące dwa wyrażenia operatorem koniunkcji
+//Zwraca true tylko gdy oba podwyrażenia są prawdziwe
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 
 import java.util.List;
 
-//Tydzień 5, Interpreter Pattern, Implementacja wyrażenia logicznego AND dla interpretacji reguł pomiarowych
 public class AndExpression implements AbstractExpression {
-    private AbstractExpression left;
-    private AbstractExpression right;
+    private final AbstractExpression left;
+    private final AbstractExpression right;
 
     public AndExpression(AbstractExpression left, AbstractExpression right) {
         this.left = left;
@@ -20,4 +22,4 @@ public class AndExpression implements AbstractExpression {
         return leftResult;
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - wyrażenie AND

@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab3Patterns.Proxy.P1;
 
+//Tydzień 4, Proxy Pattern, Rzeczywista implementacja stacji pomiarowej - kosztowny obiekt do utworzenia
 public class RealMeasuringStation implements MeasuringStationP1 {
     public RealMeasuringStation() {
         int sleepTimeInMillis = 2000;
@@ -16,3 +17,4 @@ public class RealMeasuringStation implements MeasuringStationP1 {
         return "Virtual Proxy: Displaying actual sensor data...";
     }
 }
+//Koniec, Tydzień 4, Proxy Pattern

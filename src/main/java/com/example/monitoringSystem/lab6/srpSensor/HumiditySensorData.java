@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada SRP (Single Responsibility Principle), model danych czujnika wilgotności
+//Odpowiedzialny tylko za przechowywanie i zarządzanie danymi czujnika
+//Separacja odpowiedzialności - dane oddzielone od logiki biznesowej i prezentacji
 package com.example.monitoringSystem.lab6.srpSensor;
 
 public class HumiditySensorData {
@@ -25,3 +28,4 @@ public class HumiditySensorData {
         this.name = name;
     }
 }
+//Koniec, Tydzień 7, Zasada SRP - dane czujnika wilgotności

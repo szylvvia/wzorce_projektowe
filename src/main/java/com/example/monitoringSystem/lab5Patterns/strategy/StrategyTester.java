@@ -13,7 +13,7 @@ import com.example.monitoringSystem.lab5Patterns.strategy.DataTransmissionStrate
 import com.example.monitoringSystem.lab5Patterns.strategy.DataTransmissionStrategy.MqttTransmissionStrategy;
 import com.example.monitoringSystem.lab5Patterns.strategy.DataTransmissionStrategy.WebSocketTransmissionStrategy;
 
-//Tydzień 6, Wzorzec Strategy 1
+//Tydzień 6, Strategy Pattern, Tester demonstrujący różne strategie w systemie monitoringu
 //Strategy pattern dla różnych strategii przetwarzania danych - enkapsuluje algorytmy w oddzielnych klasach
 //Umożliwia dynamiczną zmianę algorytmu w czasie wykonywania programu
 public class StrategyTester {
@@ -47,8 +47,9 @@ public class StrategyTester {
         double sensorValueForSecondCall = 32.0;
         double thresholdForRate = 5.0;
         System.out.println("Rate of Change Alert (first call): " + rateStrategy.shouldTrigger(sensorValueForFirstCall,thresholdForRate)); // false
-        System.out.println("Rate of Change Alert (second call): " + rateStrategy.shouldTrigger(sensorValueForSecondCall, thresholdForRate)); // true, jeśli różnica > 5        double thresholdForStatistical = 20.0;
+        System.out.println("Rate of Change Alert (second call): " + rateStrategy.shouldTrigger(sensorValueForSecondCall, thresholdForRate)); // true, jeśli różnica > 5
+        double thresholdForStatistical = 20.0;
         System.out.println("Statistical Alert: " + evaluator.evaluate(sensorValue, thresholdForStatistical, new StatisticalAlertStrategy()));
-    }
+                    }
 }
-//Koniec, Tydzień 6, Wzorzec Strategy 1
+//Koniec, Tydzień 6, Strategy Pattern

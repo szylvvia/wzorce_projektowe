@@ -1,12 +1,14 @@
 package com.example.monitoringSystem.lab9.AspectJ3;
 
+//Tydzień 11, AOP - główny tester aspektów zaawansowanych
+//Demonstruje kompleksowe zastosowanie AspectJ w systemie raportowania
+//Automatyczny pomiar czasu, liczenie raportów i walidacja pomiarów
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
-
-
+//Tydzień 11, AspectJ AOP, Tester aspektów dla generatora raportów - trzecia implementacja
 @SpringBootApplication(scanBasePackages = "com.example.monitoringSystem")
 @EnableAspectJAutoProxy
 public class Aspect3Tester implements CommandLineRunner {
@@ -35,3 +37,4 @@ public class Aspect3Tester implements CommandLineRunner {
     }
 
 }
+//Koniec, Tydzień 11, AOP - główny tester aspektów

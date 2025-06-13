@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Mediator - komponent sensora stacji
+//Wykrywa anomalie i powiadamia mediatora o zdarzeniach
+//Część systemu stacji komunikującego się przez wzorzec Mediator
 package com.example.monitoringSystem.lab4Patterns.mediator.station;
 
 public class SensorComponentStation extends Component {
@@ -10,3 +13,4 @@ public class SensorComponentStation extends Component {
         mediator.notify(this, "Detected");
     }
 }
+//Koniec, Tydzień 5, Wzorzec Mediator - sensor stacji

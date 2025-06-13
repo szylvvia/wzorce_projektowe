@@ -4,6 +4,9 @@ package com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure;
 import java.util.ArrayList;
 import java.util.List;
 
+// Tydzień 3, Wzorzec Bridge - abstrakcja stacji pomiarowej
+// Definiuje interfejs wysokiego poziomu dla stacji pomiarowych
+// Przechowuje referencję do implementacji (SensorBridge) i deleguje do niej operacje
 // Abstraction - Measurement Station
 public abstract class MeasurementStationBridge {
     protected List<SensorBridge> sensorBridges = new ArrayList<>();
@@ -24,3 +27,4 @@ public abstract class MeasurementStationBridge {
 
     protected abstract String getStationType();
 }
+// Koniec, Tydzień 3, Wzorzec Bridge - abstrakcja

@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab6.ocpData3;
 
+//Tydzień 7, Zasada OCP (Open/Closed Principle), kolektor pomiarów środowiskowych
+//Generuje losowe dane pomiarowe temperatury i wilgotności
+//Może być rozszerzony o nowe typy pomiarów zgodnie z zasadą OCP
 public class MeasurementCollector_ocpData3 {
     public Measurement_ocpData3 collect() {
         int temperatureOffset = 15;
@@ -13,3 +16,4 @@ public class MeasurementCollector_ocpData3 {
         return new Measurement_ocpData3(temp, humidity);
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - kolektor pomiarów

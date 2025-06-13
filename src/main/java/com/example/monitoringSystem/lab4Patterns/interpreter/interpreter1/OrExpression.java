@@ -3,10 +3,12 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 import java.util.ArrayList;
 import java.util.List;
 
-//Tydzień 5, Interpreter Pattern, Implementacja wyrażenia logicznego OR dla interpretacji reguł pomiarowych
+//Tydzień 5, Wzorzec Interpreter - wyrażenie logiczne OR
+//Non-terminal expression łączące dwa wyrażenia operatorem alternatywy
+//Zwraca true gdy przynajmniej jedno z podwyrażeń jest prawdziwe
 public class OrExpression implements AbstractExpression {
-    private AbstractExpression left;
-    private AbstractExpression right;
+    private final AbstractExpression left;
+    private final AbstractExpression right;
 
     public OrExpression(AbstractExpression left, AbstractExpression right) {
         this.left = left;
@@ -21,4 +23,4 @@ public class OrExpression implements AbstractExpression {
         return leftResult;
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - wyrażenie OR

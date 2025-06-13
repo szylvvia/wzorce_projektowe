@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), implementacja miasta metropolitalnego
+//Dodaje nową funkcjonalność obsługi dużych miast bez zmiany istniejącego kodu
+//Demonstruje rozszerzalność systemu zgodnie z zasadą OCP
 package com.example.monitoringSystem.lab6.ocpAbstract2;
 
 public class MetropolisCity extends ACity {
@@ -14,3 +17,4 @@ public class MetropolisCity extends ACity {
         System.out.println("Updating weather for " + name + " with population " + population);
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - miasto metropolitalne

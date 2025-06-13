@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - klasa testująca wzorzec odwiedzającego
+//Demonstruje jak Visitor umożliwia dodawanie nowych operacji do hierarchii klas
+//Testuje różne typy stacji i różne implementacje odwiedzających
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor1;
 
 public class VisitorTester1 {
@@ -36,3 +39,4 @@ public class VisitorTester1 {
         return json.toString();
     }
 }
+//Koniec, Tydzień 6, Wzorzec Visitor - tester

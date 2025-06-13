@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab8.functional.example3;
 
+//Tydzień 10, Functional Programming, Demo niestandardowych interfejsów funkcyjnych dla stacji pomiarowych
 public class CustomFunctionalInterfacesDemo {
     public static void main(String[] args) {
         // Logger z lambdą
@@ -27,3 +28,4 @@ public class CustomFunctionalInterfacesDemo {
         System.out.println("Include 'North'? " + filter.shouldInclude("North")); // false
     }
 }
+//Koniec, Tydzień 10, Functional Programming

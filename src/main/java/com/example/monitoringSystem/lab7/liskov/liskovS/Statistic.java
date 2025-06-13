@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - klasa bazowa statystyk zgodna z Liskov Substitution Principle
+//Definiuje kontrakt dla wszystkich typów statystyk środowiskowych
+//Podklasy muszą zachować semantykę i oczekiwania klasy bazowej
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
@@ -56,4 +59,4 @@ public class Statistic {
         }
     }
 }
-//Koniec, Tydzień 8, Zasada LSP
+//Koniec, Tydzień 8, Zasada LSP - klasa bazowa statystyk

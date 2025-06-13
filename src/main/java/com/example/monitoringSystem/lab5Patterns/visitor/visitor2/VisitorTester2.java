@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - tester drugiej implementacji
+//Testuje funkcjonalność wzorca Visitor dla analizy danych ze stacji pomiarowych
+//Demonstruje oddzielenie algorytmów od struktury danych przez wzorzec Visitor
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor2;
 
 import java.util.Map;
@@ -30,3 +33,5 @@ public class VisitorTester2 {
         return json.toString();
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - tester drugiej implementacji

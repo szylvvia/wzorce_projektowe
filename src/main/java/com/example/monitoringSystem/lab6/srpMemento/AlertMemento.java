@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada SRP + Wzorzec Memento, memento stanu alertu
+//Single Responsibility Principle - odpowiedzialny tylko za przechowywanie stanu alertu
+//Wzorzec Memento - enkapsuluje stan alertu w niezmiennej postaci
 package com.example.monitoringSystem.lab6.srpMemento;
 
 public class AlertMemento {
@@ -13,3 +16,4 @@ public class AlertMemento {
         return alertMessage;
     }
 }
+//Koniec, Tydzień 7, Zasada SRP + Wzorzec Memento - memento alertu

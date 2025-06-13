@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - analizator danych z środowiska morskiego
+//Konkretna implementacja analizy danych dla stacji monitoringu morskiego
+//Specjalizuje kroki analizy pod kątem specyfiki środowiska wodnego
 package com.example.monitoringSystem.lab5Patterns.template.template3;
 import java.util.Map;
 
@@ -34,3 +37,5 @@ public class SeaDataAnalyzer extends EnvironmentalDataAnalyzerTemplate {
     }
 
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - analizator morski

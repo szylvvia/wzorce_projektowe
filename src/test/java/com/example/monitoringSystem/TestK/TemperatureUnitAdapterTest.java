@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla TemperatureUnitAdapter
+//Testuje wzorzec Adapter dla konwersji jednostek temperatury
+//Weryfikuje poprawność konwersji między Celsius, Fahrenheit i Kelvin
 package com.example.monitoringSystem.TestK;
 
 
@@ -40,3 +43,4 @@ public class TemperatureUnitAdapterTest {
         assertEquals(97.88, adapter.toFahrenheit(), 0.01);
     }
 }
+//Koniec, Tydzień 13, Test wzorca Adapter

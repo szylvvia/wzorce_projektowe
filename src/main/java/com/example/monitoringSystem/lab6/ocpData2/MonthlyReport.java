@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab6.ocpData2;
 
+//Tydzień 7, Zasada OCP (Open/Closed Principle), implementacja raportu miesięcznego
+//Dodaje nową funkcjonalność raportowania miesięcznego bez modyfikacji kodu bazowego
+//Przykład jak OCP umożliwia rozszerzanie systemu o nowe rodzaje analiz czasowych
 import java.util.List;
 
 public class MonthlyReport implements IReport {
@@ -17,3 +20,4 @@ public class MonthlyReport implements IReport {
                 aitQuality.get((int) (Math.random() * aitQuality.size())));
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - raport miesięczny

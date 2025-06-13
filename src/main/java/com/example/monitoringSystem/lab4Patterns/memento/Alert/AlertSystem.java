@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Memento - klasa Originator systemu alertów
+//Tworzy i przywraca snapshoty swoich stanów alertów
+//Zarządza historią alertów i umożliwia ich przywracanie
 package com.example.monitoringSystem.lab4Patterns.memento.Alert;
 
 import java.util.ArrayList;
@@ -25,3 +28,4 @@ public class AlertSystem {
         }
     }
 }
+//Koniec, Tydzień 5, Wzorzec Memento - Originator

@@ -1,5 +1,9 @@
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter3;
 
+//Tydzień 5, Wzorzec Interpreter - checker anomalii ciśnienia
+//Analizuje pomiary ciśnienia atmosferycznego pod kątem nieprawidłowości
+//Wykrywa gwałtowne zmiany ciśnienia mogące wskazywać na problemy systemowe
+
 import com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2.EnvironmentData;
 
 import java.util.List;
@@ -25,4 +29,4 @@ public class PressureAnomalyChecker implements AbstractExpression {
     }
 
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - checker ciśnienia

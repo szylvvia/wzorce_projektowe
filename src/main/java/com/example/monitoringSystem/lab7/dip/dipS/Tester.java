@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada DIP - klasa testująca Dependency Inversion Principle
+//Demonstruje odwrócenie zależności poprzez zależność od abstrakcji, nie konkretnych implementacji
+//Testuje różne implementacje sensorów, raportów i statystyk zgodnie z zasadą DIP
 package com.example.monitoringSystem.lab7.dip.dipS;
 
 import com.example.monitoringSystem.lab7.dip.dipS.dip1.DIPSensorDevice;
@@ -67,3 +70,4 @@ public class Tester {
         stats.generateStats();
     }
 }
+//Koniec, Tydzień 8, Zasada DIP

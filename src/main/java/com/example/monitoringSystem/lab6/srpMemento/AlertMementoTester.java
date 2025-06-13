@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada SRP + Wzorzec Memento, tester systemu alertów z historią
+//Demonstruje zastosowanie SRP w połączeniu z wzorcem Memento
+//Testuje zapisywanie i przywracanie stanów alertów bez naruszania enkapsulacji
 package com.example.monitoringSystem.lab6.srpMemento;
 
 public class AlertMementoTester {
@@ -27,4 +30,5 @@ public class AlertMementoTester {
         alertSystem.restoreFromMemento(caretaker.restore());
     }
 }
+//Koniec, Tydzień 7, Zasada SRP + Wzorzec Memento - tester
 

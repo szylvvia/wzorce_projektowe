@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - tester trzeciej implementacji
+//Testuje najbardziej zaawansowaną wersję interpretera anomalii
+//Łączy różne typy checkerów w kompleksowe wyrażenia logiczne
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter3;
 
 import com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2.EnvironmentData;
@@ -55,4 +58,4 @@ public class InterpreterTester {
         System.out.println("Condition Anomaly: " + conditionResult);
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - tester kompletny

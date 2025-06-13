@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Mediator - konkretna implementacja mediatora kalibracji
+//Koordynuje komunikację między stacją a sensorami podczas procesu kalibracji
+//Implementuje logikę obsługi wydarzeń w systemie kalibracji
 package com.example.monitoringSystem.lab4Patterns.mediator.calibration;
 
 public class CalibrationMediatorImpl implements CalibrationMediator {
@@ -16,3 +19,4 @@ public class CalibrationMediatorImpl implements CalibrationMediator {
         }
     }
 }
+//Koniec, Tydzień 5, Wzorzec Mediator - implementacja kalibracji

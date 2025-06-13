@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Strategy - konkretna strategia znajdowania maksimum
+//Implementuje algorytm wyszukiwania największej wartości w zestawie danych
+//Strategia przydatna do identyfikacji szczytowych wartości pomiarowych
 package com.example.monitoringSystem.lab5Patterns.strategy.DataAggregationStrategy;
 
 public class MaximumAggregationStrategy implements DataAggregationStrategy {
@@ -12,3 +15,4 @@ public class MaximumAggregationStrategy implements DataAggregationStrategy {
         return max;
     }
 }
+//Koniec, Tydzień 6, Wzorzec Strategy - strategia maksimum

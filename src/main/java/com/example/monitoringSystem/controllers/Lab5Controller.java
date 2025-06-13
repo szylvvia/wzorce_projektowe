@@ -1,15 +1,15 @@
 package com.example.monitoringSystem.controllers;
 
 
-import com.example.monitoringSystem.lab5Patterns.observer.MeasuringStationObserver;
-import com.example.monitoringSystem.lab5Patterns.observer.PressureObserver;
-import com.example.monitoringSystem.lab5Patterns.observer.TemperatureObserver;
-import com.example.monitoringSystem.lab5Patterns.observer.HumidityObserver;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-//Tydzień 6, Kontroler Lab5 - wzorce behawioralne zaawansowane
+import com.example.monitoringSystem.lab5Patterns.observer.HumidityObserver;
+import com.example.monitoringSystem.lab5Patterns.observer.MeasuringStationObserver;
+import com.example.monitoringSystem.lab5Patterns.observer.PressureObserver;
+import com.example.monitoringSystem.lab5Patterns.observer.TemperatureObserver;
+
+//Tydzień 6, MVC Controller, Kontroler Spring Boot dla Lab5 - wzorce behawioralne zaawansowane
 //Demonstracja wzorców Observer, Strategy, Template Method, Visitor
 //Implementacja powiadomień, strategii, szablonów i odwiedzających
 @Controller
@@ -36,4 +36,4 @@ public class Lab5Controller {
         return "lab5";
     }
 }
-//Koniec, Tydzień 6, Kontroler Lab5
+//Koniec, Tydzień 6, MVC Controller

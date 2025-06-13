@@ -3,7 +3,7 @@ package com.example.monitoringSystem.lab8.streamProcessing;
 import java.util.Arrays;
 import java.util.List;
 
-//Tydzień 9, Stream Processing 1
+//Tydzień 10, Stream Processing 1
 //Stream API do przetwarzania kolekcji danych - filtrowanie, mapowanie, redukcja
 //Deklaratywne podejście do przetwarzania danych z wykorzystaniem strumieni
 public class StreamProcessingDemo {
@@ -34,4 +34,4 @@ public class StreamProcessingDemo {
                 .forEach(System.out::println);
     }
 }
-//Koniec, Tydzień 9, Stream Processing 1
+//Koniec, Tydzień 10, Stream Processing 1

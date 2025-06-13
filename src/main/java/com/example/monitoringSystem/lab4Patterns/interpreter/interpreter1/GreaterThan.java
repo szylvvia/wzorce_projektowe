@@ -3,7 +3,9 @@ package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter1;
 import java.util.ArrayList;
 import java.util.List;
 
-//Tydzień 5, Wzorzec Interpreter, terminal expression implementujący porównanie "większe niż"
+//Tydzień 5, Wzorzec Interpreter - wyrażenie "większe niż"
+//Terminal expression sprawdzające czy wartość jest większa od progu
+//Używane do wykrywania przekroczeń limitów w pomiarach środowiskowych
 public class GreaterThan implements AbstractExpression {
     private String key;
     private Double value;
@@ -31,4 +33,4 @@ public class GreaterThan implements AbstractExpression {
         }        return result;
     }
 }
-//Koniec, Tydzień 5, Wzorzec Interpreter
+//Koniec, Tydzień 5, Wzorzec Interpreter - wyrażenie większe

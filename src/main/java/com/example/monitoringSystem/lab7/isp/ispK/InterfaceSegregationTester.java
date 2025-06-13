@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada ISP - tester segregacji interfejsów
+//Demonstruje zastosowanie Interface Segregation Principle w systemie monitoringu
+//Pokazuje korzyści z podziału dużych interfejsów na mniejsze, specjalistyczne
 package com.example.monitoringSystem.lab7.isp.ispK;
 
 public class InterfaceSegregationTester {
@@ -20,4 +23,6 @@ public class InterfaceSegregationTester {
         fileLogger.logToFile("Sensor data: Temp=25.4°C");
     }
 }
+
+//Koniec, Tydzień 8, Zasada ISP - tester segregacji
 

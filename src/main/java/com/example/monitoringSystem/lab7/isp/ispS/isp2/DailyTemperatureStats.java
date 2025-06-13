@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada ISP - dzienne statystyki temperatury
+//Implementuje tylko interfejs TemperatureStats zgodnie z ISP
+//Nie jest obciążona metodami dla jakości powietrza czy poziomu hałasu
 package com.example.monitoringSystem.lab7.isp.ispS.isp2;
 
 public class DailyTemperatureStats implements TemperatureStats {
@@ -11,3 +14,5 @@ public class DailyTemperatureStats implements TemperatureStats {
     }
 
 }
+
+//Koniec, Tydzień 8, Zasada ISP - statystyki temperatury dzienne

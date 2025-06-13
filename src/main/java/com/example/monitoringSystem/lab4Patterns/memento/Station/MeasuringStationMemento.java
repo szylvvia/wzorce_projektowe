@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Memento - originator stacji pomiarowej
+//Tworzy i przywraca memento dla stacji monitoringu środowiska
+//Enkapsuluje wewnętrzny stan stacji i umożliwia jego serializację
 package com.example.monitoringSystem.lab4Patterns.memento.Station;
 
 //Tydzień 5, Wzorzec Memento 1
@@ -19,4 +22,4 @@ public class MeasuringStationMemento {
         System.out.println("Restored station state: " + state);
     }
 }
-//Koniec, Tydzień 5, Wzorzec Memento 1
+//Koniec, Tydzień 5, Wzorzec Memento - originator stacji

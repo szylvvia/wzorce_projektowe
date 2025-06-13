@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), implementacja raportu dziennego
+//Rozszerza system raportowania o raporty dzienne bez modyfikacji kodu bazowego
+//Demonstruje jak OCP pozwala na dodawanie nowych typów raportów
 package com.example.monitoringSystem.lab6.ocpData2;
 
 import java.util.List;
@@ -32,3 +35,4 @@ public class DailyReport implements IReport {
 
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - raport dzienny

@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - dane środowiskowe jako kontekst
+//Encapsuluje pomiary temperatury, ciśnienia i wilgotności
+//Służy jako kontekst dla ewaluacji wyrażeń interpretera anomalii
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
@@ -25,4 +28,4 @@ public class EnvironmentData {
     }
 
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - kontekst środowiskowy

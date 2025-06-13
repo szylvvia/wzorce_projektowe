@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - stacja miejska
+//Konkretny element reprezentujący stację monitoringu miejskiego
+//Implementuje interfejs odwiedzanego dla operacji analizy danych miejskich
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor2;
 
 import java.util.HashMap;
@@ -26,3 +29,5 @@ public class UrbanStation implements DataAnalyzeVisitable {
         return dataAnalyzer.accept(this);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - stacja miejska

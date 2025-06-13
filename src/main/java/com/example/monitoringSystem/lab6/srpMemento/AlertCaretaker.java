@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada SRP + Wzorzec Memento, opiekun historii alertów
+//Single Responsibility Principle - odpowiedzialny tylko za zarządzanie historią stanów
+//Wzorzec Memento - przechowuje i przywraca poprzednie stany alertów systemu
 package com.example.monitoringSystem.lab6.srpMemento;
 
 import java.util.Stack;
@@ -14,3 +17,4 @@ public class AlertCaretaker {
         return alertHistory.isEmpty() ? null : alertHistory.pop();
     }
 }
+//Koniec, Tydzień 7, Zasada SRP + Wzorzec Memento - opiekun alertów

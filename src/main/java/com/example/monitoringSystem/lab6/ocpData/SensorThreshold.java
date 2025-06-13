@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP - klasa reprezentująca próg sensora
+//Enkapsuluje dane o wartości progowej dla różnych typów sensorów
+//Zgodnie z zasadą Open/Closed może być rozszerzana bez modyfikacji istniejącego kodu
 package com.example.monitoringSystem.lab6.ocpData;
 
 public class SensorThreshold {
@@ -23,3 +26,4 @@ public class SensorThreshold {
         return limit;
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - próg sensora

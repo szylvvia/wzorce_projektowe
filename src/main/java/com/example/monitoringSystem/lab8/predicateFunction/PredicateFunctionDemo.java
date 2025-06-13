@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+//Tydzień 10, Predicate Function, Demo wykorzystania predykatów i funkcji w analizie danych pomiarowych
 public class PredicateFunctionDemo {
     public static void main(String[] args) {
         double zeroTemp = 0;
@@ -64,3 +65,4 @@ public class PredicateFunctionDemo {
         }
     }
 }
+//Koniec, Tydzień 10, Predicate Function

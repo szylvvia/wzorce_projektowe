@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), sprawdzarka progów czujników
+//Wykorzystuje polimorfizm do sprawdzania różnych typów progów bez znajomości ich implementacji
+//System otwarty na rozszerzenia o nowe typy czujników, zamknięty na modyfikacje
 package com.example.monitoringSystem.lab6.ocpData;
 
 import java.util.List;
@@ -13,3 +16,4 @@ public class ThresholdChecker {
         }
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - sprawdzarka progów

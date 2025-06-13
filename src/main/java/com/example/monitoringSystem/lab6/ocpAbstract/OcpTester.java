@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), klasa testująca zastosowanie zasady OCP
+//Demonstruje jak system jest otwarty na rozszerzenia ale zamknięty na modyfikacje
+//Pokazuje polimorficzne wykorzystanie interfejsów dla różnych implementacji
 package com.example.monitoringSystem.lab6.ocpAbstract;
 
 import java.util.List;
@@ -29,3 +32,4 @@ public class OcpTester {
 
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - tester

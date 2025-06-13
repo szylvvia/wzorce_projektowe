@@ -1,5 +1,9 @@
 package com.example.monitoringSystem.controllers;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
 import com.example.monitoringSystem.lab3Patterns.Proxy.P1.VirtualMeasuringStationProxy;
 import com.example.monitoringSystem.lab3Patterns.Proxy.P2.ProtectionMeasuringStationProxy;
 import com.example.monitoringSystem.lab3Patterns.Proxy.P3.RemoteMeasuringStationProxy;
@@ -9,14 +13,8 @@ import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.CsvReportGe
 import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.JsonReportGeneratorFacade;
 import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.PdfReportGeneratorFacade;
 import com.example.monitoringSystem.lab3Patterns.facade.ReportFacade.ReportFacade;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 
-//Tydzień 4, Kontroler Lab3 - wzorce strukturalne zaawansowane
-//Demonstracja wzorców Proxy, Facade, Flyweight
-//Implementacja różnych typów proxy i fasad upraszczających złożone operacje
-
+//Tydzień 4, MVC Controller, Kontroler Spring Boot dla Lab3 - zaawansowane wzorce strukturalne
 @Controller
 public class Lab3Controller {
 
@@ -70,8 +68,10 @@ public class Lab3Controller {
         // Alert Facade
         AlertFacade alertFacade = new AlertFacade();
         alertFacade.sendSmsAlert("Temperature too high!");
-        alertFacade.sendEmailAlert("Pressure dropping rapidly!");
-        alertFacade.sendPushNotification("Humidity level critical!");        return "lab3";
+                alertFacade.sendEmailAlert("Pressure dropping rapidly!");
+        alertFacade.sendPushNotification("Humidity level critical!");
+        
+        return "lab3";
     }
 }
-//Koniec, Tydzień 4, Kontroler Lab3
+//Koniec, Tydzień 4, MVC Controller

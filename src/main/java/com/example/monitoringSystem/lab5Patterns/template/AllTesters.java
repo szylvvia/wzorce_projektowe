@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - tester główny łączący wszystkie implementacje
+//Uruchamia wszystkie wersje wzorca Template Method w sekwencji
+//Demonstruje różne warianty implementacji tego samego wzorca behawioralnego
 package com.example.monitoringSystem.lab5Patterns.template;
 
 import com.example.monitoringSystem.lab5Patterns.template.template1.TemplateTester;
@@ -14,3 +17,5 @@ public class AllTesters {
         AnalyzerTester.main(args);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - tester główny

@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla AverageProcessor (DIP)
+//Testuje implementację procesora średniej zgodnie z zasadą Dependency Inversion Principle
+//Weryfikuje poprawność obliczeń średniej arytmetycznej w kontekście wzorców SOLID
 package com.example.monitoringSystem.TestdipM;
 
 import com.example.monitoringSystem.lab7.dip.dipM.AverageProcessor;
@@ -38,4 +41,5 @@ class AverageProcessorTest {
         assertEquals(0.0, processor.process(data));
     }
 }
+//Koniec, Tydzień 13, Test DIP AverageProcessor
 

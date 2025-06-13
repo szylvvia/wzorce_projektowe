@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - checker anomalii temperatury
+//Monitoruje odczyty temperatur i identyfikuje wartości wykraczające poza normy
+//Kluczowy komponent systemu wczesnego ostrzegania przed ekstremalnymi temperaturami
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter3;
 
 import com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2.EnvironmentData;
@@ -25,4 +28,4 @@ public class TemperatureAnomalyChecker implements AbstractExpression {
     }
 
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - checker temperatury

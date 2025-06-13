@@ -1,3 +1,6 @@
+//Tydzień 3, Wzorzec Adapter, klasa testująca różne implementacje wzorca adaptacyjnego
+//Testuje adaptery do konwersji jednostek temperatury, ciśnienia i prędkości wiatru
+//Demonstruje jak wzorzec Adapter umożliwia współpracę niekompatybilnych interfejsów
 package com.example.monitoringSystem.lab2Patterns.adapter;
 
 public class AdapterTester {
@@ -69,3 +72,4 @@ public class AdapterTester {
         }
     }
 }
+//Koniec, Tydzień 3, Wzorzec Adapter

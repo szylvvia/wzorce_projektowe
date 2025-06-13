@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Command - klasa testująca komendy alertów
+//Demonstruje enkapsulację żądań alertów jako obiekty komend
+//Pozwala na kolejkowanie, logowanie i cofanie operacji alertów
 package com.example.monitoringSystem.lab4Patterns.command;
 
 public class AlertCommandTester {
@@ -15,3 +18,4 @@ public class AlertCommandTester {
         invoker.executeCommand(pushCmd);
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command - tester alertów

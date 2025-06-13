@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla DataAggregationStrategy (Strategy Pattern)
+//Testuje implementację wzorca Strategy dla agregacji danych pomiarowych
+//Weryfikuje poprawność różnych strategii: Average, Maximum, Median
 package com.example.monitoringSystem.TestK;
 
 
@@ -48,3 +51,4 @@ import static org.junit.jupiter.api.Assertions.*;
             assertDoesNotThrow(() -> strategy.aggregate(new double[]{}), "Dla pustej tablicy nie powinien wystąpić wyjątek");
         }
     }
+//Koniec, Tydzień 13, Test Strategy Pattern - agregacja danych

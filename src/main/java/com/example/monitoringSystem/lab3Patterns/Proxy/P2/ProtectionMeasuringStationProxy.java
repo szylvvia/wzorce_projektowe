@@ -1,8 +1,6 @@
 package com.example.monitoringSystem.lab3Patterns.Proxy.P2;
 
-import com.example.monitoringSystem.lab3Patterns.Proxy.P1.RealMeasuringStation;
-
-// Proxy
+//Tydzień 4, Proxy Pattern, Protection Proxy - kontroluje dostęp do wrażliwych danych na podstawie uprawnień
 public class ProtectionMeasuringStationProxy implements MeasuringStationP2 {
     private final SensitiveMeasuringStation protectedStation = new SensitiveMeasuringStation();
 
@@ -19,3 +17,4 @@ public class ProtectionMeasuringStationProxy implements MeasuringStationP2 {
         return accessDataP2(userRole);
     }
 }
+//Koniec, Tydzień 4, Proxy Pattern

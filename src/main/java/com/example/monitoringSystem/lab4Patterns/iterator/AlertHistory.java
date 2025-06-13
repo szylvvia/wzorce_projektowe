@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Iterator - kolekcja historii alertów
+//Agregat przechowujący alerty i zapewniający dostęp przez iterator
+//Umożliwia sekwencyjny dostęp do alertów bez ujawniania wewnętrznej struktury
 package com.example.monitoringSystem.lab4Patterns.iterator;
 
 public class AlertHistory {
@@ -14,3 +17,4 @@ public class AlertHistory {
         return new AlertHistoryIterator(alerts, count);
     }
 }
+//Koniec, Tydzień 5, Wzorzec Iterator - Agregat

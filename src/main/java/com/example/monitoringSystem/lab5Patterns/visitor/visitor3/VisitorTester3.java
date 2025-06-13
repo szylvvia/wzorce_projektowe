@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - tester trzeciej implementacji visitora
+//Testuje funkcjonalność wzorca Visitor dla systemu alertów krajowych i departamentalnych
+//Demonstruje oddzielenie algorytmów raportowania od struktury danych administracyjnych
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
 public class VisitorTester3 {
@@ -31,3 +34,5 @@ public class VisitorTester3 {
         return json.toString();
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - tester alertów

@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), serwis alertów z mapą strategii
+//Wykorzystuje wzorzec Strategy z mapą do zarządzania różnymi typami alertów
+//Otwarty na rozszerzenia o nowe typy alertów, zamknięty na modyfikacje
 package com.example.monitoringSystem.lab6.ocpData;
 
 import java.util.HashMap;
@@ -21,4 +24,5 @@ public class AlertServiceWithMap {
         }
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - serwis alertów z mapą
 

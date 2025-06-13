@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - tester Liskov Substitution Principle
+//Demonstruje zastosowanie zasady podstawienia Liskov w systemie monitoringu
+//Pokazuje jak podklasy mogą zastępować klasy bazowe bez naruszania funkcjonalności
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
@@ -46,4 +49,4 @@ public class Tester {
         city.updateWeather();
     }
 }
-//Koniec, Tydzień 8, Zasada LSP 1
+//Koniec, Tydzień 8, Zasada LSP - tester LSP

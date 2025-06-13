@@ -1,32 +1,60 @@
 package com.example.monitoringSystem.controllers;
 
 
-import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.*;
-import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.monitoringSystem.lab2Patterns.adapter.CelsiusSensor;
+import com.example.monitoringSystem.lab2Patterns.adapter.HpaPressureSensor;
+import com.example.monitoringSystem.lab2Patterns.adapter.KmphWindSensor;
+import com.example.monitoringSystem.lab2Patterns.adapter.MmHgPressureAdapter;
+import com.example.monitoringSystem.lab2Patterns.adapter.MphWindAdapter;
+import com.example.monitoringSystem.lab2Patterns.adapter.TemperatureSensor;
+import com.example.monitoringSystem.lab2Patterns.adapter.TemperatureUnitAdapter;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.CommunicatingMeasurementStation;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.HttpCommunication;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.IndustrialStationWithCommunication;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.MqttCommunication;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternCommunication.WeatherStationWithCommunication;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.HumiditySensorBridge;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.IndustrialStationBridge;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.MeasurementStationBridge;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.MultiSensorStationBridge;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.TemperatureSensorBridge;
-
-import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.*;
-
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternMessure.WeatherStationBridge;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.CsvReportGenerator;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.IndustrialStationWithReports;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.PdfReportGenerator;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.ReportableMeasurementStation;
+import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.WeatherStationWithReports;
 import com.example.monitoringSystem.lab2Patterns.bridge.BridgePatternReport.exceptions.ReportGenerationException;
-import com.example.monitoringSystem.lab2Patterns.composite.*;
+import com.example.monitoringSystem.lab2Patterns.composite.CityComposite;
+import com.example.monitoringSystem.lab2Patterns.composite.CityMeasurementsGroup;
+import com.example.monitoringSystem.lab2Patterns.composite.HumiditySensorComposite;
+import com.example.monitoringSystem.lab2Patterns.composite.Measurement;
+import com.example.monitoringSystem.lab2Patterns.composite.MeasurementStationCity;
+import com.example.monitoringSystem.lab2Patterns.composite.MeasurementStationRegion;
+import com.example.monitoringSystem.lab2Patterns.composite.MonitoringStationComposite;
+import com.example.monitoringSystem.lab2Patterns.composite.PressureSensorComposite;
+import com.example.monitoringSystem.lab2Patterns.composite.SensorComposite;
+import com.example.monitoringSystem.lab2Patterns.composite.TemperatureSensorComposite;
+import com.example.monitoringSystem.lab2Patterns.composite.TimeInterval;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alert.AlertDecorator;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alert.BasicMeasurementStation;
 import com.example.monitoringSystem.lab2Patterns.decorator.Alert.LoggingDecorator;
-
 import com.example.monitoringSystem.lab2Patterns.decorator.Alert.MeasurementStation;
+import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.AuthorizedSensorDecorator;
+import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.BasicSensor;
+import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.SensorAuth;
 import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AllPurposeSensorSensor;
 import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.AnalogSensorSensor;
 import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.DigitalSensorSensor;
 import com.example.monitoringSystem.lab2Patterns.decorator.Sensor.SensorSensor;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import com.example.monitoringSystem.lab2Patterns.adapter.*;
-import com.example.monitoringSystem.lab2Patterns.decorator.Authorization.*;
-
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 //Tydzień 3, Kontroler Lab2 - wzorce strukturalne
 //Demonstracja wzorców Adapter, Bridge, Composite, Decorator

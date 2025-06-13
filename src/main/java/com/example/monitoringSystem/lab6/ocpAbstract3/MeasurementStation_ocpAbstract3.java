@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP - stacja pomiarowa dla trzeciej implementacji
+//Demonstruje zastosowanie Open/Closed Principle w systemie stacji pomiarowych
+//Możliwość rozszerzania funkcjonalności bez modyfikacji istniejącego kodu
 package com.example.monitoringSystem.lab6.ocpAbstract3;
 
 public class MeasurementStation_ocpAbstract3 {
@@ -25,3 +28,5 @@ public class MeasurementStation_ocpAbstract3 {
         System.out.println("Zakończono zbieranie danych. Sprawdź log.txt.");
     }
 }
+
+//Koniec, Tydzień 7, Zasada OCP - stacja pomiarowa

@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - tester drugiej implementacji
+//Testuje rozszerzoną wersję interpretera dla danych środowiskowych
+//Obsługuje złożone reguły anomalii dla temperatur, ciśnienia i wilgotności
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
@@ -63,4 +66,4 @@ public class InterpreterTester {
     }
 
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - tester zaawansowany

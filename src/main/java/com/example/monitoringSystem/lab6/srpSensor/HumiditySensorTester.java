@@ -9,12 +9,11 @@ public class HumiditySensorTester {
         HumiditySensorData humiditySensorData = new HumiditySensorData("Humidity Sensor", humidity);
         HumiditySensorController sensorController = new HumiditySensorController(humiditySensorData);
         HumiditySensorDisplay sensorDisplay = new HumiditySensorDisplay(humiditySensorData);
-        HumiditySensorDescribe sensorDescribe = new HumiditySensorDescribe(humiditySensorData);
-
-        // Test the classes
+        HumiditySensorDescribe sensorDescribe = new HumiditySensorDescribe(humiditySensorData);        // Test the classes
         sensorController.turnOn();
         sensorDisplay.showMeasurement();
-        sensorDescribe.getDetails();        sensorController.reset();
+        sensorDescribe.getDetails();
+        sensorController.reset();
         sensorController.turnOff();
     }
 }

@@ -2,7 +2,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1;
 import java.util.ArrayList;
 import java.util.List;
 
-
+//Tydzień 4, Flyweight Pattern, Tester demonstrujący efektywność pamięciową wzorca flyweight
 public class DigitalSensorTester {
     private List<DigitalSensor> digitalSensors = new ArrayList<>();
 
@@ -41,3 +41,4 @@ public class DigitalSensorTester {
         DigitalSensorTester digitalSensorTester = new DigitalSensorTester();
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern

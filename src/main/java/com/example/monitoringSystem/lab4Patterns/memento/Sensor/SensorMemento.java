@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Memento - memento sensora
+//Przechowuje stan sensora umożliwiając przywrócenie poprzednich ustawień
+//Zawiera wszystkie krytyczne parametry konfiguracyjne sensora pomiarowego
 package com.example.monitoringSystem.lab4Patterns.memento.Sensor;
 
 //Tydzień 5, Wzorzec Memento, originator przechowujący stan kalibracji czujnika
@@ -17,4 +20,4 @@ public class SensorMemento {
         System.out.println("Restored sensor calibration: " + calibrationValue);
     }
 }
-//Koniec, Tydzień 5, Wzorzec Memento
+//Koniec, Tydzień 5, Wzorzec Memento - memento sensora

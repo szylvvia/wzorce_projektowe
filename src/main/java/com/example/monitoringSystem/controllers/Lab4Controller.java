@@ -1,8 +1,19 @@
 package com.example.monitoringSystem.controllers;
 
 // Mediator Calibration
-import com.example.monitoringSystem.lab4Patterns.command.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.monitoringSystem.lab4Patterns.command.CalibrateSensorCommand;
+import com.example.monitoringSystem.lab4Patterns.command.Command;
+import com.example.monitoringSystem.lab4Patterns.command.CommandInvoker;
+import com.example.monitoringSystem.lab4Patterns.command.MeasuringStation;
+import com.example.monitoringSystem.lab4Patterns.command.StartMeasurementCommand;
+import com.example.monitoringSystem.lab4Patterns.command.StopMeasurementCommand;
+import com.example.monitoringSystem.lab4Patterns.iterator.AlertHistory;
+import com.example.monitoringSystem.lab4Patterns.iterator.CalibrationHistory;
 import com.example.monitoringSystem.lab4Patterns.iterator.MyIterator;
+import com.example.monitoringSystem.lab4Patterns.iterator.SensorData;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertComponent;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.AlertMediatorImpl;
 import com.example.monitoringSystem.lab4Patterns.mediator.alert.SensorComponentAlert;
@@ -12,24 +23,14 @@ import com.example.monitoringSystem.lab4Patterns.mediator.calibration.StationCom
 import com.example.monitoringSystem.lab4Patterns.mediator.station.ControllerComponent;
 import com.example.monitoringSystem.lab4Patterns.mediator.station.SensorComponentStation;
 import com.example.monitoringSystem.lab4Patterns.mediator.station.StationMediatorImpl;
-
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertSystem;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorCalibrationCaretaker;
 import com.example.monitoringSystem.lab4Patterns.memento.Sensor.SensorMemento;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.MeasuringStationMemento;
 import com.example.monitoringSystem.lab4Patterns.memento.Station.StateHistoryCaretaker;
-// Iterator imports
-import com.example.monitoringSystem.lab4Patterns.iterator.SensorData;
-import com.example.monitoringSystem.lab4Patterns.iterator.CalibrationHistory;
-import com.example.monitoringSystem.lab4Patterns.iterator.AlertHistory;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-
-//Tydzień 5, Kontroler Lab4 - wzorce behawioralne podstawowe
-//Demonstracja wzorców Command, Memento, Iterator, Mediator
-//Enkapsulacja operacji, zapisywanie stanów, iteracja i mediacja komunikacji
+//Tydzień 5, MVC Controller, Kontroler Spring Boot dla Lab4 - wzorce behawioralne podstawowe
 @Controller
 public class Lab4Controller {
 
@@ -160,5 +161,5 @@ public class Lab4Controller {
         return "lab4";
     }
 }
-//Koniec, Tydzień 5, Kontroler Lab4
+//Koniec, Tydzień 5, MVC Controller
 

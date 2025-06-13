@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - reprezentacja kraju w systemie alertów
+//Konkretny element przechowujący informacje o poziomach alertów krajowych
+//Implementuje interfejs odwiedzanego dla generowania raportów krajowych
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
 class Country implements AlertVisitable {
@@ -32,3 +35,5 @@ class Country implements AlertVisitable {
         return alertVisitor.visit(this);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - element kraju

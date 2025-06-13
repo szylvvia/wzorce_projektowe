@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - reprezentacja departamentu w systemie alertów
+//Konkretny element reprezentujący jednostkę administracyjną departamentu
+//Przechowuje dane o alertach departamentalnych dla procesowania przez visitor
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
 public class Department implements AlertVisitable {
@@ -30,3 +33,5 @@ public class Department implements AlertVisitable {
         return alertVisitor.visit(this);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - element departamentu

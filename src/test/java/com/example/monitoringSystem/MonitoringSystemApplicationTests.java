@@ -1,3 +1,6 @@
+//Tydzień 13, Test głównej aplikacji systemu monitoringu środowiska
+//Testuje kontekst Spring Boot dla aplikacji implementującej wzorce projektowe
+//Weryfikuje poprawność konfiguracji i uruchomienia całego systemu monitoringu
 package com.example.monitoringSystem;
 
 import org.junit.jupiter.api.Test;
@@ -12,4 +15,4 @@ class MonitoringSystemApplicationTests {
 	}
 
 }
-//Koniec testów aplikacji
+//Koniec, Tydzień 13, Testy głównej aplikacji

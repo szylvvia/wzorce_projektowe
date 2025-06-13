@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1;
 
 import java.util.HashMap;
 
+//Tydzień 4, Flyweight Pattern, Fabryka flyweight zarządzająca tworzeniem i współdzieleniem instancji
 public class EnvironmentalDetailsFactory {
     private static final HashMap<SensorType, AbstractFlySensorDetails> sensorDetails = new HashMap<SensorType, AbstractFlySensorDetails>();
 
@@ -23,4 +24,5 @@ public class EnvironmentalDetailsFactory {
         TEMPERATURE, HUMIDITY, PRESSURE
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern
 

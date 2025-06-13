@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada ISP - podstawowa implementacja sensora zgodnie z ISP
+//Implementuje tylko interfejs IReadSensor - nie jest obciążona niepotrzebnymi metodami
+//Przykład dobrego projektowania zgodnego z Interface Segregation Principle
 package com.example.monitoringSystem.lab7.isp.ispM.ISensorFile;
 
 public class BasicSensor implements IReadSensor, ICalibratable, IResettable, IStatusDisplayable {
@@ -23,3 +26,5 @@ public class BasicSensor implements IReadSensor, ICalibratable, IResettable, ISt
         System.out.println("Sensor: status OK.");
     }
 }
+
+//Koniec, Tydzień 8, Zasada ISP - podstawowy sensor

@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - miasto nadmorskie
+//Rozszerza klasę City zachowując zgodność z kontraktem bazowym
+//Dodaje specjalistyczne zachowania dla miast położonych nad morzem
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 public class CostalCity extends City {
@@ -11,3 +14,5 @@ public class CostalCity extends City {
         System.out.println("[COSTAL] Zaktualizowanie pogody w mieście nadmorskim: " + getName());
     }
 }
+
+//Koniec, Tydzień 8, Zasada LSP - miasto nadmorskie

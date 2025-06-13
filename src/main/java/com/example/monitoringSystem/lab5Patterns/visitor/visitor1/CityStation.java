@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - stacja miejska
+//Konkretny element reprezentujący stację miejską w strukturze odwiedzanej przez visitor
+//Przechowuje dane o mieście i umożliwia odwiedzającemu dostęp do informacji
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor1;
 
 public class CityStation implements StationVisitable {
@@ -48,3 +51,5 @@ public class CityStation implements StationVisitable {
         return visitor.visit(this);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - stacja miejska

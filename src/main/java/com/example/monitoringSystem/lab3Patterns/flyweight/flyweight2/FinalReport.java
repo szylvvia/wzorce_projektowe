@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight2;
 import java.util.Date;
 import java.util.stream.Collectors;
 
+//Tydzień 4, Flyweight Pattern, Kontekst używający flyweight - zawiera zewnętrzny stan raportu końcowego
 public class FinalReport {
     private final Date DATE;
     private final String AUTHOR_ID;
@@ -30,7 +31,6 @@ public class FinalReport {
         return getFinalReport() + " " + mapAsString;
     }
 
-
-
-
 }
+
+//Koniec, Tydzień 4, Flyweight Pattern

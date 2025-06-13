@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), silnik polityk alertów
+//Centralizuje logikę sprawdzania progów dla różnych typów pomiarów
+//Może być rozszerzony o nowe typy sprawdzeń zgodnie z zasadą OCP
 package com.example.monitoringSystem.lab6.ocpData3;
 
 import java.util.Map;
@@ -14,3 +17,4 @@ public class AlertPolicyEngine_ocpData3 {
         return false;
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - silnik polityk alertów

@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - analizator danych leśnych
+//Konkretna implementacja analizy danych dla środowiska leśnego
+//Specjalizuje algorytm analizy pod kątem ekosystemów leśnych i ich specyfiki
 package com.example.monitoringSystem.lab5Patterns.template.template3;
 import java.util.Map;
 
@@ -34,3 +37,5 @@ public class ForestDataAnalyzer extends EnvironmentalDataAnalyzerTemplate {
     }
 
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - analizator leśny

@@ -1,3 +1,6 @@
+//Tydzień 11, AOP - aspekt walidacji generowania pomiarów
+//Sprawdza czy pomiary są prawidłowo generowane przed tworzeniem raportów
+//Automatyczna walidacja danych wejściowych bez modyfikacji kodu biznesowego
 package com.example.monitoringSystem.lab9.AspectJ3;
 
 import org.aspectj.lang.JoinPoint;
@@ -8,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.lang.reflect.Field;
 import java.util.List;
 
+//Tydzień 11, AspectJ AOP, Aspekt sprawdzający czy pomiary zostały wygenerowane
 @Aspect
 @Component
 public class CheckIsMeasurmentGeneratedAspect {
@@ -32,3 +36,4 @@ public class CheckIsMeasurmentGeneratedAspect {
         }
     }
 }
+//Koniec, Tydzień 11, AOP - aspekt walidacji pomiarów

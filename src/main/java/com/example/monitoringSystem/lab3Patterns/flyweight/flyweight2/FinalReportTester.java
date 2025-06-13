@@ -1,12 +1,10 @@
 package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight2;
 
-import com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1.DigitalSensorTester;
-import com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1.EnvironmentalDetailsFactory;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+//Tydzień 4, Flyweight Pattern, Tester demonstrujący współdzielenie pamięci przez flyweight w raportach
 public class FinalReportTester {
     private List<FinalReport> finalReports = new ArrayList<>();
 
@@ -40,3 +38,4 @@ public class FinalReportTester {
     }
 
 }
+//Koniec, Tydzień 4, Flyweight Pattern

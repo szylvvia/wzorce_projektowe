@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - wyrażenie OR dla anomalii
+//Non-terminal expression łączące reguły wykrywania anomalii alternatywą
+//Pozwala na elastyczne łączenie różnych warunków alarmowych
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 //Tydzień 5, Interpreter Pattern, Kompozytowy interpreter do sprawdzania anomalii z logiką OR
@@ -25,4 +28,4 @@ public class OrAnomalyChecker implements AbstractExpression {
         }
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - wyrażenie OR anomalii

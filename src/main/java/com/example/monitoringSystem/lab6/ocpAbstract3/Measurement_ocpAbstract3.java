@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), klasa reprezentująca pomiar środowiskowy
+//Enkapsuluje dane pomiarowe - temperatura, wilgotność, ciśnienie
+//Zgodnie z OCP może być rozszerzana o nowe pola bez modyfikacji istniejącego kodu
 package com.example.monitoringSystem.lab6.ocpAbstract3;
 
 public class Measurement_ocpAbstract3 {
@@ -30,5 +33,6 @@ public class Measurement_ocpAbstract3 {
                 temperature, humidity, pressure);
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - pomiar środowiskowy
 
 

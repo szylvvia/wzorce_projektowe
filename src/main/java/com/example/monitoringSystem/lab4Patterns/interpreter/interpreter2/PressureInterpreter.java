@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - interpreter anomalii ciśnienia
+//Terminal expression walidujący pomiary ciśnienia atmosferycznego
+//Sprawdza czy ciśnienie mieści się w bezpiecznych granicach pomiarowych
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
@@ -27,4 +30,4 @@ public class PressureInterpreter implements AbstractExpression {
         return result;
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - interpreter ciśnienia

@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab6.ocpAbstract2;
 
+//Tydzień 7, Zasada OCP (Open/Closed Principle), implementacja podstawowych statystyk matematycznych
+//Rozszerza system o funkcjonalność obliczania średniej i mediany bez modyfikacji kodu bazowego
+//Przykład jak OCP pozwala na dodawanie nowych metod analizy statystycznej
 public class MathStatistics extends AStatistics {
     private double mean;
     private double median;
@@ -27,3 +30,4 @@ public class MathStatistics extends AStatistics {
         return median;
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - statystyki matematyczne

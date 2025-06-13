@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla MonitoringSystemService (AOP)
+//Testuje serwis systemu monitoringu z aspektami programowania aspektowego
+//Weryfikuje poprawność operacji zapisu, odczytu i aktualizacji konfiguracji
 package com.example.monitoringSystem.TestK;
 
 import com.example.monitoringSystem.lab9.AspectJ2.MonitoringSystemService;
@@ -50,4 +53,5 @@ public class MonitoringSystemServiceTest {
                 "Odczyt temperatury powinien zakończyć się w 100ms");
     }
 }
+//Koniec, Tydzień 13, Test AOP MonitoringSystemService
 

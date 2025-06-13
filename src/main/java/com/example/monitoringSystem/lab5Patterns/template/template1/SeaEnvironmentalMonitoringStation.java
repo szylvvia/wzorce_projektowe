@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - stacja monitoringu morskiego
+//Implementuje metody template dla środowiska morskiego
+//Dostosowuje proces monitoringu do specyfiki pomiarów oceanograficznych
 package com.example.monitoringSystem.lab5Patterns.template.template1;
 
 public class SeaEnvironmentalMonitoringStation extends EnvironmentalMonitoringStationTemplate {
@@ -22,3 +25,5 @@ public class SeaEnvironmentalMonitoringStation extends EnvironmentalMonitoringSt
         System.out.println("-> Stacja morska: wyłączanie czujników " + type + " w lokalizacji " + location);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - stacja morska

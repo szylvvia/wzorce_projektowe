@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), tester różnych implementacji OCP
+//Demonstruje zastosowanie zasady OCP w systemie raportowania i alertów
+//Pokazuje jak system jest otwarty na rozszerzenia ale zamknięty na modyfikacje
 package com.example.monitoringSystem.lab6.ocpData;
 
 import java.util.List;
@@ -39,3 +42,4 @@ public class OcpTester {
         checker.checkThresholds(data);
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - tester

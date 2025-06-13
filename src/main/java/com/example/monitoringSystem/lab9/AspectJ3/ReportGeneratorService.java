@@ -1,10 +1,13 @@
 package com.example.monitoringSystem.lab9.AspectJ3;
 
+//Tydzień 11, AOP - serwis generowania raportów z aspektami
+//Klasa biznesowa odpowiedzialna za tworzenie różnych typów raportów
+//Aspekty automatycznie dodają monitoring, walidację i pomiar wydajności
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
+//Tydzień 11, AspectJ AOP, Serwis generowania raportów z aspektami
 @Service
 public class ReportGeneratorService {
 
@@ -25,7 +28,7 @@ public class ReportGeneratorService {
 
     public void archiveReport() {
         System.out.println("Archiving report with data: " + dataMeasurements);
-        dataMeasurements.clear();
-        System.out.println("Report archived and data cleared.");
+        dataMeasurements.clear();        System.out.println("Report archived and data cleared.");
     }
 }
+//Koniec, Tydzień 11, AOP - serwis generowania raportów

@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Mediator - konkretna implementacja mediatora alertów
+//Koordynuje komunikację między sensorami a komponentami alertów
+//Implementuje logikę obsługi różnych wydarzeń w systemie pomiarowym
 package com.example.monitoringSystem.lab4Patterns.mediator.alert;
 
 public class AlertMediatorImpl implements AlertMediator {
@@ -16,3 +19,4 @@ public class AlertMediatorImpl implements AlertMediator {
         }
     }
 }
+//Koniec, Tydzień 5, Wzorzec Mediator - implementacja

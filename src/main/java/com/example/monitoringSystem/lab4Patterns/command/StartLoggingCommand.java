@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Command - konkretna komenda startu logowania
+//Enkapsuluje żądanie rozpoczęcia logowania danych w systemie pomiarowym
+//Deleguje wykonanie do obiektu DataLogger zgodnie z wzorcem Command
 package com.example.monitoringSystem.lab4Patterns.command;
 
 public class StartLoggingCommand implements Command {
@@ -12,3 +15,4 @@ public class StartLoggingCommand implements Command {
         logger.startLogging();
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command - start logowania

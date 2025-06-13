@@ -14,3 +14,4 @@ public class BridgePatternMessure {
         multiSensorStation.measure();
     }
 }
+//Koniec, Tydzień 3, Wzorzec Bridge

@@ -1,13 +1,20 @@
+//Tydzień 13, Test jednostkowy dla ReportGeneratorService (AOP)
+//Testuje serwis generatora raportów z aspektami programowania aspektowego
+//Weryfikuje poprawność generowania, archiwizacji i obsługi danych pomiarowych w raportach
 package com.example.monitoringSystem.TestS;
-
-import com.example.monitoringSystem.lab9.AspectJ3.ReportGeneratorService;
-import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-public class ReportGeneratorServiceTest {
+import com.example.monitoringSystem.lab9.AspectJ3.ReportGeneratorService;
+
+//Testy jednostkowe dla serwisu generatora raportów z aspektami AOP
+@SpringBootTest
+class ReportGeneratorServiceTest {
 
     @Test
     void testGenerateReportWithValidDate() {
@@ -50,3 +57,4 @@ public class ReportGeneratorServiceTest {
         }
     }
 }
+//Koniec, Tydzień 13, Test AOP ReportGeneratorService

@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Iterator - kolekcja historii kalibracji
+//Agregat przechowujący dane kalibracji sensorów i udostępniający iterator
+//Umożliwia sekwencyjny przegląd historycznych wartości kalibracji
 package com.example.monitoringSystem.lab4Patterns.iterator;
 
 public class CalibrationHistory {
@@ -14,3 +17,4 @@ public class CalibrationHistory {
         return new CalibrationHistoryIterator(history, index);
     }
 }
+//Koniec, Tydzień 5, Wzorzec Iterator - historia kalibracji

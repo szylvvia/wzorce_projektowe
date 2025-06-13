@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - statystyki temperatury zgodne z LSP
+//Rozszerza klasę Statistic zachowując jej kontrakt
+//Może zastąpić klasę bazową bez naruszania oczekiwanych zachowań
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
@@ -22,4 +25,4 @@ public class TemperatureStatistic extends Statistic{
     }
 
 }
-//Koniec, Tydzień 8, Zasada LSP
+//Koniec, Tydzień 8, Zasada LSP - statystyki temperatury

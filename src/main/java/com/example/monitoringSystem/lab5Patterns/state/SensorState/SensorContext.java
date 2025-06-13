@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab5Patterns.state.SensorState;
 
+//Tydzień 6, State Pattern, Kontekst czujnika zarządzający aktualnym stanem
 public class SensorContext {
     private SensorState currentState;
 
@@ -15,3 +16,4 @@ public class SensorContext {
         }
     }
 }
+//Koniec, Tydzień 6, State Pattern

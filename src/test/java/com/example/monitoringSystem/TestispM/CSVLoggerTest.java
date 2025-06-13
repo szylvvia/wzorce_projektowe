@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla CSVLogger (ISP)
+//Testuje implementację loggera zgodnie z zasadą Interface Segregation Principle
+//Weryfikuje poprawność logowania do formatu CSV w kontekście wzorców SOLID
 package com.example.monitoringSystem.TestispM;
 
 import com.example.monitoringSystem.lab7.isp.ispM.CSVLogger;
@@ -53,4 +56,5 @@ class CSVLoggerTest {
         assertDoesNotThrow(() -> logger.exportToCSV());
     }
 }
+//Koniec, Tydzień 13, Test ISP CSVLogger
 

@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada DIP (Dependency Inversion Principle), konkretna implementacja czujnika
+//Niskpoziomowy moduł implementujący abstrakcję ISensor zgodnie z DIP
+//Może być zastąpiony innymi implementacjami bez wpływu na moduły wysokopoziomowe
 package com.example.monitoringSystem.lab7.dip.dipS.dip1;
 
 public class MyDIPSensorDevice implements ISensor {
@@ -11,3 +14,4 @@ public class MyDIPSensorDevice implements ISensor {
         System.out.println("Pomiar wartosci..." + randomValue);
     }
 }
+//Koniec, Tydzień 8, Zasada DIP - implementacja czujnika

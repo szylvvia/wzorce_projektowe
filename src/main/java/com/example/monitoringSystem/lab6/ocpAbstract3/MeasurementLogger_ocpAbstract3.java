@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP - logger pomiarów dla trzeciej implementacji
+//Open/Closed Principle - klasa otwarta na rozszerzenia przez dziedziczenie
+//Zamknięta na modyfikacje - dodawanie nowych funkcji bez zmiany kodu
 package com.example.monitoringSystem.lab6.ocpAbstract3;
 
 import java.io.FileWriter;
@@ -13,5 +16,7 @@ public class MeasurementLogger_ocpAbstract3 {
         }
     }
 }
+
+//Koniec, Tydzień 7, Zasada OCP - logger pomiarów
 
 

@@ -3,7 +3,9 @@ package com.example.monitoringSystem.lab8.streamProcessing;
 import java.util.Arrays;
 import java.util.List;
 
-// Moniki
+//Tydzień 10, Programowanie funkcyjne - zaawansowane przetwarzanie strumieni danych pomiarowych
+//Stream API do analizy ciśnienia, prędkości wiatru i lokalizacji stacji
+//Wykorzystanie operacji filter, map, max, count i sorted na strumieniach
 
 public class AdvancedStreamProcessing {
     public static void main(String[] args) {
@@ -30,6 +32,7 @@ public class AdvancedStreamProcessing {
         System.out.println("Sorted station names:");
         locations.stream()
                 .sorted()
-                .forEach(System.out::println);
-    }
+                .forEach(System.out::println);    }
 }
+
+//Koniec, Tydzień 10, Programowanie funkcyjne - stream processing

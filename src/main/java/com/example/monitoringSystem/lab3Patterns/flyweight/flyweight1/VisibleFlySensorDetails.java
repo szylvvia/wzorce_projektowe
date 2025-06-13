@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1;
 
 import java.util.Map;
 
+//Tydzień 4, Flyweight Pattern, Konkretny flyweight przechowujący wspólne dane wizualne czujników
 public class VisibleFlySensorDetails implements AbstractFlySensorDetails {
     private String width;
     private String height;
@@ -24,3 +25,4 @@ public class VisibleFlySensorDetails implements AbstractFlySensorDetails {
         return sensorDetails;
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern

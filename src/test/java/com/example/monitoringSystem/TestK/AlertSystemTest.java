@@ -1,3 +1,6 @@
+//Tydzień 13, Testy jednostkowe - test systemu alertów Memento
+//Sprawdza poprawność działania wzorca Memento w systemie powiadomień
+//Weryfikuje przechowywanie i przywracanie stanu alertów
 package com.example.monitoringSystem.TestK;
 
 import com.example.monitoringSystem.lab4Patterns.memento.Alert.AlertMemento;
@@ -49,4 +52,6 @@ public class AlertSystemTest {
         assertEquals("B", alertSystem.getLastAlert().getAlertMessage());
     }
 }
+
+//Koniec, Tydzień 13, Testy - system alertów
 

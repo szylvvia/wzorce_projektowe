@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - generator raportów HTML
+//Konkretna implementacja generowania raportów w formacie HTML
+//Implementuje metody template dla tworzenia struktury HTML
 package com.example.monitoringSystem.lab5Patterns.template.template2;
 
 import java.util.Map;
@@ -26,3 +29,5 @@ public class ReportHTML extends ReportTemplate {
         System.out.println("-> Raport HTML został wysłany....");
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - generator HTML

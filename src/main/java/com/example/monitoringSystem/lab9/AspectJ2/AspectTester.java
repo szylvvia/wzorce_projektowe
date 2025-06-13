@@ -1,3 +1,6 @@
+//Tydzień 11, AOP - tester aspektów zaawansowanych
+//Demonstruje zastosowanie różnych typów aspektów w systemie monitoringu
+//Pokazuje automatyczne wykrywanie anomalii i odświeżanie konfiguracji
 package com.example.monitoringSystem.lab9.AspectJ2;
 
 import org.springframework.boot.CommandLineRunner;
@@ -5,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
+//Tydzień 11, AspectJ AOP, Tester aspektów dla systemu monitoringu - druga implementacja
 @SpringBootApplication(scanBasePackages = "com.example.monitoringSystem")
 @EnableAspectJAutoProxy
 public class AspectTester implements CommandLineRunner {
@@ -38,3 +42,4 @@ public class AspectTester implements CommandLineRunner {
         System.out.println();
     }
 }
+//Koniec, Tydzień 11, AOP - tester aspektów zaawansowanych

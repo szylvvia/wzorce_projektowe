@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - konkretna implementacja raportu CSV
+//Implementuje specyficzne kroki algorytmu dla generowania raportów w formacie CSV
+//Dziedziczy szkielet algorytmu z ReportTemplate i dostosowuje go do formatu CSV
 package com.example.monitoringSystem.lab5Patterns.template.template2;
 
 import java.util.Map;
@@ -26,3 +29,4 @@ public class ReportCSV extends ReportTemplate {
         System.out.println("-> Raport CSV został wysłany....\n");
     }
 }
+//Koniec, Tydzień 6, Wzorzec Template Method - CSV

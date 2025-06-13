@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - stacja monitoringu leśnego
+//Konkretna implementacja dla środowiska leśnego
+//Specjalizuje proces monitoringu pod kątem ekosystemów leśnych
 package com.example.monitoringSystem.lab5Patterns.template.template1;
 
 public class ForestEnvironmentalMonitoringStation extends EnvironmentalMonitoringStationTemplate {
@@ -22,3 +25,5 @@ public class ForestEnvironmentalMonitoringStation extends EnvironmentalMonitorin
         System.out.println("-> Stacja leśna: wyłączanie czujników " + type + " w lokalizacji " + location);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - stacja leśna

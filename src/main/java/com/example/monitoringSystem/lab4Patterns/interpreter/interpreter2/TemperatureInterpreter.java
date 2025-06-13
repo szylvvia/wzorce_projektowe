@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - interpreter anomalii temperatury
+//Terminal expression analizujący odczyty temperatur pod kątem anomalii
+//Identyfikuje wartości temperatur wykraczające poza normy bezpieczeństwa
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
@@ -32,4 +35,4 @@ public class TemperatureInterpreter implements AbstractExpression {
         return result;
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - interpreter temperatury

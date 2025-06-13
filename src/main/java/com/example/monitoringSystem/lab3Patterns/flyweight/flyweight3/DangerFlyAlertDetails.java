@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight3;
 import java.util.HashMap;
 import java.util.Map;
 
+//Tydzień 4, Flyweight Pattern, Konkretny flyweight przechowujący wspólne dane alertów niebezpiecznych
 public class DangerFlyAlertDetails implements AbstractFlyAlert {
     private Map<String,String> alertDetails;
     private String alertType;
@@ -29,3 +30,4 @@ public class DangerFlyAlertDetails implements AbstractFlyAlert {
         return alertDetails;
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern

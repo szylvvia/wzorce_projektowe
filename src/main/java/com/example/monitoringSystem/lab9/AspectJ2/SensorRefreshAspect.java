@@ -1,3 +1,6 @@
+//Tydzień 11, AOP - aspekt odświeżania sensorów
+//Automatyczne odświeżanie stanu sensorów po określonych operacjach
+//Separacja logiki maintenance od logiki biznesowej
 package com.example.monitoringSystem.lab9.AspectJ2;
 
 import org.aspectj.lang.annotation.After;
@@ -8,6 +11,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+//Tydzień 11, AspectJ AOP, Aspekt zarządzający odświeżaniem czujników w systemie
 @Aspect
 @Component
 public class SensorRefreshAspect {
@@ -25,3 +29,4 @@ public class SensorRefreshAspect {
         return refreshLog;
     }
 }
+//Koniec, Tydzień 11, AOP - aspekt odświeżania sensorów

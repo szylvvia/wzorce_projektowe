@@ -16,10 +16,9 @@ public class DependencyInversionTester {
         // Przykład 2: Notification Management
         NotificationSender sender = new EmailNotificationSender("admin@example.com");
         AlertService alertService = new AlertService(sender);
-        alertService.triggerAlert("Critical humidity drop detected!");
-
-        // Przykład 3: Measurement Processing
-        MeasurementProcessor processor = new AverageMeasurementProcessor();        MeasurementAnalyzer analyzer = new MeasurementAnalyzer(processor);
+        alertService.triggerAlert("Critical humidity drop detected!");        // Przykład 3: Measurement Processing
+        MeasurementProcessor processor = new AverageMeasurementProcessor();
+        MeasurementAnalyzer analyzer = new MeasurementAnalyzer(processor);
         analyzer.analyze(new double[]{22.5, 23.0, 21.5, 22.0});
     }
 }

@@ -1,34 +1,26 @@
 package com.example.monitoringSystem.controllers;
 
-import com.example.monitoringSystem.lab1Patterns.prototype.City;
-import com.example.monitoringSystem.lab1Patterns.prototype.CountryPrototype;
-import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonEagerInit;
-import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonInnerStaticClassInit;
-import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonStaticBlockInit;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.example.monitoringSystem.lab1Patterns.factory.SensorFactory;
-import com.example.monitoringSystem.lab1Patterns.factory.ReportTypeFactory;
-import com.example.monitoringSystem.lab1Patterns.factory.AlertFactory;
-//import com.example.monitoringSystem.singleton.DataSource;
-//import com.example.monitoringSystem.singleton.SensorRegistry;
-//import com.example.monitoringSystem.singleton.CriticalLevels;
-//import com.example.monitoringSystem.builder.ReportBuilder;
-//import com.example.monitoringSystem.builder.MeasuringStationBuilder;
-//import com.example.monitoringSystem.builder.NotificationBuilder;
-//import com.example.monitoringSystem.prototype.CityPrototype;
-
 import com.example.monitoringSystem.lab1Patterns.builder.MeasuringStation;
 import com.example.monitoringSystem.lab1Patterns.builder.Notification;
 import com.example.monitoringSystem.lab1Patterns.builder.Report;
-import com.example.monitoringSystem.lab1Patterns.prototype.SensorPrototype;
+import com.example.monitoringSystem.lab1Patterns.factory.AlertFactory;
+import com.example.monitoringSystem.lab1Patterns.factory.ReportTypeFactory;
+import com.example.monitoringSystem.lab1Patterns.factory.SensorFactory;
+import com.example.monitoringSystem.lab1Patterns.prototype.City;
+import com.example.monitoringSystem.lab1Patterns.prototype.CountryPrototype;
 import com.example.monitoringSystem.lab1Patterns.prototype.MeasuringStationP;
+import com.example.monitoringSystem.lab1Patterns.prototype.SensorPrototype;
+import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonEagerInit;
+import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonInnerStaticClassInit;
+import com.example.monitoringSystem.lab1Patterns.singleton.DataSourceSingletonStaticBlockInit;
 
-
-import java.util.List;
-
+//Tydzień 2, MVC Controller, Kontroler Spring Boot dla Lab1 - wzorce kreacyjne
 @Controller
 public class Lab1Controller {
 
@@ -100,3 +92,4 @@ public class Lab1Controller {
         return "lab1"; 
     }
 }
+//Koniec, Tydzień 2, MVC Controller

@@ -1,3 +1,6 @@
+//Tydzień 4, Wzorzec Facade - fasada systemu pomiarowego
+//Zapewnia uproszczony interfejs do złożonego systemu różnych sensorów
+//Koordynuje pracę sensorów temperatury, wilgotności i ciśnienia
 package com.example.monitoringSystem.lab3Patterns.facade.MeasurementFacade;
 
 public class MeasurementFacade {
@@ -23,3 +26,4 @@ public class MeasurementFacade {
         return pressureSensor.measure();
     }
 }
+//Koniec, Tydzień 4, Wzorzec Facade - pomiary

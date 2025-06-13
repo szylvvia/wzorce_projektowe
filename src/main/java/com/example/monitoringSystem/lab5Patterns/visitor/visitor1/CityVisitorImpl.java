@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - konkretna implementacja odwiedzającego
+//Implementuje operacje wizytacji dla różnych typów stacji
+//Generuje raporty JSON dla stacji miejskich i leśnych
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor1;
 
 class CityVisitorImpl implements StationVisitor{
@@ -44,3 +47,5 @@ class CityVisitorImpl implements StationVisitor{
         return json.toString();
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - implementacja odwiedzającego

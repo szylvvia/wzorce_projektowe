@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Command - konkretna komenda czyszczenia logów
+//Enkapsuluje żądanie wyczyszczenia logów danych pomiarowych
+//Deleguje wykonanie do obiektu DataLogger zgodnie z wzorcem Command
 package com.example.monitoringSystem.lab4Patterns.command;
 
 public class ClearLogCommand implements Command {
@@ -12,3 +15,4 @@ public class ClearLogCommand implements Command {
         logger.clearLog();
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command - czyszczenie logów

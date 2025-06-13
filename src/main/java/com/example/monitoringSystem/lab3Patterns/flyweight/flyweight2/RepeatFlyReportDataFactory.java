@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight2;
 
 import java.util.HashMap;
 
+//Tydzień 4, Flyweight Pattern, Fabryka zarządzająca współdzieleniem instancji flyweight dla raportów
 public class RepeatFlyReportDataFactory {
     private static final HashMap<ReportType, RepeatFlyReportData>
             reportDataSet = new HashMap<ReportType,RepeatFlyReportData>();
@@ -26,3 +27,4 @@ public class RepeatFlyReportDataFactory {
     }
 
 }
+//Koniec, Tydzień 4, Flyweight Pattern

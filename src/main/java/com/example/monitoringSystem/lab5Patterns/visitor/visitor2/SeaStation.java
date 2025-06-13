@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - stacja morska
+//Konkretny element reprezentujący stację monitoringu morskiego
+//Przechowuje dane pomiarowe specyficzne dla środowiska morskiego
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor2;
 
 import java.util.HashMap;
@@ -30,3 +33,5 @@ public class SeaStation implements DataAnalyzeVisitable {
         return dataAnalyzer.accept(this);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - stacja morska

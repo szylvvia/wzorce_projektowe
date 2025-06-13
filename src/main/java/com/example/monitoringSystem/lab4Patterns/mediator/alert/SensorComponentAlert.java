@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Mediator - komponent sensora w systemie alertów
+//Monitoruje wartości temperatury i powiadamia mediatora o przekroczeniu progów
+//Część systemu alertów komunikującego się przez wzorzec Mediator
 package com.example.monitoringSystem.lab4Patterns.mediator.alert;
 
 public class SensorComponentAlert extends Component {
@@ -13,3 +16,4 @@ public class SensorComponentAlert extends Component {
         }
     }
 }
+//Koniec, Tydzień 5, Wzorzec Mediator - sensor alertów

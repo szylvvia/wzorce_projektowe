@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), klasa zarządzająca operacjami na czujnikach
+//Wykorzystuje abstrakcję do obsługi różnych typów czujników bez znajomości ich implementacji
+//Demonstruje jak OCP pozwala na polimorficzne przetwarzanie obiektów
 package com.example.monitoringSystem.lab6.ocpAbstract2;
 
 import java.util.List;
@@ -14,3 +17,4 @@ public class OcpSensor {
         }
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - zarządzanie czujnikami

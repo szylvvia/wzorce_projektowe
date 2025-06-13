@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada ISP - zaawansowana implementacja stacji wodnej
+//Implementuje interfejsy WaterStation i SensorMaintenance zgodnie z ISP
+//Segregacja umożliwia implementację tylko potrzebnych funkcjonalności
 package com.example.monitoringSystem.lab7.isp.ispS.isp3;
 
 import java.util.ArrayList;
@@ -26,3 +29,5 @@ public class AdvancedWaterStation implements WaterStation, SensorMaintenance{
         System.out.println("Calibrating the water station...");
     }
 }
+
+//Koniec, Tydzień 8, Zasada ISP - implementacja stacji wodnej

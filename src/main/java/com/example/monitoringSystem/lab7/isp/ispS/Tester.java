@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab7.isp.ispS;
 
+//Tydzień 8, Zasada ISP - tester implementacji segregacji interfejsów
+//Demonstruje zastosowanie Interface Segregation Principle w systemie monitoringu
+//Pokazuje korzyści z podziału dużych interfejsów na mniejsze, specjalistyczne
 import com.example.monitoringSystem.lab7.isp.ispS.isp1.BasicCSVReport;
 import com.example.monitoringSystem.lab7.isp.ispS.isp1.BasicJSONReport;
 import com.example.monitoringSystem.lab7.isp.ispS.isp1.BasicPDFReport;
@@ -57,4 +60,4 @@ public class Tester {
 
     }
 }
-//Koniec, Tydzień 8, Zasada ISP 1
+//Koniec, Tydzień 8, Zasada ISP - tester implementacji

@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Command - invoker dla komend logowania danych
+//Zarządza wykonywaniem komend związanych z logowaniem i przechowuje ich historię
+//Alternatywny invoker specjalizujący się w operacjach logowania danych pomiarowych
 package com.example.monitoringSystem.lab4Patterns.command;
 
 import java.util.ArrayList;
@@ -15,3 +18,4 @@ public class DataLoggingInvoker {
         return commandHistory;
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command - invoker logowania

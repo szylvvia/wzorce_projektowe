@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Command - konkretna komenda kalibracji sensora
+//Enkapsuluje żądanie kalibracji sensora w stacji pomiarowej
+//Umożliwia kolejkowanie, logowanie i cofanie operacji kalibracji
 package com.example.monitoringSystem.lab4Patterns.command;
 
 public class CalibrateSensorCommand implements Command {
@@ -12,3 +15,4 @@ public class CalibrateSensorCommand implements Command {
         station.calibrateSensor();
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command - kalibracja sensora

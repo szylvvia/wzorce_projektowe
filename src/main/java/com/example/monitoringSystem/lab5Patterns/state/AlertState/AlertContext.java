@@ -1,7 +1,7 @@
 package com.example.monitoringSystem.lab5Patterns.state.AlertState;
 
-public class
-AlertContext {
+//Tydzień 6, State Pattern, Kontekst alertu zarządzający poziomami alertów w systemie
+public class AlertContext {
     private AlertState currentAlertState;
 
     public void setAlertState(AlertState state) {
@@ -16,3 +16,4 @@ AlertContext {
         }
     }
 }
+//Koniec, Tydzień 6, State Pattern

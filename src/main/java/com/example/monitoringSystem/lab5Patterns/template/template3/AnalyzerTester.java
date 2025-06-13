@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - tester analizatora danych środowiskowych
+//Testuje różne implementacje analizatorów dla różnych środowisk
+//Demonstruje użycie wzorca Template Method w analizie danych
 package com.example.monitoringSystem.lab5Patterns.template.template3;
 
 import java.util.Map;
@@ -23,3 +26,5 @@ public class AnalyzerTester {
         seaAnalyzer.analyzeData(temperature, humidity2, seaThresholds);
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - tester analizatora

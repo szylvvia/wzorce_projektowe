@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), tester demonstrujący zastosowanie OCP z klasami abstrakcyjnymi
+//Pokazuje polimorficzne wykorzystanie hierarchii klas zgodnie z zasadą OCP
+//Demonstruje jak system jest otwarty na rozszerzenia ale zamknięty na modyfikacje
 package com.example.monitoringSystem.lab6.ocpAbstract2;
 
 import java.util.List;
@@ -52,3 +55,4 @@ public class OcpAbstractTester {
 
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - tester abstrakcyjny

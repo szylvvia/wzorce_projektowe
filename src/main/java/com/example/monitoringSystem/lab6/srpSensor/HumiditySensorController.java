@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada SRP (Single Responsibility Principle), kontroler czujnika wilgotności
+//Odpowiedzialny tylko za operacje sterujące czujnikiem (włączanie, wyłączanie, reset)
+//Separacja odpowiedzialności - kontrola oddzielona od danych i wyświetlania
 package com.example.monitoringSystem.lab6.srpSensor;
 
 public class HumiditySensorController implements ISensorController{
@@ -24,3 +27,4 @@ public class HumiditySensorController implements ISensorController{
         System.out.println("[CONT] Humidity Sensor is reset.");
     }
 }
+//Koniec, Tydzień 7, Zasada SRP - kontroler czujnika wilgotności

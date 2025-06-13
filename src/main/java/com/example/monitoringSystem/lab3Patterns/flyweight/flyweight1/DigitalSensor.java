@@ -2,6 +2,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight1;
 
 import java.util.stream.Collectors;
 
+//Tydzień 4, Flyweight Pattern, Kontekst używający flyweight - zawiera zewnętrzny stan czujnika cyfrowego
 public class DigitalSensor {
     private final String ID;
     private final String MODEL;
@@ -37,3 +38,4 @@ public class DigitalSensor {
     }
 
 }
+//Koniec, Tydzień 4, Flyweight Pattern

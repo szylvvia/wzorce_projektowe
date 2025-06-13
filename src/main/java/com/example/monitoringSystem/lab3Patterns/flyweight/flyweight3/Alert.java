@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight3;
 import java.util.Date;
 import java.util.stream.Collectors;
 
+//Tydzień 4, Flyweight Pattern, Kontekst używający flyweight - zawiera zewnętrzny stan alertu
 public class Alert {
     private final Date DATE;
     private final String LOCALIZATION;
@@ -30,3 +31,4 @@ public class Alert {
         return getAlert() + " " + mapAsString;
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern

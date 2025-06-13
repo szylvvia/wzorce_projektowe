@@ -1,3 +1,6 @@
+//Tydzień 11, AOP - aspekt pomiaru czasu wykonania raportów
+//Automatyczny pomiar czasu generowania różnych typów raportów
+//Performance monitoring oddzielony od logiki biznesowej
 package com.example.monitoringSystem.lab9.AspectJ3;
 
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -5,9 +8,7 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
-import java.util.Date;
-
+//Tydzień 11, AspectJ AOP, Aspekt mierzący czas wykonania operacji generowania raportów
 @Aspect
 @Component
 public class ExecutionTimeAspect {
@@ -21,3 +22,4 @@ public class ExecutionTimeAspect {
         return result;
     }
 }
+//Koniec, Tydzień 11, AOP - aspekt pomiaru czasu raportów

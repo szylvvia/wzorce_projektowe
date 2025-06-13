@@ -1,3 +1,6 @@
+//Tydzień 11, AOP - aspekt wykrywania anomalii temperaturowych
+//Automatyczne monitorowanie i alertowanie o nieprawidłowych temperaturach
+//Crosscutting concern oddzielony od logiki pomiarowej
 package com.example.monitoringSystem.lab9.AspectJ2;
 
 import org.aspectj.lang.annotation.AfterReturning;
@@ -9,6 +12,7 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
+//Tydzień 11, AspectJ AOP, Aspekt monitorujący anomalie temperaturowe w systemie
 @Aspect
 @Component
 public class TemperatureAnomalyAspect {
@@ -31,3 +35,4 @@ public class TemperatureAnomalyAspect {
         return Collections.unmodifiableList(activeAlerts);
     }
 }
+//Koniec, Tydzień 11, AOP - aspekt anomalii temperaturowych

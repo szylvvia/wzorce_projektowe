@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada DIP - menedżer pomiarów implementujący dependency inversion
+//Zależy od abstrakcji (interfejsów) a nie od konkretnych implementacji
+//Demonstruje odwrócenie zależności przez wstrzykiwanie zależności przez konstruktor
 package com.example.monitoringSystem.lab7.dip.dipM;
 
 public class MeasurementManager {
@@ -30,3 +33,4 @@ public class MeasurementManager {
         manager.run();
     }
 }
+//Koniec, Tydzień 8, Zasada DIP - menedżer

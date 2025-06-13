@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Iterator - konkretny iterator dla historii alertów
+//Implementuje sekwencyjny dostęp do elementów tablicy alertów
+//Zapewnia enkapsulację logiki iterowania bez ujawniania wewnętrznej struktury
 package com.example.monitoringSystem.lab4Patterns.iterator;
 
 public class AlertHistoryIterator implements MyIterator<String> {
@@ -20,3 +23,4 @@ public class AlertHistoryIterator implements MyIterator<String> {
         return alerts[pos++];
     }
 }
+//Koniec, Tydzień 5, Wzorzec Iterator - iterator alertów

@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla DailyReportData (DIP)
+//Testuje implementację danych dziennych zgodnie z zasadą Dependency Inversion Principle
+//Weryfikuje poprawność generowania losowych danych raportowych w kontekście wzorców SOLID
 package com.example.monitoringSystem.TestS;
 
 import com.example.monitoringSystem.lab7.dip.dipS.dip2.DailyReportData;
@@ -42,3 +45,4 @@ class DailyReportDataTest {
         assertNotEquals(data1, data2, "Multiple calls should return different values");
     }
 }
+//Koniec, Tydzień 13, Test DIP DailyReportData

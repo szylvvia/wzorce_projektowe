@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - implementacja analizatora danych
+//Konkretny visitor implementujący operacje analizy dla różnych typów stacji
+//Generuje raporty JSON z analizą danych pomiarowych
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor2;
 
 public class DataAnalyzerImpl implements DataAnalyzeVisitor {
@@ -30,3 +33,5 @@ public class DataAnalyzerImpl implements DataAnalyzeVisitor {
         return json.toString();
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - analizator danych

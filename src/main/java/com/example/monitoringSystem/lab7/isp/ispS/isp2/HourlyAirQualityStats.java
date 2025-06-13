@@ -1,6 +1,10 @@
+//Tydzień 8, Zasada ISP - godzinowe statystyki jakości powietrza
+//Implementuje tylko interfejs AirQualityStats zgodnie z ISP
+//Nie jest obciążona metodami dla temperatury czy poziomu hałasu
 package com.example.monitoringSystem.lab7.isp.ispS.isp2;
 
-public class HourlyAirQualityStats implements AirQualityStats{
+
+public class HourlyAirQualityStats implements AirQualityStats {
     @Override
     public void calculateAirQualityValue() {
         int airQualityRange = 10;
@@ -10,3 +14,4 @@ public class HourlyAirQualityStats implements AirQualityStats{
     }
 
 }
+//Koniec, Tydzień 8, Zasada ISP - statystyki powietrza godzinowe

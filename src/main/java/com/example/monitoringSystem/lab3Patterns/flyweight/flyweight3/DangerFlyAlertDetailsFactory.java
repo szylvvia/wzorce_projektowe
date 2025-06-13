@@ -1,10 +1,8 @@
 package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight3;
 
-import com.example.monitoringSystem.lab3Patterns.flyweight.flyweight2.RepeatFlyReportData;
-import com.example.monitoringSystem.lab3Patterns.flyweight.flyweight2.RepeatFlyReportDataFactory;
-
 import java.util.HashMap;
 
+//Tydzień 4, Flyweight Pattern, Fabryka zarządzająca współdzieleniem instancji flyweight dla alertów
 public class DangerFlyAlertDetailsFactory {
     private static final HashMap<DangerFlyAlertDetailsFactory.AlertType, DangerFlyAlertDetails>
             alertDataSet = new HashMap<DangerFlyAlertDetailsFactory.AlertType,DangerFlyAlertDetails>();
@@ -28,3 +26,4 @@ public class DangerFlyAlertDetailsFactory {
         LOW, MEDIUM, HIGH
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern

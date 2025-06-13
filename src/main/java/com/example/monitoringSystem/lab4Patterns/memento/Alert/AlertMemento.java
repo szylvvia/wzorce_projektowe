@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Memento - memento alertu systemu
+//Snapshot stanu systemu alertów w określonym momencie czasu
+//Przechowuje konfigurację alertów dla funkcjonalności cofania zmian
 package com.example.monitoringSystem.lab4Patterns.memento.Alert;
 
 public class AlertMemento {
@@ -11,3 +14,4 @@ public class AlertMemento {
         return alertMessage;
     }
 }
+//Koniec, Tydzień 5, Wzorzec Memento - memento alertu

@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Visitor - implementacja visitora dla alertów
+//Konkretny visitor generujący raporty alertów dla różnych jednostek administracyjnych
+//Tworzy specjalistyczne formaty raportów dla krajów i departamentów
 package com.example.monitoringSystem.lab5Patterns.visitor.visitor3;
 
 class AlertImpl implements AlertVisitor {
@@ -26,3 +29,5 @@ class AlertImpl implements AlertVisitor {
         return alertMessage.toString();
     }
 }
+
+//Koniec, Tydzień 6, Wzorzec Visitor - implementacja alertów

@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla FileDataSource (DIP)
+//Testuje implementację źródła danych zgodnie z zasadą Dependency Inversion Principle
+//Weryfikuje poprawność pobierania danych z pliku w kontekście wzorców SOLID
 package com.example.monitoringSystem.TestdipM;
 
 import com.example.monitoringSystem.lab7.dip.dipM.FileDataSource;
@@ -37,3 +40,4 @@ class FileDataSourceTest {
         assertNotNull(dataSource.fetchData());
     }
 }
+//Koniec, Tydzień 13, Test DIP FileDataSource

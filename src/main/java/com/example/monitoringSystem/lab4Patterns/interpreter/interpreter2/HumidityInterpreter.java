@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - interpreter anomalii wilgotności
+//Terminal expression sprawdzający czy wilgotność jest w normalnym zakresie
+//Wykrywa anomalie wilgotnościowe w systemie monitoringu środowiska
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2;
 
 import java.util.List;
@@ -27,4 +30,4 @@ public class HumidityInterpreter implements AbstractExpression {
         return result;
     }
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - interpreter wilgotności

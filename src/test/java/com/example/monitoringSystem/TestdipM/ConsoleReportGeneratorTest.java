@@ -1,3 +1,6 @@
+//Tydzień 13, Test jednostkowy dla ConsoleReportGenerator (DIP)
+//Testuje implementację generatora raportów konsolowych zgodnie z zasadą Dependency Inversion Principle
+//Weryfikuje poprawność wyświetlania raportów w konsoli w kontekście wzorców SOLID
 package com.example.monitoringSystem.TestdipM;
 
 import com.example.monitoringSystem.lab7.dip.dipM.ConsoleReportGenerator;
@@ -53,4 +56,5 @@ class ConsoleReportGeneratorTest {
         assertEquals("Średnia z pomiarów: 10.0" + System.lineSeparator(), outContent.toString());
     }
 }
+//Koniec, Tydzień 13, Test DIP ConsoleReportGenerator
 

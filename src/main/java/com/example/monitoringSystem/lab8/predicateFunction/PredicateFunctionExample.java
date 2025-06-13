@@ -5,7 +5,7 @@ import java.util.function.Predicate;
 
 // Moniki
 
-//Tydzień 9, Programowanie funkcyjne, przykład użycia Predicate i Function dla analizy ciśnienia
+//Tydzień 10, Programowanie funkcyjne, przykład użycia Predicate i Function dla analizy ciśnienia
 public class PredicateFunctionExample {
     static int lowPressure = 1005;
     static int veryLowPressure = 1000;
@@ -26,4 +26,4 @@ public class PredicateFunctionExample {
         }
     }
 }
-//Koniec, Tydzień 9, Programowanie funkcyjne
+//Koniec, Tydzień 10, Programowanie funkcyjne

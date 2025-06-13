@@ -3,6 +3,7 @@ package com.example.monitoringSystem.lab3Patterns.flyweight.flyweight2;
 import java.util.HashMap;
 import java.util.Map;
 
+//Tydzień 4, Flyweight Pattern, Konkretny flyweight przechowujący powtarzalne dane raportów
 public class RepeatFlyReportData implements AbstractFlyReportDetails {
     private String reportType;
     private String reportContent;
@@ -21,3 +22,4 @@ public class RepeatFlyReportData implements AbstractFlyReportDetails {
         return reportDetails;
     }
 }
+//Koniec, Tydzień 4, Flyweight Pattern

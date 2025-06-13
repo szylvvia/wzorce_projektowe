@@ -1,6 +1,6 @@
 package com.example.monitoringSystem.lab3Patterns.Proxy.P3;
 
-// Proxy
+//Tydzień 4, Proxy Pattern, Remote Proxy - reprezentuje zdalny obiekt lokalnie i zarządza komunikacją
 public class RemoteMeasuringStationProxy implements MeasuringStationP3 {
     private RemoteMeasuringStation realStation;
 
@@ -17,3 +17,4 @@ public class RemoteMeasuringStationProxy implements MeasuringStationP3 {
         return fetchDataP3();
     }
 }
+//Koniec, Tydzień 4, Proxy Pattern

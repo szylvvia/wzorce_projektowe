@@ -1,3 +1,6 @@
+//Tydzień 6, Wzorzec Template Method - abstrakcyjna klasa szablonu
+//Definiuje szkielet algorytmu monitorowania środowiskowego w metodzie runCycle()
+//Kroki szczegółowe są implementowane w klasach pochodnych dla różnych środowisk
 package com.example.monitoringSystem.lab5Patterns.template.template1;
 
 import java.util.Map;
@@ -31,3 +34,4 @@ abstract class EnvironmentalMonitoringStationTemplate {
     public abstract void collectData(Integer interval);
     public abstract void turnOffSensors(String type, String location);
 }
+//Koniec, Tydzień 6, Wzorzec Template Method - klasa bazowa

@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Interpreter - ogólny checker anomalii
+//Generyczny sprawdzacz anomalii dla różnych typów pomiarów
+//Pozwala na zunifikowane podejście do wykrywania nieprawidłowości
 package com.example.monitoringSystem.lab4Patterns.interpreter.interpreter3;
 
 import com.example.monitoringSystem.lab4Patterns.interpreter.interpreter2.EnvironmentData;
@@ -22,4 +25,4 @@ public class AnomalyChecker implements AbstractExpression {
 
 
 }
-//Koniec, Tydzień 5, Interpreter Pattern
+//Koniec, Tydzień 5, Wzorzec Interpreter - checker anomalii

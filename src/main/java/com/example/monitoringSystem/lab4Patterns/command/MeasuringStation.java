@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Command - receiver dla komend stacji pomiarowej
+//Klasa docelowa wykonująca rzeczywiste operacje pomiarowe
+//Enkapsuluje logikę biznesową zarządzania pomiarami i kalibracją sensorów
 package com.example.monitoringSystem.lab4Patterns.command;
 
 public class MeasuringStation {
@@ -13,3 +16,4 @@ public class MeasuringStation {
         System.out.println("Sensor calibrated.");
     }
 }
+//Koniec, Tydzień 5, Wzorzec Command - receiver stacji

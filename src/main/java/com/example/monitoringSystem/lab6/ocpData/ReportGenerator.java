@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), generator raportów z switch expression
+//Wykorzystuje nowoczesną składnię Java do generowania raportów w różnych formatach
+//Może być rozszerzony o nowe formaty zgodnie z zasadą OCP
 package com.example.monitoringSystem.lab6.ocpData;
 
 public class ReportGenerator {
@@ -9,3 +12,4 @@ public class ReportGenerator {
         };
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - generator raportów

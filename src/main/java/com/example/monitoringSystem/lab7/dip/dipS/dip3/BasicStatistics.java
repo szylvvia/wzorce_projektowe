@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada DIP (Dependency Inversion Principle), podstawowy generator statystyk
+//Konkretna implementacja abstrakcji StatisticGenerator zgodnie z DIP
+//Implementuje algorytmy obliczania średnich bez wpływu na moduły wysokopoziomowe
 package com.example.monitoringSystem.lab7.dip.dipS.dip3;
 
 public class BasicStatistics extends StatisticGenerator {
@@ -24,3 +27,4 @@ public class BasicStatistics extends StatisticGenerator {
         System.out.println("Srednia temperatura: " + averageTemperature+" | Srednia wilgotnosc: " + averageHumidity);
     }
 }
+//Koniec, Tydzień 8, Zasada DIP - podstawowe statystyki

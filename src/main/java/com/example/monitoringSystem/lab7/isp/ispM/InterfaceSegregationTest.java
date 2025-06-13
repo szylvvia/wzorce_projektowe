@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada ISP - tester segregacji interfejsów dla modułu M
+//Demonstruje zastosowanie Interface Segregation Principle w kontekście sensorów
+//Pokazuje korzyści z podziału monolitycznych interfejsów na mniejsze, specjalistyczne
 package com.example.monitoringSystem.lab7.isp.ispM;
 
 import com.example.monitoringSystem.lab7.isp.ispM.IDataExporterFile.ICSVExportable;
@@ -47,3 +50,5 @@ public class InterfaceSegregationTest {
 
     }
 }
+
+//Koniec, Tydzień 8, Zasada ISP - tester modułu M

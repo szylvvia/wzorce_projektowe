@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-//Tydzień 9, Programowanie funkcyjne, przykład przetwarzania strumieni danych z czujników
+//Tydzień 10, Programowanie funkcyjne, przykład przetwarzania strumieni danych z czujników
 public class StreamProcessingExample {
     public static void main(String[] args) {
         List<Double> temperaturesInCelsius = List.of(20.0, 25.0, 30.0, 35.0, 40.0, 45.0);

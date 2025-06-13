@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - statystyki ciśnienia zgodne z LSP
+//Rozszerza klasę Statistic zachowując jej kontrakt
+//Implementuje specjalistyczne funkcje dla analiz ciśnienia atmosferycznego
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 import java.util.List;
@@ -22,4 +25,4 @@ public class PressureStatistic extends Statistic {
         }
     }
 }
-//Koniec, Tydzień 8, Zasada LSP
+//Koniec, Tydzień 8, Zasada LSP - statystyki ciśnienia

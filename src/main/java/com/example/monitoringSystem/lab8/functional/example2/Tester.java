@@ -1,5 +1,6 @@
 package com.example.monitoringSystem.lab8.functional.example2;
 
+//Tydzień 10, Functional Programming, Tester interfejsów funkcyjnych dla analizy warunków pogodowych
 public class Tester {
     public static void main(String[] args) {
         double temperatureThreshold = 30.0;
@@ -65,3 +66,4 @@ public class Tester {
     }
 
 }
+//Koniec, Tydzień 10, Functional Programming

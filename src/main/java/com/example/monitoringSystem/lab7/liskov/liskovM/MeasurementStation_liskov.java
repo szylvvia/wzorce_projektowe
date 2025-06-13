@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - stacja pomiarowa zgodna z Liskov Substitution Principle
+//Klasa bazowa definiuje kontrakt dla stacji monitoringu środowiskowego
+//Podklasy mogą rozszerzać funkcjonalność bez naruszania kontraktu LSP
 package com.example.monitoringSystem.lab7.liskov.liskovM;
 
 
@@ -48,3 +51,5 @@ public class MeasurementStation_liskov {
         alerter.checkAndAlert(value);
     }
 }
+
+//Koniec, Tydzień 8, Zasada LSP - stacja pomiarowa

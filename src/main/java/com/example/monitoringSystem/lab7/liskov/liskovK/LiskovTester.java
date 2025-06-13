@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - tester podstawowej implementacji Liskov Substitution Principle
+//Demonstruje że obiekty klas pochodnych mogą zastąpić obiekty klasy bazowej
+//Wszystkie implementacje zachowują się zgodnie z kontraktem klasy bazowej
 package com.example.monitoringSystem.lab7.liskov.liskovK;
 
 public class LiskovTester {
@@ -26,3 +29,5 @@ public class LiskovTester {
         concreteHandler.handleEvent("Temperature < min");
     }
 }
+
+//Koniec, Tydzień 8, Zasada LSP - tester podstawowy

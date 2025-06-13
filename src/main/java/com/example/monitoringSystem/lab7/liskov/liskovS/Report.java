@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - klasa bazowa raportów zgodna z Liskov Substitution Principle
+//Definiuje kontrakt dla wszystkich typów raportów środowiskowych
+//Podklasy (DailyReport, MonthlyReport) mogą zastąpić bez naruszania funkcjonalności
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 public class Report {
@@ -37,3 +40,4 @@ public class Report {
 
 
 }
+//Koniec, Tydzień 8, Zasada LSP - klasa bazowa raportów

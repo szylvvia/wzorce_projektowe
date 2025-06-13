@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada LSP - raport miesięczny
+//Rozszerza klasę Report zachowując zgodność z interfejsem bazowym
+//Może być używany wszędzie gdzie oczekiwana jest klasa Report
 package com.example.monitoringSystem.lab7.liskov.liskovS;
 
 public class MonthlyReport extends Report {
@@ -19,3 +22,5 @@ public class MonthlyReport extends Report {
         System.out.println("[MONTHLY] Zapisanie raportu...");
     }
 }
+
+//Koniec, Tydzień 8, Zasada LSP - raport miesięczny

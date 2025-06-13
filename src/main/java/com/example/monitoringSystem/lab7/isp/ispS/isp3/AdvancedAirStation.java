@@ -1,3 +1,6 @@
+//Tydzień 8, Zasada ISP - implementacja zaawansowanej stacji powietrza z segregacją interfejsów
+//Implementuje tylko potrzebne interfejsy: AirStation dla monitoringu i SensorMaintenance dla konserwacji
+//Zgodnie z ISP - klasa nie jest obciążona niepotrzebnymi metodami z innych typów stacji
 package com.example.monitoringSystem.lab7.isp.ispS.isp3;
 
 public class AdvancedAirStation implements AirStation, SensorMaintenance {
@@ -22,3 +25,5 @@ public class AdvancedAirStation implements AirStation, SensorMaintenance {
         System.out.println("[ADV AIR ST] Sensor calibrated.");
     }
 }
+
+//Koniec, Tydzień 8, Zasada ISP - implementacja stacji powietrza

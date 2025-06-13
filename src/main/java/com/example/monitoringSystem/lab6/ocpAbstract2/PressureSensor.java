@@ -1,5 +1,8 @@
 package com.example.monitoringSystem.lab6.ocpAbstract2;
 
+//Tydzień 7, Zasada OCP (Open/Closed Principle), implementacja czujnika ciśnienia
+//Rozszerza system o nowy typ czujnika bez modyfikacji kodu bazowego
+//Przykład jak OCP pozwala na dodawanie nowych rodzajów czujników środowiskowych
 public class PressureSensor extends ASensor {
     private double pressure;
     private String location;
@@ -35,3 +38,4 @@ public class PressureSensor extends ASensor {
         System.out.println("Calibrating pressure sensor at: " + location);
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - czujnik ciśnienia

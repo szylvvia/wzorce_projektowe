@@ -1,5 +1,9 @@
 package com.example.monitoringSystem.lab5Patterns.template.template1;
 
+//Tydzień 6, Wzorzec Template Method - klasa testująca różne implementacje algorytmu monitorowania
+//Demonstruje wzorzec Template Method dla stacji monitorowania środowiskowego
+//Testuje algorytmy dla miasta, lasu i morza z różnymi krokami implementacji
+
 import java.util.Map;
 
 public class TemplateTester {
@@ -37,3 +41,4 @@ public class TemplateTester {
         seaStation.runCycle(seaData);
     }
 }
+//Koniec, Tydzień 6, Wzorzec Template Method - tester

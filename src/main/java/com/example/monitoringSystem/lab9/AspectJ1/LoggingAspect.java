@@ -1,9 +1,12 @@
+//Tydzień 11, AOP - aspekt logowania dla stacji pomiarowej
+//Separacja zagadnień przekrojowych - automatyczne logowanie wywołań metod
+//Demonstruje zastosowanie programowania aspektowego w systemie monitoringu
 package com.example.monitoringSystem.lab9.AspectJ1;
 
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.JoinPoint;
 
-//Tydzień 10, Aspect Oriented Programming 2
+//Tydzień 11, Aspect Oriented Programming 2
 //Aspekt logowania - automatyczne logowanie przed i po wykonaniu metod
 //Wykorzystuje adnotacje @Before i @After do definiowania punktów przecięcia
 @Aspect
@@ -17,4 +20,4 @@ public class LoggingAspect {
         System.out.println("[LOG] Data retrieval complete.");
     }
 }
-//Koniec, Tydzień 10, Aspect Oriented Programming 2
+//Koniec, Tydzień 11, AOP - aspekt logowania

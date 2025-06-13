@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada SRP + Wzorzec Memento, system alertów z możliwością przywracania stanów
+//Single Responsibility Principle - odpowiedzialny tylko za logikę alertów
+//Wzorzec Memento - originator tworzący i wykorzystujący memento do przywracania stanów
 package com.example.monitoringSystem.lab6.srpMemento;
 
 import java.util.ArrayList;
@@ -28,3 +31,4 @@ public class AlertSystem {
         return lastAlert;
     }
 }
+//Koniec, Tydzień 7, Zasada SRP + Wzorzec Memento - system alertów

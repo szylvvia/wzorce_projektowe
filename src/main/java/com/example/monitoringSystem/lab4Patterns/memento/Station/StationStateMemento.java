@@ -1,3 +1,6 @@
+//Tydzień 5, Wzorzec Memento - memento stanu stacji pomiarowej
+//Przechowuje snapshot konfiguracji i parametrów stacji monitoringu
+//Umożliwia przywracanie poprzednich ustawień stacji w przypadku błędów
 package com.example.monitoringSystem.lab4Patterns.memento.Station;
 
 public class StationStateMemento {
@@ -11,3 +14,4 @@ public class StationStateMemento {
         return state;
     }
 }
+//Koniec, Tydzień 5, Wzorzec Memento - memento stacji

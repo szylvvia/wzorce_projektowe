@@ -1,4 +1,8 @@
+//Tydzień 6, Wzorzec Template Method - abstrakcyjna klasa analizatora danych środowiskowych
+//Definiuje szkielet algorytmu analizy danych z różnych środowisk
+//Pozwala na specjalizację kroków analizy przez klasy pochodne
 package com.example.monitoringSystem.lab5Patterns.template.template3;
+
 import java.util.Map;
 
 abstract class EnvironmentalDataAnalyzerTemplate {
@@ -32,3 +36,5 @@ abstract class EnvironmentalDataAnalyzerTemplate {
 
         public abstract void sendAnalyzedData();
 }
+
+//Koniec, Tydzień 6, Wzorzec Template Method - abstrakcyjna klasa analizatora

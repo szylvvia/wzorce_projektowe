@@ -1,11 +1,18 @@
+//Tydzień 13, Test jednostkowy dla WeeklyData (DIP)
+//Testuje implementację danych tygodniowych zgodnie z zasadą Dependency Inversion Principle
+//Weryfikuje poprawność generowania danych temperaturowych i wilgotnościowych na tydzień
 package com.example.monitoringSystem.TestS;
-
-import com.example.monitoringSystem.lab7.dip.dipS.dip3.WeeklyData;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.Test;
+
+import com.example.monitoringSystem.lab7.dip.dipS.dip3.WeeklyData;
+
+//Testy jednostkowe dla klasy WeeklyData - dane tygodniowe w systemie monitoringu
 class WeeklyDataTest {
 
     @Test
@@ -49,3 +56,4 @@ class WeeklyDataTest {
         assertNotEquals(temperatureData1, temperatureData2, "Temperature data should be random and not identical.");
     }
 }
+//Koniec, Tydzień 13, Test DIP WeeklyData

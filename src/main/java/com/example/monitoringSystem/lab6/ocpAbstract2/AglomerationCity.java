@@ -1,3 +1,6 @@
+//Tydzień 7, Zasada OCP (Open/Closed Principle), implementacja miasta aglomeracyjnego
+//Rozszerza system o nową funkcjonalność obsługi aglomeracji bez modyfikacji kodu bazowego
+//Demonstruje jak OCP pozwala na dodawanie nowych typów miast z własną logiką
 package com.example.monitoringSystem.lab6.ocpAbstract2;
 
 import java.util.ArrayList;
@@ -21,3 +24,4 @@ public class AglomerationCity extends ACity{
         System.out.println();
     }
 }
+//Koniec, Tydzień 7, Zasada OCP - miasto aglomeracyjne

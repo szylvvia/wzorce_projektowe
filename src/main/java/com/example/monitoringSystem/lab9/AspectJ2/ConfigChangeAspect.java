@@ -1,3 +1,6 @@
+//Tydzień 11, AOP - aspekt zmian konfiguracji
+//Automatyczne wykrywanie i obsługa zmian w konfiguracji systemu
+//Reaguje na zmiany parametrów bez ingerencji w kod biznesowy
 package com.example.monitoringSystem.lab9.AspectJ2;
 
 import org.aspectj.lang.annotation.After;
@@ -9,6 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
+//Tydzień 11, AspectJ AOP, Aspekt reagujący na zmiany konfiguracji systemu
 @Aspect
 @Component
 public class ConfigChangeAspect {
@@ -31,4 +35,5 @@ public class ConfigChangeAspect {
         return Collections.unmodifiableMap(configChanges);
     }
 }
+//Koniec, Tydzień 11, AOP - aspekt konfiguracji
 
