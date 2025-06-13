@@ -4,16 +4,12 @@
 package com.example.monitoringSystem.TestS;
 
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
-
 import com.example.monitoringSystem.lab9.AspectJ3.ReportGeneratorService;
 
 //Testy jednostkowe dla serwisu generatora raportów z aspektami AOP
-@SpringBootTest
 class ReportGeneratorServiceTest {
 
     @Test
