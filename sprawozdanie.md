@@ -1,4 +1,4 @@
-# Sprawozdanie z zajęć - Wzorce projektowe i techniki programistyczne
+# Sprawozdanie z zajęć - Wzorce projektowe i techniki pisania czystego kodu
 
 **Temat:** Aplikacja monitorowania środowiskowego  
 **Autorzy:** Korzeniewska Monika, Król Jakub, Krzysztoń Sylwia  
