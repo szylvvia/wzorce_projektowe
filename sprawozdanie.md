@@ -1,5 +1,6 @@
 # Sprawozdanie z zajęć - Wzorce projektowe i techniki programistyczne
 
+**Temat:** Aplikacja monitorowania środowiskowego  
 **Autorzy:** Korzeniewska Monika, Król Jakub, Krzysztoń Sylwia  
 **Prowadzący:** dr inż. Piotr Kopniak
 
